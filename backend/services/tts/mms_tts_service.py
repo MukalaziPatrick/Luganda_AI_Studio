@@ -50,13 +50,12 @@ class MMSTTSService:
         try:
             self._load()
 
-            inputs = self._tokenizer(text, return_tensors="pt")
-
             with torch.no_grad():
+                inputs = self._tokenizer(text, return_tensors="pt")
                 output = self._model(**inputs).waveform
 
-            # output shape: (1, samples) — squeeze to 1D numpy array
-            waveform = output.squeeze().cpu().numpy().astype(np.float32)
+            # output[0] selects first batch item; squeeze removes any remaining singleton dims
+            waveform = output[0].squeeze().cpu().numpy().astype(np.float32)
             sample_rate = self._model.config.sampling_rate
 
             return _to_wav_bytes(waveform, sample_rate)
@@ -70,8 +69,9 @@ def _to_wav_bytes(waveform: np.ndarray, sample_rate: int) -> bytes:
     """Convert a float32 numpy waveform array to WAV bytes."""
     import scipy.io.wavfile as wavfile
 
-    # scipy expects int16 for WAV
-    pcm = (waveform * 32767).astype(np.int16)
+    # Clip to [-1, 1] before scaling — VITS output can exceed this range
+    pcm = np.clip(waveform, -1.0, 1.0)
+    pcm = (pcm * 32767).astype(np.int16)
     buf = io.BytesIO()
     wavfile.write(buf, sample_rate, pcm)
     return buf.getvalue()
