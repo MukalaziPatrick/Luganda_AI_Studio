@@ -63,15 +63,12 @@ def _safe_str(value, fallback=""):
 
 
 def _is_valid_pair(source: str, target: str) -> bool:
-    """Return False if the pair should be dropped from training data.
-
-    Filters:
-    - Either side under 3 characters (too short)
-    - Source and target identical after normalization (no real translation)
-    """
-    if len(source.strip()) < 3 or len(target.strip()) < 3:
+    """Return False if the pair should be dropped from training data."""
+    s = source.strip()
+    t = target.strip()
+    if len(s) < 3 or len(t) < 3:
         return False
-    if source.strip().lower() == target.strip().lower():
+    if s.lower() == t.lower():
         return False
     return True
 
