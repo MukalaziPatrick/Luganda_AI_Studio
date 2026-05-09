@@ -357,6 +357,41 @@
       /* Action buttons */
       .btn-done   { min-height: 52px; }
     }
+
+    /* ── TTS Speaker Button ─────────────────────────────────── */
+    .tts-btn {
+      background: none;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+      margin-top: 6px;
+      transition: background 0.15s;
+    }
+    .tts-btn:hover { background: #f3f4f6; }
+    .tts-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── TTS First-Use Toast ────────────────────────────────── */
+    .tts-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2937;
+      color: #f9fafb;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      max-width: 380px;
+      text-align: center;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      animation: tts-toast-in 0.3s ease;
+    }
+    .tts-toast.hiding { animation: tts-toast-out 0.3s ease forwards; }
+    @keyframes tts-toast-in  { from { opacity:0; transform: translateX(-50%) translateY(12px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
+    @keyframes tts-toast-out { from { opacity:1; } to { opacity:0; } }
   </style>
 </head>
 <body>
