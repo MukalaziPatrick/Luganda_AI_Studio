@@ -130,11 +130,14 @@ def export(dry_run: bool = False) -> None:
         else:
             valid.append(record)
 
-    # Deduplicate by (source, direction) — keep most recent (last seen)
+    # Deduplicate by (source, direction) — verified always beats unverified;
+    # within the same verified status, last seen wins (most recent).
     seen: dict[tuple, dict] = {}
     for record in valid:
         key = (record["source"].lower(), record["direction"])
-        seen[key] = record  # later entries overwrite earlier ones
+        existing = seen.get(key)
+        if existing is None or (record["verified"] and not existing["verified"]):
+            seen[key] = record
 
     deduped = list(seen.values())
     stats["dropped_duplicate"] = len(valid) - len(deduped)
@@ -156,6 +159,8 @@ def export(dry_run: bool = False) -> None:
 
     output_path = OUTPUT_DIR / f"dataset_export_{date.today().isoformat()}.jsonl"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    if output_path.exists():
+        print(f"  WARNING: Overwriting existing export: {output_path.name}")
 
     with open(output_path, "w", encoding="utf-8") as f:
         for record in deduped:
