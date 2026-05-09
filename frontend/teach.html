@@ -477,6 +477,7 @@
             <div class="card-face card-front">
               <div class="card-badge">Luganda</div>
               <div class="card-word" id="cardLuganda">—</div>
+              <button class="tts-btn" id="ttsBtnCard" style="display:none" title="Speak Luganda" aria-label="Speak">🔊</button>
               <div class="card-hint">Tap card to reveal the meaning</div>
               <div class="card-type-tag" id="cardType">vocabulary</div>
             </div>
@@ -503,6 +504,7 @@
           <div class="quiz-label">Quiz</div>
           <div class="quiz-question">What does this word mean in English?</div>
           <div class="quiz-word" id="quizWord">—</div>
+          <button class="tts-btn" id="ttsBtnQuiz" style="display:none" title="Speak Luganda" aria-label="Speak">🔊</button>
         </div>
 
         <div class="quiz-options" id="quizOptions">
@@ -594,6 +596,7 @@ function showFlashCard(index) {
   document.getElementById('flipPrompt').classList.remove('hidden');
   document.getElementById('answerRow').classList.add('hidden');
   document.getElementById('cardLuganda').textContent = card.luganda || '—';
+  if (window.setCardTTSText) window.setCardTTSText(card.luganda || '');
   document.getElementById('cardEnglish').textContent = card.english || '—';
   document.getElementById('cardNotes').textContent   = card.notes   || '';
   document.getElementById('cardType').textContent    = card.type    || 'vocabulary';
@@ -669,6 +672,7 @@ async function loadQuizQuestion() {
 
 function renderQuizQuestion(q) {
   document.getElementById('quizWord').textContent = q.luganda || '—';
+  if (window.setQuizTTSText) window.setQuizTTSText(q.luganda || '');
   const container = document.getElementById('quizOptions');
   container.innerHTML = '';
 
@@ -857,6 +861,67 @@ function closeSidebar() {
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('sidebarOverlay').classList.remove('open');
 }
+
+/* ─────────────────────────────────────────────────
+   TTS — SPEAKER BUTTONS (TEACH PAGE)
+───────────────────────────────────────────────── */
+(function () {
+  function _playTTS(text, button) {
+    if (!text || !button) return;
+    button.disabled = true;
+    button.textContent = '⏳';
+
+    if (!sessionStorage.getItem('tts_toast_shown')) {
+      sessionStorage.setItem('tts_toast_shown', '1');
+      var toast = document.createElement('div');
+      toast.className = 'tts-toast';
+      toast.textContent = "Loading Luganda voice for the first time — this takes ~10 seconds. It'll be instant after that.";
+      document.body.appendChild(toast);
+      setTimeout(function () {
+        toast.classList.add('hiding');
+        setTimeout(function () { toast.remove(); }, 350);
+      }, 6000);
+    }
+
+    fetch('/api/v1/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text, lang: 'lug' }),
+    })
+      .then(function (res) { return res.blob(); })
+      .then(function (blob) {
+        var url = URL.createObjectURL(blob);
+        var audio = new Audio(url);
+        button.textContent = '🔊';
+        function _done() { button.disabled = false; URL.revokeObjectURL(url); }
+        audio.onended = _done;
+        audio.onerror = _done;
+        audio.onabort = _done;
+        audio.play().catch(function (err) {
+          console.error('TTS playback blocked:', err);
+          _done();
+        });
+      })
+      .catch(function () {
+        button.textContent = '🔊';
+        button.disabled = false;
+      });
+  }
+
+  window.setCardTTSText = function (text) {
+    var btn = document.getElementById('ttsBtnCard');
+    if (!btn) return;
+    btn.onclick = function () { _playTTS(text, btn); };
+    btn.style.display = text ? 'inline-block' : 'none';
+  };
+
+  window.setQuizTTSText = function (text) {
+    var btn = document.getElementById('ttsBtnQuiz');
+    if (!btn) return;
+    btn.onclick = function () { _playTTS(text, btn); };
+    btn.style.display = text ? 'inline-block' : 'none';
+  };
+})();
 
 // Service Worker
 if ('serviceWorker' in navigator) {
