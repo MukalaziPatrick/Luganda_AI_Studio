@@ -1975,14 +1975,17 @@ if ('serviceWorker' in navigator) {
         return res.blob();
       })
       .then(function (blob) {
-        const url = URL.createObjectURL(blob);
-        const audio = new Audio(url);
+        var url = URL.createObjectURL(blob);
+        var audio = new Audio(url);
         button.textContent = '🔊';
-        audio.play();
-        audio.onended = function () {
-          button.disabled = false;
-          URL.revokeObjectURL(url);
-        };
+        function _done() { button.disabled = false; URL.revokeObjectURL(url); }
+        audio.onended = _done;
+        audio.onerror = _done;
+        audio.onabort = _done;
+        audio.play().catch(function (err) {
+          console.error('TTS playback blocked:', err);
+          _done();
+        });
       })
       .catch(function (err) {
         console.error('TTS error:', err);
