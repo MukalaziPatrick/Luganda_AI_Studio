@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 
-from backend.api.routes import health, knowledge, translate, teach, feedback, chat
+from backend.api.routes import health, knowledge, translate, teach, feedback, chat, tts
 
 app = FastAPI(
     title="Luganda AI Studio",
@@ -29,6 +29,7 @@ app.include_router(translate.router,  prefix="/api/v1/translate",  tags=["Transl
 app.include_router(teach.router,      prefix="/api/v1/teach",      tags=["Teach"])
 app.include_router(feedback.router,   prefix="/api/v1/feedback",   tags=["Feedback"])
 app.include_router(chat.router,       prefix="/api/v1/chat",       tags=["Chat"])
+app.include_router(tts.router,        prefix="/api/v1/tts",        tags=["TTS"])
 
 # ─── Frontend Static Files ────────────────────────────────────
 frontend_path = Path(__file__).resolve().parent.parent / "frontend"
