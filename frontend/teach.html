@@ -923,7 +923,7 @@ function closeSidebar() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: text, lang: 'lug' }),
     })
-      .then(function (res) { return res.blob(); })
+      .then(function (res) { if (!res.ok) throw new Error('TTS error ' + res.status); return res.blob(); })
       .then(function (blob) {
         var url = URL.createObjectURL(blob);
         var audio = new Audio(url);
