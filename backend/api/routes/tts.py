@@ -14,17 +14,19 @@ router = APIRouter()
 
 class TTSRequest(BaseModel):
     text: str
-    lang: str = "lug"
+    lang: str = "lug"  # reserved for future multi-language support; only "lug" supported now
 
 
 @router.post("")
-async def text_to_speech(request: TTSRequest):
+def text_to_speech(request: TTSRequest):
     """
     Synthesize Luganda text into a WAV audio stream.
 
     Returns: audio/wav stream
-    Errors: 400 if text is empty, 503 if model fails
+    Errors: 400 if text is empty or lang unsupported, 503 if model fails
     """
+    if request.lang != "lug":
+        raise HTTPException(status_code=400, detail=f"lang '{request.lang}' is not supported. Only 'lug' is available.")
     text = request.text.strip()
     if not text:
         raise HTTPException(status_code=400, detail="text must not be empty")
