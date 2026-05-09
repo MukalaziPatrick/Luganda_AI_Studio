@@ -89,34 +89,39 @@ class OpenRouterTranslator:
             with httpx.Client(timeout=settings.openrouter_timeout_seconds) as client:
                 response = client.post(_OPENROUTER_URL, json=payload, headers=headers)
 
-            if response.status_code != 200:
-                logger.warning(
-                    f"[OpenRouter] HTTP {response.status_code} — "
-                    f"falling back to NLLB-200."
+                if response.status_code != 200:
+                    logger.warning(
+                        f"[OpenRouter] HTTP {response.status_code} — "
+                        f"falling back to NLLB-200."
+                    )
+                    return None
+
+                data = response.json()
+
+                # Track spend if the API reports it
+                usage = data.get("usage", {})
+                cost = usage.get("cost", 0.0)
+                if cost:
+                    _daily_spend_usd += cost
+
+                choices = data.get("choices") or []
+                if not choices:
+                    logger.warning("[OpenRouter] Empty choices in response — falling back to NLLB-200.")
+                    return None
+
+                translated = (
+                    choices[0]
+                    .get("message", {})
+                    .get("content", "")
+                    .strip()
                 )
-                return None
 
-            data = response.json()
+                if not translated:
+                    logger.warning("[OpenRouter] Empty translation in response — falling back to NLLB-200.")
+                    return None
 
-            # Track spend if the API reports it
-            usage = data.get("usage", {})
-            cost = usage.get("cost", 0.0)
-            if cost:
-                _daily_spend_usd += cost
-
-            translated = (
-                data.get("choices", [{}])[0]
-                .get("message", {})
-                .get("content", "")
-                .strip()
-            )
-
-            if not translated:
-                logger.warning("[OpenRouter] Empty response — falling back to NLLB-200.")
-                return None
-
-            logger.info(f"[OpenRouter] '{text}' → '{translated}'")
-            return translated
+                logger.info(f"[OpenRouter] '{text}' → '{translated}'")
+                return translated
 
         except httpx.TimeoutException:
             logger.warning(
