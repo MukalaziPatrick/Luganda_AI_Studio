@@ -1,0 +1,501 @@
+{
+  "metadata": {
+    "category": "transport",
+    "description": "Luganda vocabulary for vehicles, travel, roads, and transportation",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 48,
+    "last_updated": "2026-03-23"
+  },
+  "entries": [
+    {
+      "luganda": "Mmotoka",
+      "english": "Car / Vehicle",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Emmotoka zidduka nnyo, ziseerera.",
+      "example_sentence_english": "Cars are fast, they slide.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ggaali ya mukka",
+      "english": "Train / Locomotive",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mmeeri",
+      "english": "Ship",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Lyato",
+      "english": "Boat",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Akaato",
+      "english": "Canoe",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Loole",
+      "english": "Lorry",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Loole yettisse amatooke mangi.",
+      "example_sentence_english": "The lorry is filled with many bananas.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Bbaasi",
+      "english": "Bus",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Takisi",
+      "english": "Taxi",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Bwe nva eka ntambula ate ne ninya takisi.",
+      "example_sentence_english": "From home I walk then I take a taxi.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Enyonyi",
+      "english": "Aeroplane",
+      "category": "transport",
+      "subcategory": "vehicles",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekisaawe ky'enyonyi",
+      "english": "Airport",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Sitenseni y'eggaali",
+      "english": "Railway Station",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Paaka ya mmotoka",
+      "english": "Car Park",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Oluguudo",
+      "english": "Road",
+      "category": "transport",
+      "subcategory": "roads",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Onoddira mu kkubo ki?",
+      "example_sentence_english": "Which route will you return by?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekkubo",
+      "english": "Path / Route",
+      "category": "transport",
+      "subcategory": "roads",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amakubo gakwataganye",
+      "english": "Junction",
+      "category": "transport",
+      "subcategory": "roads",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekkoona",
+      "english": "Corner / Bend",
+      "category": "transport",
+      "subcategory": "roads",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okwetoloola",
+      "english": "Round About",
+      "category": "transport",
+      "subcategory": "roads",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obugulumu",
+      "english": "Humps (speed bumps)",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Akabenje",
+      "english": "Accident",
+      "category": "transport",
+      "subcategory": "road_events",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Waguddewo akabenje!",
+      "example_sentence_english": "There has been an accident!",
+      "needs_review": false
+    },
+    {
+      "luganda": "Yita ku kkono",
+      "english": "Turn left",
+      "category": "transport",
+      "subcategory": "directions",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Genda mu maaso / yitawo",
+      "english": "Ahead / Give way",
+      "category": "transport",
+      "subcategory": "directions",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Oluguudo luddabirizibwa",
+      "english": "Road repair / Road works",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Toyingira",
+      "english": "No entry",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Tosukka sipiidi ttano buli ssaawa",
+      "english": "Speed limit 5 KPH",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olutindo lufunda",
+      "english": "Narrow bridge",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Tewali kkubo",
+      "english": "No way through",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Essomero",
+      "english": "School (road sign context)",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kendeeza sipiidi",
+      "english": "Reduce speed",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Yimirira",
+      "english": "Stop",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Towetera wano",
+      "english": "No turn",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Webasalira ekkubo",
+      "english": "Zebra Crossing",
+      "category": "transport",
+      "subcategory": "road_signs",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Petulooli",
+      "english": "Petrol",
+      "category": "transport",
+      "subcategory": "vehicle_care",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Petulooli namufuna wa?",
+      "example_sentence_english": "Where can I get petrol?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Amafuta",
+      "english": "Oil / Fuel",
+      "category": "transport",
+      "subcategory": "vehicle_care",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omukka gw'emipiira",
+      "english": "Tyre pressure",
+      "category": "transport",
+      "subcategory": "vehicle_care",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": "Kebera omukka gw'emipiira.",
+      "example_sentence_english": "Check the tyre pressure.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Siteegi",
+      "english": "Steering wheel",
+      "category": "transport",
+      "subcategory": "vehicle_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": true
+    },
+    {
+      "luganda": "Bonnetti",
+      "english": "Bonnet (car hood)",
+      "category": "transport",
+      "subcategory": "vehicle_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olubalama",
+      "english": "Shore",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekizinga",
+      "english": "Island",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Tikiti",
+      "english": "Ticket",
+      "category": "transport",
+      "subcategory": "travel",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Tikiti ey'amagenda ya ssente mmeka?",
+      "example_sentence_english": "How much is a one way ticket?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Emigugu",
+      "english": "Luggage / Baggage",
+      "category": "transport",
+      "subcategory": "travel",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Nkuumira emigugu male okusasula.",
+      "example_sentence_english": "Keep my luggage till I have paid.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kutambula",
+      "english": "To travel / To walk",
+      "category": "transport",
+      "subcategory": "travel_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Atambula.",
+      "example_sentence_english": "He/she is walking.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okusitula",
+      "english": "Starting a journey / Departure",
+      "category": "transport",
+      "subcategory": "travel_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okudda",
+      "english": "To return",
+      "category": "transport",
+      "subcategory": "travel_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Akomawo.",
+      "example_sentence_english": "He/she will come back.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Dduka",
+      "english": "Run away",
+      "category": "transport",
+      "subcategory": "travel_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kansale oluguudo",
+      "english": "Let me cross the road",
+      "category": "transport",
+      "subcategory": "phrases",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ffe tutambula mpola",
+      "english": "We move slowly",
+      "category": "transport",
+      "subcategory": "phrases",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ziseerera",
+      "english": "They slide / skid",
+      "category": "transport",
+      "subcategory": "phrases",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Emmotoka zidduka nnyo, ziseerera.",
+      "example_sentence_english": "Cars are fast, they slide.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Olusuku",
+      "english": "Banana plantation / Garden",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Wansi mu ttaka",
+      "english": "Underground",
+      "category": "transport",
+      "subcategory": "places",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    }
+  ]
+}

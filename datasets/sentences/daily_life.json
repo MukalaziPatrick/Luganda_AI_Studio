@@ -1,0 +1,572 @@
+{
+  "metadata": {
+    "category": "daily_life",
+    "description": "Luganda sentence pairs for everyday situations: work, home, routines, shopping, problems",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 62,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "dl_011 corrected: 'Kakati asenya' was ambiguous. 'Asenya' means to grind or gnash teeth, not to brush them. The correct full phrase for brushing teeth is 'asenya amannyo' (she brushes/scrubs her teeth). Added 'amannyo' to make meaning clear and accurate. All other entries verified clean."
+  },
+  "entries": [
+    {
+      "id": "dl_001",
+      "english": "I go to work every day.",
+      "luganda": "Ngenda ku mulimu buli lunaku.",
+      "tense": "everyday",
+      "topic": "work",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_002",
+      "english": "I work in the agriculture department.",
+      "luganda": "Nkola mu kitongole ky'obulimi.",
+      "tense": "everyday",
+      "topic": "work",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_003",
+      "english": "In the morning we drink tea with my son.",
+      "luganda": "Ku makya tunywa chai ne mutabani wange.",
+      "tense": "everyday",
+      "topic": "home",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_004",
+      "english": "My son goes to school every day.",
+      "luganda": "Mutabani wange asoma buli lunaku.",
+      "tense": "everyday",
+      "topic": "education",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_005",
+      "english": "I have a bag with a file of papers.",
+      "luganda": "Mbeera n'ensawo erimu failo z'empapula.",
+      "tense": "present",
+      "topic": "work",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_006",
+      "english": "From home I walk then I take a taxi.",
+      "luganda": "Bwe nva eka ntambula ate ne ninya takisi.",
+      "tense": "everyday",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_007",
+      "english": "I work up to five in the evening then I close the office.",
+      "luganda": "Nkola okutuuka ku ssaawa kumi n'emu ez'olweggulo era nenzigalawo offeesi.",
+      "tense": "everyday",
+      "topic": "work",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_008",
+      "english": "That lady has two children.",
+      "luganda": "Omukyala oli alina abaana babiri.",
+      "tense": "present",
+      "topic": "family",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_009",
+      "english": "Today she is going to hospital.",
+      "luganda": "Leero agenda mu ddwaliro.",
+      "tense": "present",
+      "topic": "health",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_010",
+      "english": "The elder child, Jane, is sick.",
+      "luganda": "Omwana omukulu Jane, mulwadde.",
+      "tense": "present",
+      "topic": "health",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_011",
+      "english": "She is now brushing her teeth.",
+      "luganda": "Kakati asenya amannyo.",
+      "tense": "present",
+      "topic": "home",
+      "difficulty": "beginner",
+      "notes": "CORRECTED: 'asenya' alone means to grind/gnash teeth. Adding 'amannyo' (teeth) makes the brushing action clear and complete: asenya amannyo = she scrubs/brushes her teeth.",
+      "needs_review": false
+    },
+    {
+      "id": "dl_012",
+      "english": "The young one, Moses, is polishing his shoes.",
+      "luganda": "Omwana omuto Musa akuba engatto eddagala.",
+      "tense": "present",
+      "topic": "home",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_013",
+      "english": "Their mother is eating food.",
+      "luganda": "Maama waabwe alya mmere.",
+      "tense": "present",
+      "topic": "food",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_014",
+      "english": "It is late, she is eating while standing.",
+      "luganda": "Obudde bugenze, alya nga ayimiridde.",
+      "tense": "present",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_015",
+      "english": "She is now looking out of the window to see if there is any vehicle coming.",
+      "luganda": "Kakati atunula mu ddirisa alabe oba waliyo mmotoka ejja.",
+      "tense": "present",
+      "topic": "home",
+      "difficulty": "advanced",
+      "needs_review": false
+    },
+    {
+      "id": "dl_016",
+      "english": "The child was crying because mother and Jane were going.",
+      "luganda": "Omwana omuto akaaba kubanga maama ne Jane bagenda.",
+      "tense": "past",
+      "topic": "family",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_017",
+      "english": "There they are now carrying the bag and going out of the house.",
+      "luganda": "Baabo basitula ensawo era bafuluma mu nnyumba.",
+      "tense": "present",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_018",
+      "english": "My friends amazed me!",
+      "luganda": "Mikwano gyange bannewunyisa!",
+      "tense": "past",
+      "topic": "social",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_019",
+      "english": "One was a man and the other was a woman.",
+      "luganda": "Omu yali musajja omulala mukazi.",
+      "tense": "past",
+      "topic": "social",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_020",
+      "english": "The man was an architect while his wife was an accountant.",
+      "luganda": "Omusajja yali mupunta nga ate mukyala we mubazi w'abitabo.",
+      "tense": "past",
+      "topic": "work",
+      "difficulty": "advanced",
+      "needs_review": false
+    },
+    {
+      "id": "dl_021",
+      "english": "The man cooked while the woman fried the sauce.",
+      "luganda": "Omwami ye yafumba ate omukyala n'asiika enva.",
+      "tense": "past",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_022",
+      "english": "The woman washed the clothes while the man dried them.",
+      "luganda": "Omukyala yayoza engoye, omwami n'azaanika.",
+      "tense": "past",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_023",
+      "english": "When the woman was angry, the man made her laugh.",
+      "luganda": "Omukyala bwe yanyiiga, omwami n'amusesa.",
+      "tense": "past",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_024",
+      "english": "The man cleaned the sitting room, the woman swept the bedroom.",
+      "luganda": "Omwami yalongoosa eddiiro omukyala nayera ekisenge.",
+      "tense": "past",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_025",
+      "english": "The man slashed the compound and the woman swept the backyard.",
+      "luganda": "Omwami bwe yasaawa olugya omukyala nayera emanju.",
+      "tense": "past",
+      "topic": "home",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_026",
+      "english": "One time the woman fell down while running from a dog.",
+      "luganda": "Olumu omukyala yali adduka embwa nagwa wansi.",
+      "tense": "past",
+      "topic": "daily_life",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_027",
+      "english": "The man jumped, knocked the door frame and fell.",
+      "luganda": "Omwami yabuuka n'atomera omwango gwoluggi nagwa wansi.",
+      "tense": "past",
+      "topic": "daily_life",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_028",
+      "english": "Both cried. Each one held the other's hand and both went to hospital.",
+      "luganda": "Bombi ne bakaaba. Buli omu yakwata omukono gwa munne ne bagenda mu ddwaliro.",
+      "tense": "past",
+      "topic": "health",
+      "difficulty": "advanced",
+      "needs_review": false
+    },
+    {
+      "id": "dl_029",
+      "english": "I am going to the shops.",
+      "luganda": "Ngenda ku madunka.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_030",
+      "english": "I want to buy bread.",
+      "luganda": "Njagala kugula mugaati.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_031",
+      "english": "Things are cheap.",
+      "luganda": "Ebintu bya beeyi layisi.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_032",
+      "english": "What amount? What is the price?",
+      "luganda": "Kipimo ki? Kigero ki?",
+      "tense": "question",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_033",
+      "english": "I want that piece.",
+      "luganda": "Njagala kitundu ekyo.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_034",
+      "english": "Leave this one, I do not want it.",
+      "luganda": "Kino kireke, sikyagala.",
+      "tense": "command",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_035",
+      "english": "I have not chosen it.",
+      "luganda": "Sikyennonze.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_036",
+      "english": "I have not liked it.",
+      "luganda": "Sikisiimye.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_037",
+      "english": "How many? / How much?",
+      "luganda": "Mmeka?",
+      "tense": "question",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_038",
+      "english": "It is too large / too much.",
+      "luganda": "Kinene nnyo.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_039",
+      "english": "It is too small / too little.",
+      "luganda": "Kitono nnyo.",
+      "tense": "present",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_040",
+      "english": "What do you have in the shop?",
+      "luganda": "Biki by'olina mu dduuka?",
+      "tense": "question",
+      "topic": "shopping",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_041",
+      "english": "Help me, I am lost!",
+      "luganda": "Munyambe, mbuze!",
+      "tense": "command",
+      "topic": "emergency",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_042",
+      "english": "I have lost my money!",
+      "luganda": "Nsudde sente zange!",
+      "tense": "present",
+      "topic": "emergency",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_043",
+      "english": "I have forgotten my baggage in the car.",
+      "luganda": "Nerabidde emigugu mu mmotoka.",
+      "tense": "past",
+      "topic": "emergency",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_044",
+      "english": "I am late.",
+      "luganda": "Obudde bumpiseeko.",
+      "tense": "present",
+      "topic": "daily_life",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_045",
+      "english": "I have lost my keys.",
+      "luganda": "Ebisumuluzo binguddeko.",
+      "tense": "present",
+      "topic": "emergency",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_046",
+      "english": "Thieves! Help me!",
+      "luganda": "Ababbi babano, munyambe!",
+      "tense": "present",
+      "topic": "emergency",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_047",
+      "english": "I am late, the train has left without me.",
+      "luganda": "Nkereye eggaali endese.",
+      "tense": "present",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_048",
+      "english": "I have missed the plane. What can I do?",
+      "luganda": "Ennyonyi endese. Nkole ntya?",
+      "tense": "present",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_049",
+      "english": "Somebody is disturbing me, I will call the police!",
+      "luganda": "Wuuno antawanya, nja kuyita Poliisi.",
+      "tense": "present",
+      "topic": "emergency",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_050",
+      "english": "I have been robbed. Who is in charge here?",
+      "luganda": "Banzibye, ani akulira wano?",
+      "tense": "past",
+      "topic": "emergency",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_051",
+      "english": "I have lost my ticket!",
+      "luganda": "Tikiti yange embuzeeko!",
+      "tense": "present",
+      "topic": "emergency",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_052",
+      "english": "Where does this road lead? Is it motorable?",
+      "luganda": "Lino ekkubo ligenda wa? Liyitamu emmotoka?",
+      "tense": "question",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_053",
+      "english": "What is this place called? What is the next town?",
+      "luganda": "Kino ekifo bakiyita batya? Ate ekibuga ekiddako?",
+      "tense": "question",
+      "topic": "location",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_054",
+      "english": "Can I leave the car here briefly?",
+      "luganda": "Nsobola okulekako wano emmotoka katono?",
+      "tense": "question",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_055",
+      "english": "Do you have tyre pressure? Check petrol, oil, and water.",
+      "luganda": "Mulina omukka? Kebera amafuta, woyilo, n'amazzi.",
+      "tense": "question",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_056",
+      "english": "Is there water in the radiator? Check the tyre pressure.",
+      "luganda": "Lajenta mulimu amazzi? Kebera omukka gw'emipiira.",
+      "tense": "question",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_057",
+      "english": "My car is stuck in the mud.",
+      "luganda": "Mmotoka yange ekwamidde mu ttosi.",
+      "tense": "present",
+      "topic": "transport",
+      "difficulty": "intermediate",
+      "needs_review": false
+    },
+    {
+      "id": "dl_058",
+      "english": "The valve is spoilt and the bonnet is bent.",
+      "luganda": "Akatima konoonese, ne bonnetti ekyamye.",
+      "tense": "present",
+      "topic": "transport",
+      "difficulty": "advanced",
+      "needs_review": false
+    },
+    {
+      "id": "dl_059",
+      "english": "Today",
+      "luganda": "Leero",
+      "tense": "time_word",
+      "topic": "time",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_060",
+      "english": "Tomorrow",
+      "luganda": "Enkya",
+      "tense": "time_word",
+      "topic": "time",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_061",
+      "english": "Yesterday",
+      "luganda": "Jjo",
+      "tense": "time_word",
+      "topic": "time",
+      "difficulty": "beginner",
+      "needs_review": false
+    },
+    {
+      "id": "dl_062",
+      "english": "It is raining.",
+      "luganda": "Enkuba etonnya.",
+      "tense": "present",
+      "topic": "weather",
+      "difficulty": "beginner",
+      "needs_review": false
+    }
+  ]
+}

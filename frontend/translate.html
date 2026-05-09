@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translate — Luganda AI Studio</title>
+  <!-- PWA -->
+  <link rel="manifest" href="/app/manifest.json" />
+  <meta name="theme-color" content="#0c1710" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Luganda AI" />
+  <link rel="apple-touch-icon" href="/app/icons/icon-192.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────────
+       TOKENS
+    ───────────────────────────────────────────── */
+    :root {
+      --bg:            #0c1710;
+      --bg-card:       #111f15;
+      --bg-surface:    #182a1d;
+      --bg-input:      #0f1d13;
+      --border:        #243529;
+      --border-focus:  #2e5c38;
+      --border-strong: #3a5c42;
+
+      --green-deep:    #1a6b35;
+      --green-mid:     #27924a;
+      --green-light:   #52c46e;
+      --green-glow:    rgba(39,146,74,0.18);
+
+      --amber:         #d99b2a;
+      --amber-light:   #f0b93c;
+      --amber-dim:     #7a5212;
+      --amber-glow:    rgba(217,155,42,0.22);
+      --amber-bg:      #1c1205;
+
+      --text-primary:  #deeee2;
+      --text-secondary:#7a9e84;
+      --text-muted:    #3e5c46;
+      --text-inverse:  #0c1710;
+
+      --red:           #c9503e;
+      --red-bg:        #1e0e0b;
+      --red-border:    #5c2318;
+
+      --success:       #3daa60;
+      --success-bg:    #091a0f;
+      --success-border:#1a4a28;
+
+      --review-color:  #c4922a;
+      --review-bg:     #1a1205;
+      --review-border: #5a3e10;
+
+      --font-display:  'Fraunces', Georgia, serif;
+      --font-body:     'DM Sans', sans-serif;
+
+      --radius-xs:  4px;
+      --radius-sm:  8px;
+      --radius:     14px;
+      --radius-lg:  20px;
+
+      --space-1:  4px;
+      --space-2:  8px;
+      --space-3:  12px;
+      --space-4:  16px;
+      --space-5:  20px;
+      --space-6:  24px;
+      --space-8:  32px;
+      --space-10: 40px;
+
+      --transition:      0.18s ease;
+      --transition-slow: 0.32s ease;
+    }
+
+    /* ─────────────────────────────────────────────
+       RESET
+    ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    button { cursor: pointer; font-family: var(--font-body); }
+    a      { color: inherit; text-decoration: none; }
+
+    /* ─────────────────────────────────────────────
+       LAYOUT
+    ───────────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ─────────────────────────────────────────────
+       SIDEBAR
+    ───────────────────────────────────────────── */
+    .sidebar {
+      background: var(--bg-card);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 20;
+    }
+    .sidebar-brand {
+      padding: var(--space-6) var(--space-5) var(--space-5);
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 1px var(--border-focus);
+    }
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .brand-tagline {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .sidebar-nav { padding: var(--space-4) var(--space-3); flex: 1; }
+    .nav-group-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: var(--space-3) var(--space-3) var(--space-2);
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: 9px var(--space-3);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 400;
+      transition: background var(--transition), color var(--transition);
+      margin-bottom: 2px;
+    }
+    .nav-link:hover { background: var(--bg-surface); color: var(--text-primary); }
+    .nav-link.active {
+      background: var(--bg-surface);
+      color: var(--green-light);
+      font-weight: 500;
+      border-left: 2px solid var(--green-mid);
+      padding-left: calc(var(--space-3) - 2px);
+    }
+    .nav-link.disabled { opacity: 0.35; pointer-events: none; }
+    .nav-icon { font-size: 14px; width: 18px; text-align: center; flex-shrink: 0; }
+    .sidebar-foot {
+      padding: var(--space-4) var(--space-5);
+      border-top: 1px solid var(--border);
+    }
+    .version-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      font-size: 10px;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 3px var(--space-2);
+      border-radius: 20px;
+    }
+    .version-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* ─────────────────────────────────────────────
+       MAIN
+    ───────────────────────────────────────────── */
+    .main { display: flex; flex-direction: column; min-height: 100vh; }
+
+    /* ─────────────────────────────────────────────
+       TOPBAR
+    ───────────────────────────────────────────── */
+    .topbar {
+      padding: var(--space-5) var(--space-8);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .topbar-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+    }
+    .topbar-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-dim);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ─────────────────────────────────────────────
+       PAGE BODY
+    ───────────────────────────────────────────── */
+    .page-body {
+      padding: var(--space-8);
+      flex: 1;
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* ─────────────────────────────────────────────
+       DIRECTION TOGGLE
+    ───────────────────────────────────────────── */
+    .dir-toggle {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 4px;
+      margin-bottom: var(--space-6);
+      gap: 2px;
+    }
+    .dir-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 8px 18px;
+      border-radius: calc(var(--radius-lg) - 4px);
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+    }
+    .dir-btn.active {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4), inset 0 0 0 1px var(--border-focus);
+    }
+    .dir-btn:hover:not(.active) { color: var(--text-primary); }
+    .dir-sep { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
+    .dir-flag  { font-size: 13px; }
+    .dir-arrow { color: var(--text-muted); font-size: 11px; }
+
+    /* ─────────────────────────────────────────────
+       INPUT CARD
+    ───────────────────────────────────────────── */
+    .input-card {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: var(--space-3);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .input-card:focus-within {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--green-glow);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+    }
+    .card-lang {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .card-lang-flag { font-size: 14px; }
+    .card-clear {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xs);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .card-clear:hover {
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      border-color: var(--border-strong);
+    }
+    .input-textarea {
+      display: block;
+      width: 100%;
+      min-height: 130px;
+      padding: var(--space-4) var(--space-4) var(--space-3);
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      resize: vertical;
+    }
+    .input-textarea::placeholder { color: var(--text-muted); }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: var(--space-2) var(--space-4);
+      border-top: 1px solid var(--border);
+    }
+    .char-counter { font-size: 10px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .char-counter.near-limit { color: var(--amber); }
+    .char-counter.at-limit   { color: var(--red); }
+
+    /* ─────────────────────────────────────────────
+       ACTION ROW
+    ───────────────────────────────────────────── */
+    .action-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .btn-translate {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: 14px var(--space-6);
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--amber);
+      color: var(--text-inverse);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+      position: relative;
+      overflow: hidden;
+      min-height: 48px;
+    }
+    .btn-translate::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .btn-translate:hover:not(:disabled) {
+      background: var(--amber-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--amber-glow);
+    }
+    .btn-translate:active:not(:disabled) { transform: translateY(0); box-shadow: none; }
+    .btn-translate:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+    .btn-translate.is-loading { background: var(--amber-dim); color: var(--amber-light); }
+    .btn-spinner {
+      width: 15px;
+      height: 15px;
+      border: 2px solid rgba(240,185,60,0.3);
+      border-top-color: var(--amber-light);
+      border-radius: 50%;
+      animation: spin 0.65s linear infinite;
+      display: none;
+      flex-shrink: 0;
+    }
+    .btn-translate.is-loading .btn-spinner { display: block; }
+    .btn-translate.is-loading .btn-icon    { display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px var(--space-5);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+      min-height: 48px;
+      white-space: nowrap;
+    }
+    .btn-secondary:hover {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+
+    /* ─────────────────────────────────────────────
+       ENTER HINT
+    ───────────────────────────────────────────── */
+    .enter-hint {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-align: right;
+      margin-bottom: var(--space-5);
+      letter-spacing: 0.02em;
+    }
+    .enter-hint kbd {
+      font-family: var(--font-body);
+      font-size: 9px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1px 5px;
+      color: var(--text-muted);
+    }
+
+    /* ─────────────────────────────────────────────
+       OUTPUT CARD
+    ───────────────────────────────────────────── */
+    .output-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: var(--space-3);
+      transition: border-color var(--transition-slow);
+    }
+    .output-card.state-idle      { background: var(--bg-card); }
+    .output-card.state-loading   { background: var(--bg-card); border-color: var(--border-focus); }
+    .output-card.state-success   { background: var(--bg-card); border-color: var(--green-deep); box-shadow: 0 0 0 1px rgba(26,107,53,0.3); }
+    .output-card.state-error     { background: var(--bg-card); border-color: var(--red-border); }
+    .output-card.state-not-found { background: var(--bg-card); border-color: var(--amber-dim); }
+
+    .output-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+      min-height: 42px;
+    }
+    .output-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .output-label.lbl-success  { color: var(--success); }
+    .output-label.lbl-error    { color: var(--red); }
+    .output-label.lbl-loading  { color: var(--text-muted); }
+    .output-label.lbl-notfound { color: var(--amber); }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: 3px 10px;
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 11px;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .copy-btn:hover  { background: var(--bg-card); color: var(--text-secondary); border-color: var(--border-strong); }
+    .copy-btn.copied { color: var(--success); border-color: var(--success-border); }
+
+    .output-body { padding: var(--space-5) var(--space-4); }
+
+    /* Idle */
+    .idle-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      padding: var(--space-8) var(--space-4);
+      text-align: center;
+    }
+    .idle-icon { font-size: 28px; opacity: 0.4; filter: grayscale(0.5); }
+    .idle-text { font-size: 13px; color: var(--text-muted); line-height: 1.6; max-width: 260px; }
+
+    /* Loading */
+    .loading-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-8) var(--space-4);
+      text-align: center;
+    }
+    .loading-dots { display: flex; gap: var(--space-2); align-items: center; }
+    .loading-dots span {
+      width: 7px; height: 7px;
+      background: var(--green-mid);
+      border-radius: 50%;
+      animation: bounce-dot 1.1s ease-in-out infinite;
+    }
+    .loading-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .loading-dots span:nth-child(3) { animation-delay: 0.30s; }
+    @keyframes bounce-dot {
+      0%, 100% { transform: translateY(0);    opacity: 0.5; }
+      50%       { transform: translateY(-5px); opacity: 1; }
+    }
+    .loading-text { font-size: 12px; color: var(--text-muted); letter-spacing: 0.04em; }
+
+    /* Success */
+    .result-text {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.5;
+      margin-bottom: var(--space-4);
+      animation: slide-up 0.25s ease both;
+    }
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Chips */
+    .chips-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+    }
+    .chip.chip-hi    { color: var(--success);       border-color: var(--success-border); background: var(--success-bg); }
+    .chip.chip-mid   { color: var(--amber);          border-color: var(--amber-dim);      background: var(--amber-bg); }
+    .chip.chip-low   { color: var(--red);            border-color: var(--red-border);     background: var(--red-bg); }
+    .chip.chip-match { color: var(--text-secondary); }
+    .chip.chip-col   { color: var(--text-muted); }
+
+    /* Error / Not found */
+    .error-text     { font-size: 14px; color: var(--red);   line-height: 1.65; animation: slide-up 0.2s ease both; }
+    .not-found-text { font-size: 14px; color: var(--amber); line-height: 1.65; animation: slide-up 0.2s ease both; }
+
+    /* ─────────────────────────────────────────────
+       FEEDBACK ROW
+    ───────────────────────────────────────────── */
+    .feedback-section {
+      border-top: 1px solid var(--border);
+      padding: var(--space-3) var(--space-4);
+      display: none;
+      align-items: center;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+    .feedback-section.visible { display: flex; }
+    .feedback-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      margin-right: var(--space-1);
+    }
+    .fb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .fb-btn:hover              { background: var(--bg-surface); }
+    .fb-btn.fb-active-correct  { background: var(--success-bg); color: var(--success);      border-color: var(--success-border); }
+    .fb-btn.fb-active-wrong    { background: var(--red-bg);     color: var(--red);           border-color: var(--red-border); }
+    .fb-btn.fb-active-review   { background: var(--review-bg);  color: var(--review-color);  border-color: var(--review-border); }
+    .feedback-status {
+      margin-left: auto;
+      font-size: 10px;
+      color: var(--text-muted);
+      font-style: italic;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
+    .feedback-status.show-saved { color: var(--success); }
+    .feedback-status.show-error { color: var(--red); }
+
+    /* ─────────────────────────────────────────────
+       EXPECTED OUTPUT FIELD
+    ───────────────────────────────────────────── */
+    .expected-card {
+      background: var(--bg-card);
+      border: 1px solid var(--amber-dim);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: var(--space-3);
+      display: none;
+      animation: slide-up 0.22s ease both;
+    }
+    .expected-card.visible { display: block; }
+    .expected-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-2) var(--space-4);
+      background: var(--amber-bg);
+      border-bottom: 1px solid var(--amber-dim);
+    }
+    .expected-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+    .expected-hint  { font-size: 10px; color: var(--amber-dim); }
+    .expected-input {
+      display: block;
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .expected-input::placeholder { color: var(--text-muted); }
+
+    /* CHANGED: Save correction footer */
+    .expected-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--space-3);
+      padding: var(--space-2) var(--space-4);
+      border-top: 1px solid var(--amber-dim);
+      background: var(--amber-bg);
+    }
+    .expected-footer-status {
+      font-size: 10px;
+      font-style: italic;
+      color: var(--text-muted);
+      flex: 1;
+      transition: color 0.3s ease;
+    }
+    .expected-footer-status.saved { color: var(--success); }
+    .expected-footer-status.error { color: var(--red); }
+    .btn-save-correction {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--amber-dim);
+      background: transparent;
+      color: var(--amber);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+    .btn-save-correction:hover:not(:disabled) {
+      background: var(--amber-bg);
+      border-color: var(--amber);
+    }
+    .btn-save-correction:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ─────────────────────────────────────────────
+       NEW: SESSION SUMMARY CARD
+    ───────────────────────────────────────────── */
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: var(--space-8);
+      display: none;
+    }
+    .summary-card.visible { display: block; animation: slide-up 0.28s ease both; }
+
+    .summary-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+    }
+    .summary-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .btn-clear-session {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--red-border);
+      background: transparent;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition);
+    }
+    .btn-clear-session:hover { background: var(--red-bg); }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .summary-stat {
+      padding: var(--space-4) var(--space-5);
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .summary-stat:last-child { border-right: none; }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .stat-value.sv-total     { color: var(--text-primary); }
+    .stat-value.sv-correct   { color: var(--success); }
+    .stat-value.sv-wrong     { color: var(--red); }
+    .stat-value.sv-corrected { color: var(--amber); }
+
+    .persist-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9px;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px 8px;
+      margin-left: var(--space-2);
+      vertical-align: middle;
+    }
+    .persist-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--green-mid);
+      border-radius: 50%;
+    }
+
+    /* ─────────────────────────────────────────────
+       HISTORY PANEL
+    ───────────────────────────────────────────── */
+    .history-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: var(--space-4);
+      display: none;
+    }
+    .history-panel.visible { display: block; animation: slide-up 0.28s ease both; }
+
+    .history-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--border);
+    }
+    .history-title {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .history-pill {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .history-actions { display: flex; gap: var(--space-2); }
+
+    .btn-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 500;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .btn-sm:hover              { background: var(--bg-surface); color: var(--text-primary); border-color: var(--border-strong); }
+    .btn-sm.btn-export         { color: var(--amber); border-color: var(--amber-dim); }
+    .btn-sm.btn-export:hover   { background: var(--amber-bg); }
+
+    .history-list { max-height: 380px; overflow-y: auto; }
+    .history-list::-webkit-scrollbar       { width: 4px; }
+    .history-list::-webkit-scrollbar-track { background: transparent; }
+    .history-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .history-item {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--transition);
+    }
+    .history-item:last-child { border-bottom: none; }
+    .history-item:hover      { background: var(--bg-surface); }
+
+    .h-item-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-3);
+      margin-bottom: 4px;
+    }
+    .h-input    { font-size: 12px; color: var(--text-secondary); flex: 1; line-height: 1.4; }
+    .h-verdict  {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+    .h-verdict.vd-correct { background: var(--success-bg); color: var(--success);      border: 1px solid var(--success-border); }
+    .h-verdict.vd-wrong   { background: var(--red-bg);     color: var(--red);           border: 1px solid var(--red-border); }
+    .h-verdict.vd-review  { background: var(--review-bg);  color: var(--review-color);  border: 1px solid var(--review-border); }
+    .h-verdict.vd-pending { background: var(--bg-surface); color: var(--text-muted);    border: 1px solid var(--border); }
+
+    .h-output {
+      font-family: var(--font-display);
+      font-size: 16px;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+    .h-expected { font-size: 11px; color: var(--amber); font-style: italic; margin-bottom: 4px; }
+    .h-expected-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--amber-dim); margin-right: 4px; }
+    .h-meta { font-size: 10px; color: var(--text-muted); display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+    /* ─────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────── */
+    /* Mobile nav toggle button */
+    .mobile-nav-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 18px;
+      padding: 6px 10px;
+      cursor: pointer;
+      line-height: 1;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Sidebar overlay */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 199;
+    }
+    .sidebar-overlay.open { display: block; }
+
+    @media (max-width: 720px) {
+      .layout { grid-template-columns: 1fr; }
+
+      /* Sidebar becomes a slide-in drawer */
+      .sidebar {
+        position: fixed;
+        top: 0; left: 0;
+        width: 260px;
+        height: 100vh;
+        z-index: 200;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+        border-right: 1px solid var(--border);
+      }
+      .sidebar.open { transform: translateX(0); }
+
+      .mobile-nav-toggle { display: flex; }
+
+      .topbar         { padding: var(--space-4) var(--space-4); }
+      .topbar-badge   { display: none; }
+      .page-body      { padding: var(--space-4); }
+      .dir-toggle     { width: 100%; justify-content: center; }
+      .dir-btn        { flex: 1; justify-content: center; padding: 10px 8px; font-size: 13px; min-height: 44px; }
+
+      /* Translate + Clear buttons — full tap targets */
+      .btn-translate  { min-height: 52px; font-size: 15px; }
+      .btn-secondary  { min-height: 52px; }
+
+      /* Feedback buttons — touch-friendly */
+      .fb-btn         { min-height: 44px; padding: 8px 14px; font-size: 12px; }
+
+      /* Summary grid collapses to 2 columns on mobile */
+      .summary-grid   { grid-template-columns: repeat(2, 1fr); }
+      .summary-stat:nth-child(2) { border-right: none; }
+      .summary-stat:nth-child(3) { border-top: 1px solid var(--border); }
+      .summary-stat:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+
+      /* History list readable on small screens */
+      .history-list   { max-height: 280px; }
+      .h-output       { font-size: 14px; }
+    }
+
+    @media (max-width: 400px) {
+      .dir-btn        { padding: 10px 4px; font-size: 12px; }
+      .dir-flag       { display: none; }
+      .action-row     { flex-direction: column; }
+      .btn-secondary  { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+<div class="layout">
+
+  <!-- ════════════════════════════
+       SIDEBAR — UPDATED NAV
+       Teach Mode is now a live link.
+       Voice removed until built.
+       Labels standardised.
+  ═══════════════════════════════ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">
+        <div class="brand-icon">🌿</div>
+        <div>
+          <div class="brand-name">Luganda AI Studio</div>
+        </div>
+      </div>
+      <div class="brand-tagline">Language Intelligence</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-group-label">Main</div>
+      <a href="index.html"     class="nav-link"><span class="nav-icon">⊞</span> Dashboard</a>
+      <a href="translate.html" class="nav-link active"><span class="nav-icon">⇄</span> Translate</a>
+      <a href="search.html"    class="nav-link"><span class="nav-icon">◎</span> Search</a>
+      <a href="teach.html"     class="nav-link"><span class="nav-icon">📖</span> Teach Mode</a>
+
+      <div class="nav-group-label" style="margin-top: var(--space-4);">System</div>
+      <a href="reviews.html"   class="nav-link"><span class="nav-icon">📋</span> Reviews</a>
+      <a href="/docs"          class="nav-link" target="_blank"><span class="nav-icon">⧉</span> API Docs</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="version-tag">
+        <span class="version-dot"></span>
+        v0.1 · MVP
+      </div>
+    </div>
+  </aside>
+
+  <!-- ════════════════════════════
+       MAIN
+  ═══════════════════════════════ -->
+  <main class="main">
+
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button class="mobile-nav-toggle" onclick="openSidebar()" aria-label="Open navigation">☰</button>
+        <div class="topbar-heading">
+          <div class="topbar-title">Translate</div>
+          <div class="topbar-sub">Luganda ↔ English · Powered by ChromaDB + MiniLM</div>
+        </div>
+      </div>
+      <div class="topbar-badge">Quality Mode</div>
+    </div>
+
+    <div class="page-body">
+
+      <!-- DIRECTION TOGGLE -->
+      <div class="dir-toggle">
+        <button class="dir-btn active" id="btnEnLg" onclick="setDirection('en-lg')">
+          <span class="dir-flag">🇬🇧</span>
+          English
+          <span class="dir-arrow">→</span>
+          <span class="dir-flag">🇺🇬</span>
+          Luganda
+        </button>
+        <div class="dir-sep"></div>
+        <button class="dir-btn" id="btnLgEn" onclick="setDirection('lg-en')">
+          <span class="dir-flag">🇺🇬</span>
+          Luganda
+          <span class="dir-arrow">→</span>
+          <span class="dir-flag">🇬🇧</span>
+          English
+        </button>
+      </div>
+
+      <!-- INPUT CARD -->
+      <div class="input-card">
+        <div class="card-header">
+          <div class="card-lang" id="inputLangLabel">
+            <span class="card-lang-flag">🇬🇧</span>
+            English
+          </div>
+          <button class="card-clear" title="Clear input" onclick="clearInput()">✕</button>
+        </div>
+        <textarea
+          class="input-textarea"
+          id="inputText"
+          placeholder="Type or paste text to translate…"
+          maxlength="1000"
+          oninput="onInputChange()"
+          onkeydown="handleKey(event)"
+          rows="5"
+        ></textarea>
+        <div class="card-footer">
+          <span class="char-counter" id="charCounter">0 / 1000</span>
+        </div>
+      </div>
+
+      <!-- ACTION ROW -->
+      <div class="action-row">
+        <button class="btn-translate" id="translateBtn" onclick="runTranslation()">
+          <span class="btn-spinner"></span>
+          <span class="btn-icon">⇄</span>
+          <span class="btn-label" id="btnLabel">Translate</span>
+        </button>
+        <button class="btn-secondary" onclick="clearAll()">Clear all</button>
+      </div>
+
+      <!-- KEYBOARD HINT -->
+      <div class="enter-hint">
+        Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to translate
+      </div>
+
+      <!-- OUTPUT CARD -->
+      <div class="output-card state-idle" id="outputCard">
+        <div class="output-header" id="outputHeader">
+          <span class="output-label" id="outputLabel">Output</span>
+          <button class="copy-btn" id="copyBtn" onclick="copyResult()" style="display:none;">Copy</button>
+        </div>
+
+        <div class="output-body" id="outputBody">
+          <!-- IDLE -->
+          <div class="idle-content" id="stateIdle">
+            <div class="idle-icon">🇺🇬</div>
+            <div class="idle-text">
+              Your translation will appear here.<br>
+              Enter text above and press Translate.
+            </div>
+          </div>
+          <!-- LOADING -->
+          <div class="loading-content" id="stateLoading" style="display:none;">
+            <div class="loading-dots"><span></span><span></span><span></span></div>
+            <div class="loading-text">Searching the knowledge base…</div>
+          </div>
+          <!-- SUCCESS -->
+          <div id="stateSuccess" style="display:none;">
+            <div class="result-text" id="resultText"></div>
+            <div class="chips-row"  id="chipsRow"></div>
+          </div>
+          <!-- ERROR -->
+          <div id="stateError" style="display:none;">
+            <div class="error-text" id="errorText"></div>
+          </div>
+          <!-- NOT FOUND -->
+          <div id="stateNotFound" style="display:none;">
+            <div class="not-found-text" id="notFoundText">
+              No translation found in the current dataset.
+              The Luganda knowledge base is growing — try a simpler word,
+              or use the Expected Output field below to record the correct answer.
+            </div>
+          </div>
+        </div>
+
+        <!-- FEEDBACK ROW -->
+        <div class="feedback-section" id="feedbackSection">
+          <span class="feedback-label">Rate:</span>
+          <button class="fb-btn" id="fbCorrect" onclick="setFeedback('correct')">✓ Correct</button>
+          <button class="fb-btn" id="fbWrong"   onclick="setFeedback('wrong')">✗ Wrong</button>
+          <button class="fb-btn" id="fbReview"  onclick="setFeedback('review')">🔁 Review</button>
+          <span class="feedback-status" id="feedbackStatus"></span>
+        </div>
+      </div>
+
+      <!-- EXPECTED OUTPUT FIELD -->
+      <div class="expected-card" id="expectedCard">
+        <div class="expected-header">
+          <span class="expected-label">✏ Expected Output</span>
+          <span class="expected-hint">What is the correct translation?</span>
+        </div>
+        <input
+          type="text"
+          class="expected-input"
+          id="expectedInput"
+          placeholder="Type the correct answer here, then click Save Correction…"
+          oninput="onExpectedChange()"
+          onkeydown="handleExpectedKey(event)"
+        />
+        <!-- CHANGED: Save Correction footer button -->
+        <div class="expected-footer">
+          <span class="expected-footer-status" id="correctionStatus"></span>
+          <button
+            class="btn-save-correction"
+            id="btnSaveCorrection"
+            onclick="submitWithExpected()"
+            disabled
+          >Save Correction →</button>
+        </div>
+      </div>
+
+      <!-- SESSION SUMMARY CARD -->
+      <div class="summary-card" id="summaryCard">
+        <div class="summary-header">
+          <span class="summary-title">
+            Session Summary
+            <span class="persist-badge">
+              <span class="persist-dot"></span>
+              Saved locally
+            </span>
+          </span>
+          <button class="btn-clear-session" onclick="clearSession()">⊘ Clear Session</button>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-stat">
+            <div class="stat-value sv-total"     id="statTotal">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-value sv-correct"   id="statCorrect">0</div>
+            <div class="stat-label">Correct</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-value sv-wrong"     id="statWrong">0</div>
+            <div class="stat-label">Wrong</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-value sv-corrected" id="statCorrected">0</div>
+            <div class="stat-label">Corrected</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SESSION HISTORY -->
+      <div class="history-panel" id="historyPanel">
+        <div class="history-header">
+          <div class="history-title">
+            History
+            <span class="history-pill" id="historyCount">0</span>
+          </div>
+          <div class="history-actions">
+            <button class="btn-sm btn-export" onclick="exportHistory()">⬇ Export JSON</button>
+          </div>
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+
+    </div><!-- /page-body -->
+  </main>
+</div>
+
+<!-- ════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════ -->
+<script>
+'use strict';
+
+/* ─────────────────────────────────────────────────
+   CONSTANTS
+───────────────────────────────────────────────── */
+const STORAGE_KEY   = 'luganda_studio_session_v1';
+const FEEDBACK_URL  = '/api/v1/feedback';
+
+/* ─────────────────────────────────────────────────
+   STATE
+───────────────────────────────────────────────── */
+let currentDirection = 'en-lg';
+let lastResult       = '';
+let currentFeedback  = null;
+let currentEntry     = null;
+let isLoading        = false;
+
+let sessionHistory = [];
+
+/* ─────────────────────────────────────────────────
+   HELPERS
+───────────────────────────────────────────────── */
+function qs(id) { return document.getElementById(id); }
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/* ─────────────────────────────────────────────────
+   LOCALSTORAGE — persist & restore
+───────────────────────────────────────────────── */
+function persistSession() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(sessionHistory));
+  } catch (e) {
+    console.warn('localStorage write failed:', e);
+  }
+}
+
+function restoreSession() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      sessionHistory = parsed;
+    }
+  } catch (e) {
+    console.warn('localStorage read failed, starting fresh:', e);
+    sessionHistory = [];
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   DIRECTION TOGGLE
+───────────────────────────────────────────────── */
+function setDirection(dir) {
+  currentDirection = dir;
+  qs('btnEnLg').classList.toggle('active', dir === 'en-lg');
+  qs('btnLgEn').classList.toggle('active', dir === 'lg-en');
+
+  if (dir === 'en-lg') {
+    qs('inputLangLabel').innerHTML = '<span class="card-lang-flag">🇬🇧</span> English';
+    qs('inputText').placeholder    = 'Type or paste text to translate…';
+  } else {
+    qs('inputLangLabel').innerHTML = '<span class="card-lang-flag">🇺🇬</span> Luganda';
+    qs('inputText').placeholder    = 'Wandiika mu Luganda wano…';
+  }
+
+  resetOutput();
+}
+
+/* ─────────────────────────────────────────────────
+   CHAR COUNTER
+───────────────────────────────────────────────── */
+function onInputChange() {
+  const len = qs('inputText').value.length;
+  const el  = qs('charCounter');
+  el.textContent = `${len} / 1000`;
+  el.classList.toggle('near-limit', len >= 850 && len < 1000);
+  el.classList.toggle('at-limit',   len >= 1000);
+}
+
+/* ─────────────────────────────────────────────────
+   KEYBOARD SHORTCUT
+───────────────────────────────────────────────── */
+function handleKey(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+    e.preventDefault();
+    runTranslation();
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   CLEAR HELPERS
+───────────────────────────────────────────────── */
+function clearInput() {
+  qs('inputText').value = '';
+  onInputChange();
+}
+
+function clearAll() {
+  clearInput();
+  qs('expectedInput').value = '';
+  currentFeedback = null;
+  currentEntry    = null;
+  lastResult      = '';
+  resetOutput();
+  hideExpected();
+}
+
+/* ─────────────────────────────────────────────────
+   CLEAR SESSION (with confirmation)
+───────────────────────────────────────────────── */
+function clearSession() {
+  if (!confirm(
+    'Clear the full session?\n\n' +
+    'This will delete all translations, verdicts, and expected outputs ' +
+    'from this browser. This cannot be undone.\n\n' +
+    'Export first if you want to keep the data.'
+  )) return;
+
+  sessionHistory = [];
+  currentEntry   = null;
+
+  try { localStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+
+  clearAll();
+  renderSummary();
+  renderHistory();
+}
+
+/* ─────────────────────────────────────────────────
+   OUTPUT STATE MACHINE
+───────────────────────────────────────────────── */
+const OUTPUT_STATES = ['stateIdle','stateLoading','stateSuccess','stateError','stateNotFound'];
+
+function showOutputState(which) {
+  OUTPUT_STATES.forEach(id => {
+    qs(id).style.display = (id === which) ? '' : 'none';
+  });
+}
+
+function setOutputCard(stateClass, labelText, labelClass, showCopy) {
+  qs('outputCard').className    = 'output-card ' + stateClass;
+  qs('outputLabel').textContent = labelText;
+  qs('outputLabel').className   = 'output-label ' + labelClass;
+  qs('copyBtn').style.display   = showCopy ? '' : 'none';
+}
+
+function resetOutput() {
+  setOutputCard('state-idle', 'Output', '', false);
+  showOutputState('stateIdle');
+  qs('feedbackSection').classList.remove('visible');
+  qs('chipsRow').innerHTML         = '';
+  qs('feedbackStatus').textContent = '';
+  qs('feedbackStatus').className   = 'feedback-status';
+  ['fbCorrect','fbWrong','fbReview'].forEach(id => qs(id).className = 'fb-btn');
+  qs('copyBtn').classList.remove('copied');
+}
+
+function showLoading() {
+  setOutputCard('state-loading', 'Translating…', 'lbl-loading', false);
+  showOutputState('stateLoading');
+  qs('feedbackSection').classList.remove('visible');
+}
+
+function showSuccess(text, meta) {
+  lastResult = text;
+  setOutputCard('state-success', '✓ Translation', 'lbl-success', true);
+  showOutputState('stateSuccess');
+  qs('resultText').textContent = text;
+
+  const row = qs('chipsRow');
+  row.innerHTML = '';
+  const dirLabel = currentDirection === 'en-lg' ? 'EN → LG' : 'LG → EN';
+  row.innerHTML += `<span class="chip chip-dir">${dirLabel}</span>`;
+
+  if (meta.confidence !== null && meta.confidence !== undefined) {
+    const pct = Math.round(meta.confidence * 100);
+    const cls = pct >= 75 ? 'chip-hi' : pct >= 45 ? 'chip-mid' : 'chip-low';
+    row.innerHTML += `<span class="chip ${cls}">Confidence ${pct}%</span>`;
+  }
+  if (meta.match_type)         row.innerHTML += `<span class="chip chip-match">Match: ${meta.match_type}</span>`;
+  if (meta.matched_collection) row.innerHTML += `<span class="chip chip-col">${meta.matched_collection}</span>`;
+
+  currentFeedback = null;
+  ['fbCorrect','fbWrong','fbReview'].forEach(id => qs(id).className = 'fb-btn');
+  qs('feedbackStatus').textContent = '';
+  qs('feedbackStatus').className   = 'feedback-status';
+  qs('feedbackSection').classList.add('visible');
+}
+
+function showError(msg) {
+  setOutputCard('state-error', '✕ Error', 'lbl-error', false);
+  showOutputState('stateError');
+  qs('errorText').textContent = msg;
+  qs('feedbackSection').classList.remove('visible');
+}
+
+function showNotFound(msg) {
+  setOutputCard('state-not-found', '◌ Not Found', 'lbl-notfound', false);
+  showOutputState('stateNotFound');
+  if (msg) qs('notFoundText').textContent = msg;
+  qs('feedbackSection').classList.remove('visible');
+}
+
+/* ─────────────────────────────────────────────────
+   LOADING TOGGLE
+───────────────────────────────────────────────── */
+function setLoading(loading) {
+  isLoading = loading;
+  const btn = qs('translateBtn');
+  btn.disabled = loading;
+  btn.classList.toggle('is-loading', loading);
+  qs('btnLabel').textContent = loading ? 'Translating…' : 'Translate';
+}
+
+/* ─────────────────────────────────────────────────
+   EXPECTED OUTPUT
+───────────────────────────────────────────────── */
+function hideExpected() { qs('expectedCard').classList.remove('visible'); }
+
+function showExpected() {
+  qs('expectedInput').value = '';
+  qs('expectedCard').classList.add('visible');
+}
+
+function onExpectedChange() {
+  const val = qs('expectedInput').value.trim();
+  if (currentEntry) {
+    currentEntry.expected = val;
+    upsertHistory(currentEntry);
+  }
+  // CHANGED: enable Save Correction button only when there is text
+  const btn = qs('btnSaveCorrection');
+  if (btn) btn.disabled = (val.length === 0);
+  // Clear any previous status when user edits
+  const st = qs('correctionStatus');
+  if (st && val.length > 0) { st.textContent = ''; st.className = 'expected-footer-status'; }
+}
+
+// CHANGED: allow Enter key to submit the correction from the expected input field
+function handleExpectedKey(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    submitWithExpected();
+  }
+}
+
+// CHANGED: re-submit feedback to the server with the expected output included
+async function submitWithExpected() {
+  const expected = qs('expectedInput').value.trim();
+  if (!expected) return;
+
+  const btn = qs('btnSaveCorrection');
+  const st  = qs('correctionStatus');
+
+  if (btn) btn.disabled = true;
+  if (st)  { st.textContent = 'Saving…'; st.className = 'expected-footer-status'; }
+
+  if (!currentEntry) {
+    if (st) { st.textContent = 'No active translation to correct.'; st.className = 'expected-footer-status error'; }
+    if (btn) btn.disabled = false;
+    return;
+  }
+
+  // Use the current verdict if set, otherwise default to 'wrong'
+  const verdictMap = { correct: 'correct', wrong: 'wrong', review: 'needs_review' };
+  const apiVerdict = verdictMap[currentFeedback] || 'wrong';
+
+  const directionMap = { 'en-lg': 'en_to_lg', 'lg-en': 'lg_to_en' };
+  const apiDirection = directionMap[currentEntry.direction] || currentEntry.direction;
+
+  const payload = {
+    input_text:         currentEntry.input         || '',
+    direction:          apiDirection,
+    translated_text:    currentEntry.output        || '',
+    verdict:            apiVerdict,
+    expected_output:    expected,
+    match_type:         currentEntry.match_type    || null,
+    confidence:         currentEntry.confidence    || null,
+    matched_collection: currentEntry.collection    || null,
+  };
+
+  try {
+    const response = await fetch(FEEDBACK_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+      signal:  AbortSignal.timeout(8000),
+    });
+
+    if (response.ok) {
+      if (st) { st.textContent = '✓ Correction saved to server'; st.className = 'expected-footer-status saved'; }
+      // Update local entry too
+      currentEntry.expected = expected;
+      currentEntry.verdict  = currentFeedback || 'wrong';
+      upsertHistory(currentEntry);
+    } else {
+      const data = await response.json().catch(() => ({}));
+      const msg  = data.detail || `Server error (${response.status})`;
+      console.warn('Correction save error:', msg);
+      if (st) { st.textContent = '✗ Server error — saved locally only'; st.className = 'expected-footer-status error'; }
+      if (btn) btn.disabled = false;
+    }
+  } catch (err) {
+    console.warn('Correction save failed:', err);
+    if (st) { st.textContent = '✗ Could not reach server'; st.className = 'expected-footer-status error'; }
+    if (btn) btn.disabled = false;
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   FEEDBACK
+───────────────────────────────────────────────── */
+async function setFeedback(verdict) {
+  currentFeedback = verdict;
+
+  const map = {
+    correct: { id: 'fbCorrect', cls: 'fb-active-correct' },
+    wrong:   { id: 'fbWrong',   cls: 'fb-active-wrong'   },
+    review:  { id: 'fbReview',  cls: 'fb-active-review'  },
+  };
+
+  Object.values(map).forEach(({ id }) => qs(id).className = 'fb-btn');
+  qs(map[verdict].id).className = `fb-btn ${map[verdict].cls}`;
+
+  if (currentEntry) {
+    currentEntry.verdict  = verdict;
+    currentEntry.expected = qs('expectedInput').value.trim();
+    upsertHistory(currentEntry);
+  }
+
+  const statusEl = qs('feedbackStatus');
+  statusEl.textContent = 'Saving…';
+  statusEl.className   = 'feedback-status';
+
+  if (!currentEntry) {
+    statusEl.textContent = '✓ Saved locally';
+    statusEl.className   = 'feedback-status show-saved';
+    return;
+  }
+
+  const directionMap = { 'en-lg': 'en_to_lg', 'lg-en': 'lg_to_en' };
+  const apiDirection = directionMap[currentEntry.direction] || currentEntry.direction;
+
+  const verdictMap = { correct: 'correct', wrong: 'wrong', review: 'needs_review' };
+  const apiVerdict = verdictMap[verdict] || verdict;
+
+  const payload = {
+    input_text:         currentEntry.input         || '',
+    direction:          apiDirection,
+    translated_text:    currentEntry.output        || '',
+    verdict:            apiVerdict,
+    expected_output:    currentEntry.expected      || null,
+    match_type:         currentEntry.match_type    || null,
+    confidence:         currentEntry.confidence    || null,
+    matched_collection: currentEntry.collection    || null,
+  };
+
+  try {
+    const response = await fetch(FEEDBACK_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+      signal:  AbortSignal.timeout(8000),
+    });
+
+    if (response.ok) {
+      statusEl.textContent = '✓ Saved to server';
+      statusEl.className   = 'feedback-status show-saved';
+    } else {
+      const data = await response.json().catch(() => ({}));
+      const msg  = data.detail || `Server error (${response.status})`;
+      console.warn('Feedback API error:', msg);
+      statusEl.textContent = '✓ Saved locally · server error';
+      statusEl.className   = 'feedback-status show-saved';
+    }
+
+  } catch (err) {
+    console.warn('Feedback API unreachable:', err);
+    statusEl.textContent = '✓ Saved locally · offline';
+    statusEl.className   = 'feedback-status show-saved';
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   RUN TRANSLATION
+───────────────────────────────────────────────── */
+async function runTranslation() {
+  if (isLoading) return;
+
+  const inputText = qs('inputText').value.trim();
+  if (!inputText) {
+    showError('Please enter some text before translating.');
+    return;
+  }
+
+  const direction = currentDirection === 'en-lg' ? 'en_to_lg' : 'lg_to_en';
+  const payload   = { text: inputText, direction };
+
+  setLoading(true);
+  showLoading();
+  hideExpected();
+  currentEntry    = null;
+  currentFeedback = null;
+
+  try {
+    const response = await fetch('/api/v1/translate', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+      signal:  AbortSignal.timeout(20000),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      const msg = data.detail || data.error || data.message || `Server error (${response.status})`;
+      showError(msg);
+      return;
+    }
+
+    if (data.status === 'not_found' || !data.translated_text) {
+      showNotFound(data.message || null);
+      showExpected();
+      currentEntry = buildEntry(inputText, null, data);
+      upsertHistory(currentEntry);
+      return;
+    }
+
+    currentEntry = buildEntry(inputText, data.translated_text, data);
+    upsertHistory(currentEntry);
+
+    showSuccess(data.translated_text, {
+      confidence:         data.confidence,
+      match_type:         data.match_type,
+      matched_collection: data.matched_collection,
+    });
+    showExpected();
+
+  } catch (err) {
+    if (err.name === 'TimeoutError' || err.name === 'AbortError') {
+      showError('Request timed out. The server took too long to respond. Please try again.');
+    } else {
+      showError('Could not reach the translation API. Make sure the backend is running on port 8000.');
+    }
+  } finally {
+    setLoading(false);
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   BUILD HISTORY ENTRY
+───────────────────────────────────────────────── */
+function buildEntry(input, output, data) {
+  return {
+    id:         Date.now(),
+    timestamp:  new Date().toLocaleTimeString(),
+    input,
+    direction:  currentDirection,
+    output:     output || null,
+    confidence: data.confidence  || null,
+    match_type: data.match_type  || null,
+    collection: data.matched_collection || null,
+    verdict:    null,
+    expected:   '',
+  };
+}
+
+/* ─────────────────────────────────────────────────
+   HISTORY MANAGEMENT
+───────────────────────────────────────────────── */
+function upsertHistory(entry) {
+  const idx = sessionHistory.findIndex(e => e.id === entry.id);
+  if (idx >= 0) {
+    sessionHistory[idx] = { ...entry };
+  } else {
+    sessionHistory.push({ ...entry });
+  }
+  persistSession();
+  renderSummary();
+  renderHistory();
+}
+
+/* ─────────────────────────────────────────────────
+   RENDER SESSION SUMMARY
+───────────────────────────────────────────────── */
+function renderSummary() {
+  const card = qs('summaryCard');
+
+  if (sessionHistory.length === 0) {
+    card.classList.remove('visible');
+    return;
+  }
+
+  card.classList.add('visible');
+
+  const total     = sessionHistory.length;
+  const correct   = sessionHistory.filter(e => e.verdict === 'correct').length;
+  const wrong     = sessionHistory.filter(e => e.verdict === 'wrong').length;
+  const corrected = sessionHistory.filter(e =>
+    (e.verdict === 'wrong' || e.verdict === 'review') && e.expected && e.expected.trim() !== ''
+  ).length;
+
+  qs('statTotal').textContent     = total;
+  qs('statCorrect').textContent   = correct;
+  qs('statWrong').textContent     = wrong;
+  qs('statCorrected').textContent = corrected;
+}
+
+/* ─────────────────────────────────────────────────
+   RENDER HISTORY LIST
+───────────────────────────────────────────────── */
+function renderHistory() {
+  const panel = qs('historyPanel');
+  const list  = qs('historyList');
+  const count = qs('historyCount');
+
+  count.textContent = sessionHistory.length;
+
+  if (sessionHistory.length === 0) {
+    panel.classList.remove('visible');
+    return;
+  }
+
+  panel.classList.add('visible');
+  list.innerHTML = '';
+
+  const verdictMap = {
+    correct: { cls: 'vd-correct', label: '✓ Correct' },
+    wrong:   { cls: 'vd-wrong',   label: '✗ Wrong'   },
+    review:  { cls: 'vd-review',  label: '🔁 Review'  },
+  };
+
+  [...sessionHistory].reverse().forEach(entry => {
+    const vd     = verdictMap[entry.verdict] || { cls: 'vd-pending', label: 'Pending' };
+    const dirLbl = entry.direction === 'en-lg' ? 'EN→LG' : 'LG→EN';
+
+    const el = document.createElement('div');
+    el.className = 'history-item';
+    el.innerHTML = `
+      <div class="h-item-top">
+        <div class="h-input">${escapeHtml(entry.input)}</div>
+        <span class="h-verdict ${vd.cls}">${vd.label}</span>
+      </div>
+      <div class="h-output">${
+        entry.output
+          ? escapeHtml(entry.output)
+          : '<em style="color:var(--text-muted);font-size:13px;">Not found</em>'
+      }</div>
+      ${entry.expected ? `
+        <div class="h-expected">
+          <span class="h-expected-lbl">Expected:</span>${escapeHtml(entry.expected)}
+        </div>
+      ` : ''}
+      <div class="h-meta">
+        <span>${dirLbl}</span>
+        ${entry.confidence !== null && entry.confidence !== undefined
+          ? `<span>· ${Math.round(entry.confidence * 100)}% conf.</span>` : ''}
+        ${entry.match_type ? `<span>· ${entry.match_type}</span>` : ''}
+        <span>· ${entry.timestamp}</span>
+      </div>
+    `;
+    list.appendChild(el);
+  });
+}
+
+/* ─────────────────────────────────────────────────
+   COPY RESULT
+───────────────────────────────────────────────── */
+function copyResult() {
+  if (!lastResult) return;
+  navigator.clipboard.writeText(lastResult).then(() => {
+    const btn = qs('copyBtn');
+    btn.textContent = 'Copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2200);
+  });
+}
+
+/* ─────────────────────────────────────────────────
+   EXPORT SESSION
+───────────────────────────────────────────────── */
+function exportHistory() {
+  if (sessionHistory.length === 0) return;
+
+  const correct   = sessionHistory.filter(e => e.verdict === 'correct').length;
+  const wrong     = sessionHistory.filter(e => e.verdict === 'wrong').length;
+  const corrected = sessionHistory.filter(e =>
+    (e.verdict === 'wrong' || e.verdict === 'review') && e.expected && e.expected.trim() !== ''
+  ).length;
+
+  const payload = {
+    exported_at:   new Date().toISOString(),
+    session_count: sessionHistory.length,
+    summary: {
+      total:     sessionHistory.length,
+      correct,
+      wrong,
+      corrected,
+      pending:   sessionHistory.filter(e => !e.verdict).length,
+    },
+    entries: sessionHistory.map(e => ({
+      input:      e.input,
+      direction:  e.direction,
+      output:     e.output,
+      expected:   e.expected || null,
+      verdict:    e.verdict  || 'pending',
+      confidence: e.confidence,
+      match_type: e.match_type,
+      collection: e.collection,
+      timestamp:  e.timestamp,
+    })),
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url  = URL.createObjectURL(blob);
+  const a    = Object.assign(document.createElement('a'), {
+    href:     url,
+    download: `luganda-session-${Date.now()}.json`,
+  });
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ─────────────────────────────────────────────────
+   BOOT
+───────────────────────────────────────────────── */
+(function boot() {
+  restoreSession();
+  renderSummary();
+  renderHistory();
+})();
+
+/* ─────────────────────────────────────────────────
+   MOBILE SIDEBAR
+───────────────────────────────────────────────── */
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebarOverlay').classList.add('open');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('open');
+}
+
+/* ─────────────────────────────────────────────────
+   SERVICE WORKER
+───────────────────────────────────────────────── */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/app/service-worker.js', { scope: '/app/' })
+      .catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+{
+  "metadata": {
+    "category": "proverbs",
+    "description": "Kiganda (Luganda) proverbs with English translations, moral themes, and symbolic meanings",
+    "source_ids": ["nakimbugwe_dissertation"],
+    "total_entries": 60,
+    "last_updated": "2026-03-23"
+  },
+  "entries": [
+    {
+      "id": "prov_001",
+      "luganda": "Kyosimba onanya kyoolyako etooke",
+      "english": "You reap what you sow.",
+      "theme": "hardwork",
+      "meaning": "Whatever you plant without care, or whatever you invest effort into, that is what you will benefit from. Your outcomes depend on your own actions.",
+      "symbols": ["kyosimba (what you plant)", "etooke (banana plant)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_002",
+      "luganda": "Kamu kamu gwemuganda",
+      "english": "One by one makes a bundle.",
+      "theme": "hardwork",
+      "meaning": "Small, consistent efforts accumulate into something great. Never underestimate a small beginning.",
+      "symbols": ["kamu (one)", "omuganda (bundle)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_003",
+      "luganda": "Asiika obulamu tassa mukono",
+      "english": "One who seeks a better life does not put down the hand.",
+      "theme": "hardwork",
+      "meaning": "If you truly want to improve your life, you must never stop working. Persistence is essential.",
+      "symbols": ["obulamu (life)", "mukono (hand)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_004",
+      "luganda": "Kola ngo'muddu",
+      "english": "Work like a slave.",
+      "theme": "hardwork",
+      "meaning": "To achieve anything in life, you must work tirelessly without stopping, just as a person under pressure cannot rest until the work is done.",
+      "symbols": ["muddu (slave)", "kola (work)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_005",
+      "luganda": "Akwata empola atuuka wala, nawolovu atuuka emitala",
+      "english": "One who moves slowly but surely reaches far; the chameleon reaches very far.",
+      "theme": "hardwork",
+      "meaning": "Patience and steady effort lead to greater success than rushing. Taking things carefully is always better than haste.",
+      "symbols": ["empola (slowly)", "nawolovu (chameleon)", "wala (far)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_006",
+      "luganda": "Akatali kabbe eggumbba osuula mumulyaango",
+      "english": "The bone that was not stolen is thrown freely at the front of the house.",
+      "theme": "hardwork",
+      "meaning": "Work for what you have so that you can be free in society. Only what you earned honestly can you enjoy openly.",
+      "symbols": ["eggumba (bone)", "mumulyaango (in front of the house)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_007",
+      "luganda": "Linda kigweeyo afumita mukira",
+      "english": "If you wait for the end, you will only pierce the tail.",
+      "theme": "hardwork",
+      "meaning": "Do not procrastinate. Act when the opportunity is right, not after it has passed. Waiting too long means you miss the chance.",
+      "symbols": ["linda (wait)", "afumita (pierce)", "mukira (tail)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_008",
+      "luganda": "Agali ewamu ge galuma enyama",
+      "english": "Teeth together bite the meat.",
+      "theme": "hardwork",
+      "meaning": "When people work together, they achieve more. Unity and teamwork produce the best results.",
+      "symbols": ["ewamu (together)", "galuma (bite)", "enyama (meat)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_009",
+      "luganda": "Azaala akira atema ente",
+      "english": "A woman who bears children is better than one who always slaughters a cow.",
+      "theme": "hardwork",
+      "meaning": "Something that gives lasting, living value is better than temporary material wealth. Family and long-term investment matter more than short-term gains.",
+      "symbols": ["azaala (bores children)", "atema ente (slaughters cow)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_010",
+      "luganda": "Kami katono okanyomera mitala wamugga",
+      "english": "A tiny person carries water further from the well.",
+      "theme": "hardwork",
+      "meaning": "Never underestimate someone because of their size or appearance. What looks small or weak can outperform what looks strong.",
+      "symbols": ["kami katono (tiny person)", "mitala wamugga (far from the well)"],
+      "needs_review": true
+    },
+    {
+      "id": "prov_011",
+      "luganda": "Omusiru takufuula musiru",
+      "english": "A foolish person should not make you foolish.",
+      "theme": "wisdom",
+      "meaning": "Never let someone else's poor judgment drag you down. Stay wise even when surrounded by foolishness.",
+      "symbols": ["omusiru (foolish person)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_012",
+      "luganda": "Nditwaala kinene afa tatuuse ku buko",
+      "english": "One waiting to get something big dies before the introduction.",
+      "theme": "wisdom",
+      "meaning": "It is better to go with the little you have than to wait for something bigger that may never come. Seize current opportunities.",
+      "symbols": ["nditwaala kinene (waiting for something big)", "ku buko (introduction/marriage ceremony)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_013",
+      "luganda": "Omukwano masavu ogalya gakyayokya",
+      "english": "Friendship is like hot fat — enjoy it while it is still warm.",
+      "theme": "wisdom",
+      "meaning": "Relationships and love are sweet at their best moments. Cherish them while they last because they can cool and change.",
+      "symbols": ["masavu (fat)", "gakyayokya (still hot)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_014",
+      "luganda": "Ababiri babibira ebigambo naye abasatu babisatulula",
+      "english": "Two people keep secrets but three people destroy them.",
+      "theme": "wisdom",
+      "meaning": "The more people know a secret, the harder it is to keep. Be careful who you share private matters with.",
+      "symbols": ["ababiri (two people)", "abasatu (three people)", "ebigambo (words/secrets)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_015",
+      "luganda": "Akatono okalya ne munno bwakwata enkukunyi anyigiramu kinkumu",
+      "english": "When you share something small with a friend, even a bug gets squeezed in the thumb.",
+      "theme": "wisdom",
+      "meaning": "Share what you have, however small. Sharing is a moral duty even when what you have is very little.",
+      "symbols": ["akatono (small thing)", "munno (your friend)", "enkukunyi (bug)", "kinkumu (thumb)"],
+      "needs_review": true
+    },
+    {
+      "id": "prov_016",
+      "luganda": "Gwotazinanga naye bwasituka okuzina nga gwe otuula",
+      "english": "One you have never danced with — when they start dancing, it is as if you are seated.",
+      "theme": "wisdom",
+      "meaning": "Someone you have not worked or partnered with can overtake you when they start. Do not underestimate newcomers.",
+      "symbols": ["gwotazinanga (one you have never danced with)", "okuzina (dance)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_017",
+      "luganda": "Abaggagga nabaggaga baagalana",
+      "english": "Rich people love each other (they stay together).",
+      "theme": "wisdom",
+      "meaning": "People of the same level or class tend to associate together. Wealth attracts wealth.",
+      "symbols": ["abaggagga (rich people)", "baagalana (love each other)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_018",
+      "luganda": "Amaka abiri musango, bwolwanira agali e kyaggwe nga ge ssingo banyaga",
+      "english": "Two families are a fight — when you fight for the one in Kyaggwe, the one in Ssingo is taken.",
+      "theme": "wisdom",
+      "meaning": "Managing two households or divided loyalties always leads to trouble. Polygamy and divided attention create endless conflict.",
+      "symbols": ["amaka abiri (two families)", "kyaggwe and ssingo (place names symbolizing two sides)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_019",
+      "luganda": "Bakuseeredde mu katale oyombera mu kubo",
+      "english": "You were ripped off in the market but you are arguing about it in the road.",
+      "theme": "wisdom",
+      "meaning": "Solve problems where they happen, not later and elsewhere. Complaining after the moment has passed accomplishes nothing.",
+      "symbols": ["katale (market)", "kubo (road)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_020",
+      "luganda": "Akatono akatuuse, kakira ekinene ekisuubize",
+      "english": "A small thing that is available is worth more than a big thing that has only been promised.",
+      "theme": "wisdom",
+      "meaning": "Something real and available — even if small — is better than a grand promise that may never be fulfilled.",
+      "symbols": ["akatono (small thing)", "ekinene ekisuubize (big thing that is promised)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_021",
+      "luganda": "Okwagala kulya magezi",
+      "english": "Love feeds on creativity.",
+      "theme": "wisdom",
+      "meaning": "Relationships need constant effort, creativity, and new energy to survive. Love that is not nurtured will die.",
+      "symbols": ["okwagala (love)", "kulya (feed)", "magezi (wisdom/creativity)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_022",
+      "luganda": "Omugenyi mugeyi",
+      "english": "A visitor is a back-biter.",
+      "theme": "wisdom",
+      "meaning": "Be careful with visitors — when they leave, they will talk about what they saw in your home. Maintain your standards always.",
+      "symbols": ["omugenyi (visitor)", "mugeyi (back-biter)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_023",
+      "luganda": "Nkaabila mulengete tagwaako nnaku",
+      "english": "One who loses the only thing they have in life stays miserable forever.",
+      "theme": "wisdom",
+      "meaning": "When someone loses their only source of hope or support, their suffering never ends. Guard what you love most.",
+      "symbols": ["nkaabila (one who cries/mourns)", "mulengete (dead child/only thing)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_024",
+      "luganda": "Ataalukutambulire akususiza lwa meenvu",
+      "english": "One who has not walked your journey will tell you it is like peeling a banana.",
+      "theme": "wisdom",
+      "meaning": "Someone who has never been through what you have experienced will always make it sound easy. Do not take advice from those with no experience.",
+      "symbols": ["ataalukutambulire (one who won't walk your journey)", "meenvu (yellow bananas)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_025",
+      "luganda": "Abasajja kiti kya muwogo wokisuula wekilandira",
+      "english": "Men are like stems of a cassava plant — wherever you dump them, they grow.",
+      "theme": "wisdom",
+      "meaning": "Men adapt and move on easily. When rejected or left, they simply start again somewhere else.",
+      "symbols": ["kiti kya muwogo (cassava stem)", "wokisuula wekilandira (grows where dumped)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_026",
+      "luganda": "Akasikwasikwa kafuuka omwenge",
+      "english": "A shoot of a musa banana turns into beer.",
+      "theme": "wisdom",
+      "meaning": "Something that looks small and insignificant today can become something great and valuable in the future. Never write off potential.",
+      "symbols": ["akasikwasikwa (shoot of banana)", "omwenge (beer)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_027",
+      "luganda": "Ssekibojera ku lwazi kyeyesigga mumwa mugumu",
+      "english": "The bird that pecks at a rock is sure of its strong beak.",
+      "theme": "wisdom",
+      "meaning": "Attempt only what you know you are capable of. Confidence in action comes from knowing your own strength.",
+      "symbols": ["ssekibojera (bird)", "lwazi (rock)", "mumwa mugumu (strong beak)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_028",
+      "luganda": "Kaliba kasajja akuliisa engo",
+      "english": "Over-praising a man can lead him to be eaten by a leopard.",
+      "theme": "wisdom",
+      "meaning": "Too much flattery makes a person overconfident and reckless. Excessive praise can lead someone into dangerous mistakes.",
+      "symbols": ["kaliba (will be)", "kasajja (man)", "engo (leopard)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_029",
+      "luganda": "Bannange banji nga tonagwa wabi",
+      "english": "One can claim to have many friends until they fall on hard times.",
+      "theme": "wisdom",
+      "meaning": "You do not know who your true friends are until you face difficulty. Hard times reveal the truth about relationships.",
+      "symbols": ["banange bangi (many friends)", "tonagwa wabi (not yet in trouble)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_030",
+      "luganda": "Ensiimbi zaabula, asiiba waka",
+      "english": "When money is lost, one stays home.",
+      "theme": "wisdom",
+      "meaning": "A person who loses money becomes lazy and stays home complaining instead of going out to earn more.",
+      "symbols": ["ensiimbi (money)", "asiiba waka (stays home)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_031",
+      "luganda": "Katono keewaza kakira eddene eddwadde",
+      "english": "A small healthy thing is better than a big unhealthy one.",
+      "theme": "wisdom",
+      "meaning": "Quality matters more than size or quantity. A small thing that works well is more valuable than a big thing that does not.",
+      "symbols": ["katono (small)", "eddene eddwadde (big but unhealthy)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_032",
+      "luganda": "Okwambala obulungyi ssi kuwasa, ssinga ekajjo lyenjovu lyawangiza muzibu gwazaalampanga",
+      "english": "Dressing well is not the same as marrying well; do not judge by appearance.",
+      "theme": "wisdom",
+      "meaning": "Appearances can be deceiving. Beautiful clothes or looks do not tell you about a person's character or suitability as a partner.",
+      "symbols": ["okwambala obulungyi (dressing well)", "ekajjo lyenjovu (elephant grass)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_033",
+      "luganda": "Alima ne bba si munafu",
+      "english": "A woman who farms with her husband is not weak.",
+      "theme": "wisdom",
+      "meaning": "A hardworking woman who partners with her husband in all things shows strength, not weakness.",
+      "symbols": ["alima (farms)", "bba (husband)", "munafu (weak)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_034",
+      "luganda": "Akola ekibi akwelabiza katonda",
+      "english": "One who wrongs you makes you forget God.",
+      "theme": "wisdom",
+      "meaning": "When someone deeply wrongs you, the anger can make you forget your values and want to retaliate. Be careful not to let others drag you away from your principles.",
+      "symbols": ["akola ekibi (does you wrong)", "katonda (God)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_035",
+      "luganda": "Gunsiinze aliwa bitono",
+      "english": "One who accepts their mistake pays little.",
+      "theme": "wisdom",
+      "meaning": "Accepting and admitting a mistake costs you less than denying it. Honesty in error reduces consequences.",
+      "symbols": ["gunsiinze (I accept my mistake)", "aliwa bitono (pays little)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_036",
+      "luganda": "Kaggwe ensonyi nga omukazi ayomba ne bba",
+      "english": "Shamelessness is when a woman quarrels with her husband in public.",
+      "theme": "respect",
+      "meaning": "A woman who publicly quarrels with her husband shows a lack of humility and respect for the home. This proverb reflects traditional Baganda social expectations.",
+      "symbols": ["kaggwe ensonyi (one who is not shy)", "ayomba ne bba (quarrels with husband)"],
+      "needs_review": false,
+      "cultural_note": "This reflects traditional gender dynamics in Buganda culture. Interpret with cultural context."
+    },
+    {
+      "id": "prov_037",
+      "luganda": "Nyinimu atiibwa",
+      "english": "The head of the house must be respected.",
+      "theme": "respect",
+      "meaning": "The leader of a home or a workplace deserves respect and should be honored by those under them.",
+      "symbols": ["nyinimu (head of the house)", "atiibwa (must be respected)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_038",
+      "luganda": "Sselwajaokwotta lukira nyinimu entanama",
+      "english": "A visitor should not act like they own the house.",
+      "theme": "respect",
+      "meaning": "Guests should respect the rules and customs of the home they visit. Do not overstep your boundaries as a visitor.",
+      "symbols": ["sselwajaokwotta (visitor)", "nyinimu (owner of the house)", "entanama (behaviour)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_039",
+      "luganda": "Ofunda nomubi ngazaala ngalima nga ayanilriza naabagenyi",
+      "english": "It is better to be with an ugly one who bears children, farms and is hospitable.",
+      "theme": "respect",
+      "meaning": "Character and contribution matter far more than beauty. A hardworking and hospitable partner is more valuable than an attractive but unproductive one.",
+      "symbols": ["ofunda nomubi (rather be with ugly person)", "ngazaala (bears children)", "ayanilriza (welcomes guests)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_040",
+      "luganda": "Ekitooke kifansalira",
+      "english": "The banana plant fades the way you look after it.",
+      "theme": "respect",
+      "meaning": "How you treat what you own determines how it thrives. A person — especially in marriage — will fade if not cared for and respected.",
+      "symbols": ["ekitooke (banana plant)", "kifansalira (fades according to care)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_041",
+      "luganda": "Akaggo akaakuba muka balo bwokalaba okasuka mu muliro",
+      "english": "A stick that was used to beat your co-wife — when you see it, throw it in the fire.",
+      "theme": "respect",
+      "meaning": "Get rid of things that caused harm or trouble in the past. Learn from others' painful experiences and do not repeat the same mistakes.",
+      "symbols": ["akaggo (stick)", "muka balo (co-wife)", "muliro (fire)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_042",
+      "luganda": "Kiryokya embi, kye kiryokya nenungi",
+      "english": "What burns the poor also burns the rich.",
+      "theme": "respect",
+      "meaning": "No one is exempt from consequences or suffering. Wealth and status do not protect you from the same challenges that affect everyone.",
+      "symbols": ["kiryokya (will burn)", "embi (bad/poor)", "nenungi (good/rich)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_043",
+      "luganda": "Ebyomunju tebitotolwa",
+      "english": "Secrets of the house should stay inside the house.",
+      "theme": "respect",
+      "meaning": "Family matters should be handled privately. Do not expose household problems to outsiders. What happens at home stays at home.",
+      "symbols": ["ebyomunju (what happens in the house)", "tebitotolwa (should not be said outside)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_044",
+      "luganda": "Akaliba akendo okalabila ku mukonda",
+      "english": "The usefulness of a calabash is predicted by its handle.",
+      "theme": "respect",
+      "meaning": "You can predict a person's future usefulness by their early behaviour. First impressions and early character reveal much about the future.",
+      "symbols": ["akaliba akendo (usefulness of calabash)", "mukonda (handle)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_045",
+      "luganda": "Ekwaata omwami tereka muganzi",
+      "english": "The disease that catches the husband does not spare the wife.",
+      "theme": "respect",
+      "meaning": "Partners share consequences. What affects one in a marriage affects the other. Be faithful and honest because your actions impact your spouse.",
+      "symbols": ["ekwaata omwami (disease of husband)", "muganzi (wife)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_046",
+      "luganda": "Entasiima ebula ajiwa",
+      "english": "An ungrateful person has no one to give them anything.",
+      "theme": "respect",
+      "meaning": "Gratitude is essential. People who do not appreciate what they receive eventually find no one willing to help them.",
+      "symbols": ["entasiima (ungrateful person)", "ebula ajiwa (fails to be given)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_047",
+      "luganda": "Gwoyogiriza okwesa akugobya nkaaga",
+      "english": "One you trained can chase you away.",
+      "theme": "respect",
+      "meaning": "Someone you taught and raised up can eventually surpass and reject you. Do not underestimate those you mentor.",
+      "symbols": ["gwoyogiriza (one you teach)", "akugobya (can chase you)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_048",
+      "luganda": "Ekiddiba kidda wabwe wakyo, essaaniiko lidda much lusukku",
+      "english": "Leftovers get back to their owners; banana leaves return to the plantation.",
+      "theme": "respect",
+      "meaning": "Everything finds its way back to where it belongs. People who leave always come home. Justice also returns to its source.",
+      "symbols": ["ekiddiba (leftovers)", "essaaniiko (banana leaves)", "lusuku (banana plantation)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_049",
+      "luganda": "Eriiso lyomukulu ewaddugala wewalaba",
+      "english": "An elder's eye sees even in a dirty place.",
+      "theme": "respect",
+      "meaning": "Elders have experience and wisdom that allows them to see things others miss. They should be respected and their guidance heeded.",
+      "symbols": ["eriiso lyomukulu (elder's eye)", "ewaddugala (dirty place)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_050",
+      "luganda": "Munno mu kabi, ye munno ddala",
+      "english": "Your friend in trouble is your true friend.",
+      "theme": "wisdom",
+      "meaning": "Genuine friendship is revealed in hardship. Those who stand by you when things are difficult are your real allies.",
+      "symbols": ["mu kabi (in trouble)", "munno ddala (true friend)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_051",
+      "luganda": "Oyita ewala, n'otuuka emirembe",
+      "english": "Go round the long way and arrive in safety.",
+      "theme": "wisdom",
+      "meaning": "It is wiser to take a longer, safer path than to rush through a dangerous shortcut. Safety is worth the extra effort.",
+      "symbols": ["ewala (long way around)", "emirembe (safety/peace)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_052",
+      "luganda": "Abali awamu, tebalema kuyomba",
+      "english": "People who live together cannot fail to have quarrels.",
+      "theme": "wisdom",
+      "meaning": "Conflict is natural in any close relationship. Do not be surprised when people who share space disagree — it is normal.",
+      "symbols": ["awamu (together)", "tebalema kuyomba (cannot fail to quarrel)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_053",
+      "luganda": "Ab'oluganda bita, bikoonagana ne bitayatika",
+      "english": "Relations are like beer-calabashes; they bump against each other but do not break.",
+      "theme": "wisdom",
+      "meaning": "Family members will always have disagreements and conflicts, but the bonds of family are strong enough to survive them.",
+      "symbols": ["ab'oluganda (relations)", "bita (beer-calabashes)", "bikoonagana (bump against each other)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_054",
+      "luganda": "Empera tekwata magulu, ekwata akamwa",
+      "english": "Brandishing weapons does not affect the legs, but the mouth.",
+      "theme": "wisdom",
+      "meaning": "The harm from boasting and threatening words falls back on the speaker. Boastful talk causes more harm to the one speaking than to the target.",
+      "symbols": ["empera (brandishing weapons)", "magulu (legs)", "akamwa (mouth)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_055",
+      "luganda": "Ebukojja banjagala nga nyoko akyali mulamu",
+      "english": "Your mother's relatives only love you whilst she is still alive.",
+      "theme": "wisdom",
+      "meaning": "Some relationships exist only because of a connecting person. When that person is gone, the bonds may dissolve. Value relationships built on genuine love.",
+      "symbols": ["ebukojja (mother's relatives)", "nyoko (your mother)", "mulamu (still alive)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_056",
+      "luganda": "Atagukwanye, ye agamba nti banaakitiza",
+      "english": "He who is not in love himself says they are infatuated.",
+      "theme": "wisdom",
+      "meaning": "People who have not experienced something tend to judge it harshly. Do not criticize what you have not lived.",
+      "symbols": ["atagukwanye (not in love)", "banaakitiza (they are infatuated)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_057",
+      "luganda": "Okwagalana kyayi kya mpiso, bwe kitasoba tikitunga",
+      "english": "Mutual love is like thread in a needle — if it does not pass through and stick out, it does not sew.",
+      "theme": "wisdom",
+      "meaning": "Love must flow in both directions to be effective. One-sided love cannot build or hold a relationship together.",
+      "symbols": ["kyayi kya mpiso (thread in needle)", "okwagalana (mutual love)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_058",
+      "luganda": "Ky'otonnalya, tokyesunga; ettooke balitutte kiro",
+      "english": "Do not count what you have not yet got; they took back the bananas you had stolen at night.",
+      "theme": "wisdom",
+      "meaning": "Do not assume you own something before it is secured. Premature counting of gains can lead to disappointment.",
+      "symbols": ["tokyesunga (do not consider it yours)", "ettooke balitutte (bananas taken back)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_059",
+      "luganda": "Abalungi mbwa ya nnamaaso, bw'etebba n'eyigga",
+      "english": "The beautiful are like a dog with big eyes — might turn out to be a thief or a good hunter.",
+      "theme": "wisdom",
+      "meaning": "Beauty tells you nothing about a person's true character. An attractive person may be harmful or helpful — you cannot know from looks alone.",
+      "symbols": ["abalungi (the beautiful)", "mbwa ya nnamaaso (dog with big eyes)"],
+      "needs_review": false
+    },
+    {
+      "id": "prov_060",
+      "luganda": "Akutwala ekiro, omusiima bukedde",
+      "english": "He who takes you at night, you thank him in the morning.",
+      "theme": "wisdom",
+      "meaning": "Sometimes the value of someone's help is only understood later. Be grateful even for those who helped you in dark or difficult times.",
+      "symbols": ["akutwala ekiro (takes you at night)", "omusiima bukedde (thank in the morning)"],
+      "needs_review": false
+    }
+  ]
+}

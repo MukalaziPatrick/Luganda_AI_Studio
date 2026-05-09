@@ -1,0 +1,490 @@
+{
+  "metadata": {
+    "category": "numbers",
+    "description": "Luganda vocabulary for numbers, counting, fractions, and basic mathematics",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 42,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Teens 13-15 were flagged needs_review but are structurally correct. Luganda forms compound teens using 'Kkumi na + unit number' — the same pattern confirmed in 11 (Kkumi n'emu) and 12 (Kkumi na bbiri). Flags cleared. 'Okogatta' corrected to 'Okuggatta' (to add together). 'Zero' entry noted as borrowed term. All other entries confirmed clean."
+  },
+  "entries": [
+    {
+      "luganda": "Zero",
+      "english": "Zero (0)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 0,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Borrowed from English. No traditional Luganda word for zero existed before modern mathematics.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Emu",
+      "english": "One (1)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 1,
+      "example_sentence_luganda": "Kamu kamu gwemuganda.",
+      "example_sentence_english": "One by one makes a bundle.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Bbiri",
+      "english": "Two (2)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 2,
+      "example_sentence_luganda": "Omukyala oli alina abaana babiri.",
+      "example_sentence_english": "That lady has two children.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ssatu",
+      "english": "Three (3)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 3,
+      "example_sentence_luganda": "Tulinako ebintu ssatu.",
+      "example_sentence_english": "We have three things.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Nnya",
+      "english": "Four (4)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 4,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ttaano",
+      "english": "Five (5)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 5,
+      "example_sentence_luganda": "Nkuwa emipiira ettaano.",
+      "example_sentence_english": "I give you five balls.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Mukaaga",
+      "english": "Six (6)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 6,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Musanvu",
+      "english": "Seven (7)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 7,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Munaana",
+      "english": "Eight (8)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 8,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mwenda",
+      "english": "Nine (9)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 9,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi",
+      "english": "Ten (10)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 10,
+      "example_sentence_luganda": "Nkuwa ssente kkumi.",
+      "example_sentence_english": "I give you ten shillings.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi n'emu",
+      "english": "Eleven (11)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 11,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Pattern: Kkumi (10) + n' (and) + emu (1). The 'n'' shortens to 'n'' before a vowel.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na bbiri",
+      "english": "Twelve (12)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 12,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Pattern: Kkumi (10) + na (and) + bbiri (2).",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na ssatu",
+      "english": "Thirteen (13)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 13,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Pattern: Kkumi (10) + na (and) + ssatu (3). Follows the same compound pattern as 11 and 12. Flag cleared.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na nnya",
+      "english": "Fourteen (14)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 14,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Pattern: Kkumi (10) + na (and) + nnya (4). Flag cleared.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na ttaano",
+      "english": "Fifteen (15)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 15,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Pattern: Kkumi (10) + na (and) + ttaano (5). Flag cleared.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na mukaaga",
+      "english": "Sixteen (16)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 16,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Added for completeness. Pattern: Kkumi + na + mukaaga.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na musanvu",
+      "english": "Seventeen (17)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 17,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Added for completeness. Pattern: Kkumi + na + musanvu.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na munaana",
+      "english": "Eighteen (18)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 18,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Added for completeness. Pattern: Kkumi + na + munaana.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkumi na mwenda",
+      "english": "Nineteen (19)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 19,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Added for completeness. Pattern: Kkumi + na + mwenda.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Abiri",
+      "english": "Twenty (20)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 20,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Asatu",
+      "english": "Thirty (30)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 30,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ana",
+      "english": "Forty (40)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 40,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ataano",
+      "english": "Fifty (50)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 50,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Nkaaga",
+      "english": "Sixty (60)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 60,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Nsanvu",
+      "english": "Seventy (70)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 70,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kinaana",
+      "english": "Eighty (80)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 80,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kyenda",
+      "english": "Ninety (90)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 90,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kikumi",
+      "english": "One Hundred (100)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 100,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Lukumi",
+      "english": "One Thousand (1,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 1000,
+      "example_sentence_luganda": "Nkuwa lukumi.",
+      "example_sentence_english": "I give you one thousand (shillings).",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kakumi / Mutwalo",
+      "english": "Ten Thousand (10,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 10000,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Both 'Kakumi' and 'Mutwalo' are used. Mutwalo is more traditional.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kasiriivu",
+      "english": "One Hundred Thousand (100,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 100000,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kakadde",
+      "english": "One Million (1,000,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 1000000,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kawumbi",
+      "english": "Ten Million (10,000,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 10000000,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kase",
+      "english": "One Hundred Million (100,000,000)",
+      "category": "numbers",
+      "subcategory": "cardinal",
+      "numeric_value": 100000000,
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kimu kya kuna",
+      "english": "One Quarter (1/4)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Kuna = four. Kimu kya kuna = one of four parts.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kimu kya kubiri",
+      "english": "One Half (1/2)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": "Mpayo kimu kya kubiri.",
+      "example_sentence_english": "Give me half of it.",
+      "notes": "Kubiri = two. Kimu kya kubiri = one of two parts.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kimu kya kusatu",
+      "english": "One Third (1/3)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Kusatu = three. Kimu kya kusatu = one of three parts.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Bibiri bya kusatu",
+      "english": "Two Thirds (2/3)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Bisatu bya kuna",
+      "english": "Three Quarters (3/4)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kimu kya kumi",
+      "english": "One Tenth / Tithe (1/10)",
+      "category": "numbers",
+      "subcategory": "fractions",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ataano ku kikumi",
+      "english": "Fifty Percent (50%)",
+      "category": "numbers",
+      "subcategory": "percentages",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "Ataano = fifty. Ku kikumi = out of one hundred.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kyenda ku kikumi",
+      "english": "Ninety Percent (90%)",
+      "category": "numbers",
+      "subcategory": "percentages",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Abiri mu ssatu ku kikumi",
+      "english": "Twenty Three Percent (23%)",
+      "category": "numbers",
+      "subcategory": "percentages",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okubala",
+      "english": "To count / To calculate",
+      "category": "numbers",
+      "subcategory": "math_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Omwana asoma okubala.",
+      "example_sentence_english": "The child is learning to count.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okuggatta",
+      "english": "To add together / Addition",
+      "category": "numbers",
+      "subcategory": "math_operations",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "notes": "CORRECTED: previously written as 'Okogatta' which is a misspelling. Correct form is 'Okuggatta' (double g, to add/combine together).",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okwawula",
+      "english": "To subtract / To separate / Subtraction",
+      "category": "numbers",
+      "subcategory": "math_operations",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    }
+  ]
+}

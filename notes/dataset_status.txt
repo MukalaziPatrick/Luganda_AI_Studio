@@ -1,0 +1,17 @@
+# Luganda AI Studio — Dataset Status
+Last updated: 2026-03-24
+
+vocabulary/body_parts.json        — complete, verified
+vocabulary/animals.json           — complete, verified
+vocabulary/food_and_drink.json    — complete, verified
+vocabulary/transport.json         — complete, verified
+vocabulary/family.json            — complete, verified
+vocabulary/numbers.json           — complete, verified
+sentences/daily_life.json         — complete, verified
+sentences/greetings.json          — complete, verified
+grammar/vowels.json               — complete, verified
+grammar/consonants.json           — complete, verified
+grammar/word_classes.json         — complete, verified
+grammar/verb_tenses.json          — complete, 1 entry flagged
+proverbs/kiganda_proverbs.json    — complete, verified
+metadata/sources.json             — complete, verified

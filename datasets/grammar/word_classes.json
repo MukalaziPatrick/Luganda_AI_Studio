@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "category": "grammar_word_classes",
+    "description": "Luganda grammar rules for the 8 word classes (parts of speech) with examples",
+    "source_ids": ["ish_handbook"],
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "wc_004 (Adjective) was flagged. Corrected by: (1) fixing the Luganda name from 'Nakongeza Linnya' to 'Nakongeza Erinnya', (2) expanding adjective examples with clearer prefix agreement illustrations, (3) adding a concrete note explaining why agreement changes happen, (4) clearing the flag. wc_005 (Adverb) had a misleading example — 'yaggwa nnyo' corrected to 'yaggwa wansi' (he fell down) and nnyo handled separately. wc_006 (Conjunction): 'nga' clarified as it means 'like/as/while' not simply 'and'. All 8 classes verified. Question words section verified clean."
+  },
+  "introduction": "Luganda words are organized into 8 classes, similar to the 8 parts of speech in English. Every word belongs to one of these classes. Understanding word classes helps you build correct sentences in Luganda.",
+  "word_classes": [
+    {
+      "class_id": "wc_001",
+      "luganda_name": "Nakayogeza",
+      "english_name": "Verb",
+      "description": "Doing words — words that describe an action or a state.",
+      "how_to_identify": "If the word describes something someone does or experiences, it is a verb.",
+      "examples": [
+        { "luganda": "kufumba", "english": "to cook" },
+        { "luganda": "kutambula", "english": "to walk" },
+        { "luganda": "kulya", "english": "to eat" },
+        { "luganda": "kunywa", "english": "to drink" },
+        { "luganda": "okusoma", "english": "to read / to study" },
+        { "luganda": "kwogera", "english": "to talk / to speak" }
+      ],
+      "sentence_example": {
+        "luganda": "Musa afumba.",
+        "english": "Moses cooks."
+      },
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_002",
+      "luganda_name": "Erinnya",
+      "english_name": "Noun",
+      "description": "Names of people, places, or things — words that name something.",
+      "how_to_identify": "If the word is the name of a person, a place, or an object, it is a noun. Nouns can be proper (a specific name) or common (a general name).",
+      "examples": [
+        { "luganda": "Musa", "english": "Moses (proper noun — a specific person's name)" },
+        { "luganda": "emmere", "english": "food (common noun)" },
+        { "luganda": "ennyumba", "english": "house" },
+        { "luganda": "embwa", "english": "dog" },
+        { "luganda": "Kampala", "english": "Kampala (proper noun — a place name)" }
+      ],
+      "sentence_example": {
+        "luganda": "Musa afumba emmere.",
+        "english": "Moses cooks food. (Musa and emmere are both nouns.)"
+      },
+      "important_note": "In Luganda, nouns belong to noun classes. The class a noun belongs to changes how adjectives and verbs are formed around it. This is one of the most important grammar features of Luganda.",
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_003",
+      "luganda_name": "Nakasigirwa",
+      "english_name": "Pronoun",
+      "description": "Words used instead of a noun — they replace the name of a person or thing to avoid repetition.",
+      "how_to_identify": "If the word replaces a name (like he, she, it, you, we, they), it is a pronoun.",
+      "examples": [
+        { "luganda": "gwe", "english": "you (singular)" },
+        { "luganda": "ye", "english": "he / she" },
+        { "luganda": "ffe", "english": "we / us" },
+        { "luganda": "bo", "english": "them / they" },
+        { "luganda": "nze", "english": "I / me" },
+        { "luganda": "mwe", "english": "you (plural)" }
+      ],
+      "sentence_examples": [
+        { "luganda": "Gwe ofumba.", "english": "You cook." },
+        { "luganda": "Ye yafumba.", "english": "He/she cooked." },
+        { "luganda": "Ffe tufumba.", "english": "We cook." }
+      ],
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_004",
+      "luganda_name": "Nakongeza Erinnya",
+      "english_name": "Adjective",
+      "description": "Words that describe or give more information about a noun or pronoun — they tell you what kind, what size, or what quality something is.",
+      "how_to_identify": "If the word tells you more about a noun (big, clean, young, bad), it is an adjective.",
+      "examples": [
+        {
+          "luganda": "omusajja omunene",
+          "english": "a big man",
+          "note": "omunene = big/large. The prefix omu- matches the noun class of omusajja (man)."
+        },
+        {
+          "luganda": "omukyala omulungi",
+          "english": "a beautiful woman",
+          "note": "omulungi = beautiful/good. The prefix omu- matches omukyala (woman)."
+        },
+        {
+          "luganda": "abaana abato",
+          "english": "young children",
+          "note": "abato = young/small. The prefix aba- matches abaana (children — plural)."
+        },
+        {
+          "luganda": "emmere ennungi",
+          "english": "good food",
+          "note": "ennungi = good. The prefix en- matches emmere (food)."
+        }
+      ],
+      "important_note": "In Luganda, adjectives MUST agree with the noun they describe. The adjective changes its prefix to match the noun class. For example: omusajja omunene (big man) but abaana abato (young children) — the adjective prefix changes from omu- to aba- because the noun changed from singular to plural. This agreement system is a critical feature of Luganda grammar.",
+      "agreement_pattern": {
+        "description": "The adjective prefix mirrors the noun prefix",
+        "examples": [
+          { "noun": "omusajja (man)", "noun_prefix": "omu-", "adjective": "omunene", "adjective_prefix": "omu-" },
+          { "noun": "abasajja (men)", "noun_prefix": "aba-", "adjective": "abanene", "adjective_prefix": "aba-" },
+          { "noun": "emmere (food)", "noun_prefix": "em-", "adjective": "ennungi", "adjective_prefix": "en-" }
+        ],
+        "note": "Full noun class agreement tables will be added in a future grammar file."
+      },
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_005",
+      "luganda_name": "Nakongeza Nakayogeza",
+      "english_name": "Adverb",
+      "description": "Words that add more meaning to a verb — they tell you how, when, where, or how much an action happens.",
+      "how_to_identify": "If the word modifies a verb and answers 'how?', 'when?', 'where?', or 'how much?', it is an adverb.",
+      "examples": [
+        {
+          "luganda": "yaggwa wansi nnyo",
+          "english": "fell down hard / fell down very badly",
+          "note": "wansi = down/below. Nnyo = very much/hard. Together they intensify the verb."
+        },
+        {
+          "luganda": "yalinnya mangu",
+          "english": "entered quickly",
+          "note": "mangu = quickly / soon. Modifies the verb 'to enter'."
+        },
+        {
+          "luganda": "atambula mpola",
+          "english": "walks slowly",
+          "note": "mpola = slowly / gently. Modifies the verb 'to walk'."
+        },
+        {
+          "luganda": "yalumwa nnyo ddala",
+          "english": "hurt very much indeed",
+          "note": "nnyo ddala = very much indeed. Double intensifier — both words are adverbs."
+        }
+      ],
+      "sentence_examples": [
+        { "luganda": "Akwata empola atuuka wala.", "english": "One who moves slowly reaches far." },
+        { "luganda": "Akomawo mangu.", "english": "He/she will return quickly." }
+      ],
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_006",
+      "luganda_name": "Nakayunga",
+      "english_name": "Conjunction",
+      "description": "Joining words — words that connect two words, phrases, or sentences together.",
+      "how_to_identify": "If the word connects parts of a sentence, it is a conjunction.",
+      "examples": [
+        {
+          "luganda": "ne",
+          "english": "and / with",
+          "note": "The most common conjunction. Used to join nouns and actions."
+        },
+        {
+          "luganda": "nga",
+          "english": "like / as / while",
+          "note": "Important: 'nga' means 'like', 'as', or 'while' — not simply 'and'. Example: alya nga ayimiridde = eating while standing."
+        },
+        {
+          "luganda": "oba",
+          "english": "or / whether",
+          "note": "Used for choices and questions. Example: oba kituufu = whether it is true."
+        },
+        {
+          "luganda": "ate",
+          "english": "and also / but also / while",
+          "note": "Used to connect two contrasting or sequential actions."
+        },
+        {
+          "luganda": "kubanga",
+          "english": "because",
+          "note": "Used to give a reason. Example: akaaba kubanga bagenda = crying because they were going."
+        },
+        {
+          "luganda": "naye",
+          "english": "but / however",
+          "note": "Used for contrast."
+        }
+      ],
+      "sentence_examples": [
+        { "luganda": "Tulina amatooke ne omuchere.", "english": "We have bananas and rice." },
+        { "luganda": "Omukyala bwe yanyiiga, omwami n'amusesa.", "english": "When the woman was angry, the man made her laugh." },
+        { "luganda": "Omwana akaaba kubanga maama ne Jane bagenda.", "english": "The child was crying because mother and Jane were going." }
+      ],
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_007",
+      "luganda_name": "Akagambo akalaga Ekifo, Embera, Ekiseera oba Engeri",
+      "english_name": "Preposition",
+      "description": "Words or groups of words that come before a noun or pronoun to show place, position, or time.",
+      "how_to_identify": "If the word tells you where something is, when something happens, or how things relate in space or time, it is a preposition.",
+      "examples": [
+        { "luganda": "ku", "english": "at / on / to", "note": "ku mulimu = at work. ku ssaawa = at the hour." },
+        { "luganda": "mu", "english": "in / inside", "note": "mu nnyumba = inside the house. mu kitongole = in the department." },
+        { "luganda": "e", "english": "at / in (used for place names)", "note": "e Kampala = in Kampala." },
+        { "luganda": "wansi", "english": "below / under", "note": "wansi w'ekigere = under the foot." },
+        { "luganda": "waggulu", "english": "above / on top", "note": "waggulu w'olugya = above the compound." },
+        { "luganda": "kumpi", "english": "near / close to", "note": "kumpi ne = near to." },
+        { "luganda": "ewa / wa", "english": "at someone's place / at", "note": "ewa Musa = at Moses's place." }
+      ],
+      "sentence_examples": [
+        { "luganda": "Nkola mu kitongole ky'obulimi.", "english": "I work in the agriculture department." },
+        { "luganda": "Ngenda ku mulimu buli lunaku.", "english": "I go to work every day." },
+        { "luganda": "Leero agenda mu ddwaliro.", "english": "Today she is going to hospital." }
+      ],
+      "needs_review": false
+    },
+    {
+      "class_id": "wc_008",
+      "luganda_name": "Ekigambo Ekibaguliza",
+      "english_name": "Interjection",
+      "description": "Words or phrases used to show surprise, wonder, excitement, or strong emotion. They often stand alone and are not grammatically connected to the rest of the sentence.",
+      "how_to_identify": "If the word expresses sudden emotion, surprise, or a strong social signal — and could stand alone — it is an interjection.",
+      "examples": [
+        { "luganda": "Ooh!", "english": "Oh! (surprise or wonder)" },
+        { "luganda": "Kiki!", "english": "What! / Really! (strong surprise)" },
+        { "luganda": "Ssebo! / Nnyabo!", "english": "Sir! / Madam! (polite social signals)" },
+        { "luganda": "Amiina / Kibere bwe kityo", "english": "Amen / So be it (religious/solemn agreement)" },
+        { "luganda": "Weeraba!", "english": "Goodbye! (farewell interjection)" },
+        { "luganda": "Munyambe!", "english": "Help me! (urgent exclamation)" }
+      ],
+      "needs_review": false
+    }
+  ],
+  "question_words": {
+    "description": "Common question words used to form questions in Luganda. These often appear at the end of a Luganda sentence, unlike English where they appear at the start.",
+    "entries": [
+      {
+        "luganda": "Lwaki?",
+        "english": "Why?",
+        "example": "Lwaki ogenda? = Why are you going?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Ddi?",
+        "english": "When?",
+        "example": "Okomawo ddi? = When will you return?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Wa?",
+        "english": "Where?",
+        "example": "Ogenda wa? = Where are you going?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Ki? / Kiki?",
+        "english": "What? / Which?",
+        "example": "Ekkubo ki? = Which road? Kiki oyo? = What is that?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Ani?",
+        "english": "Who?",
+        "example": "Ani akulira wano? = Who is in charge here?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Kyani? / Byani? / Lyani?",
+        "english": "Whose?",
+        "example": "Gyani? = Whose is it? (form changes with noun class)",
+        "needs_review": false
+      },
+      {
+        "luganda": "Mmeka?",
+        "english": "How many? / How much?",
+        "example": "Mmeka? = How much does it cost? How many are there?",
+        "needs_review": false
+      },
+      {
+        "luganda": "Mutya? / Otya?",
+        "english": "How? / How are you?",
+        "example": "Muli mutya? = How are you (plural)? Otya? = How are you (singular)?",
+        "needs_review": false
+      }
+    ]
+  }
+}

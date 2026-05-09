@@ -1,0 +1,565 @@
+{
+  "metadata": {
+    "category": "animals",
+    "description": "Luganda vocabulary for domestic animals, wild animals, birds, and insects",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 53,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections: (1) Omusege→Bee was WRONG — correct Luganda for bee is Enjuki. Omusege is unconfirmed. Entry corrected. (2) Engo→Leopard/Tiger corrected — tigers do not exist in Uganda or East Africa. Engo = Leopard only. (3) Duplicate Ekibe (Fox) removed — appeared twice. (4) Eddubu (Bear) kept but flagged — bears not native to Uganda, word may appear in translated texts."
+  },
+  "entries": [
+    {
+      "luganda": "Embwa",
+      "english": "Dog",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Embwa yange erina abaana.",
+      "example_sentence_english": "My dog has puppies.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Embuzi",
+      "english": "Goat",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkoko",
+      "english": "Hen / Chicken",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkoko empanga",
+      "english": "Cock / Cockerel (male chicken)",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "notes": "Empanga = male of a species. So Enkoko empanga = the male chicken.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embuzi ensajja",
+      "english": "He-goat / Billy goat",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "notes": "Ensajja = male (of an animal). Embuzi ensajja = male goat.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ente",
+      "english": "Cow / Cattle",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Ente zange ziri omu tto.",
+      "example_sentence_english": "My cows are at the pasture.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Seddume w'ente",
+      "english": "Bull",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "notes": "Seddume = male animal. Seddume w'ente = male of the cattle = bull.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embizzi",
+      "english": "Pig",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embaata",
+      "english": "Duck",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ssekkokko",
+      "english": "Turkey",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kkappa / Ppusi",
+      "english": "Cat",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "notes": "Both Kkappa and Ppusi are used. Ppusi is more common in everyday speech.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kamyu",
+      "english": "Rabbit",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Endogoyi",
+      "english": "Donkey",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embalaasi",
+      "english": "Horse",
+      "category": "animals",
+      "subcategory": "domestic",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enjovu",
+      "english": "Elephant",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Empologoma",
+      "english": "Lion",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Engo",
+      "english": "Leopard",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry said 'Leopard / Tiger'. Tigers do not exist in Uganda or East Africa. Engo = Leopard only.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Entulege",
+      "english": "Zebra",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Entugga",
+      "english": "Giraffe",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embogo",
+      "english": "Buffalo",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkula",
+      "english": "Rhinoceros",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Envubu",
+      "english": "Hippopotamus",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Engamira",
+      "english": "Camel",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkima",
+      "english": "Monkey (Vervet)",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ezzike",
+      "english": "Chimpanzee",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkobe",
+      "english": "Baboon",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Engeye",
+      "english": "Black and white Colobus Monkey",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekisodde",
+      "english": "Gorilla",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Effumbe",
+      "english": "Civet Cat",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Engabi",
+      "english": "Bushbuck / Antelope",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ggoonya",
+      "english": "Crocodile",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omusota",
+      "english": "Snake",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ttimba",
+      "english": "Python",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enswaswa",
+      "english": "Monitor Lizard",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omunya",
+      "english": "Lizard (small)",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekikere",
+      "english": "Frog",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Nawolovu",
+      "english": "Chameleon",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Nawolovu atuuka emitala.",
+      "example_sentence_english": "The chameleon reaches very far (slowly but surely).",
+      "needs_review": false
+    },
+    {
+      "luganda": "Emmese",
+      "english": "Rat / Mouse",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekibe",
+      "english": "Fox / Jackal",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: duplicate entry removed. Ekibe appeared twice in the original file. Only one entry retained.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Maaya",
+      "english": "Ostrich",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Eddubu",
+      "english": "Bear",
+      "category": "animals",
+      "subcategory": "wild",
+      "part_of_speech": "noun",
+      "notes": "Bears are not native to Uganda or East Africa. This word may appear in translated texts, religious books, or formal Luganda dictionaries. Kept for reference but flagged.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": true
+    },
+    {
+      "luganda": "Ngaali",
+      "english": "Grey Crowned Crane",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "notes": "National bird of Uganda. Ngaali = Grey Crowned Crane.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kamunye",
+      "english": "Hawk / Kite",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Empungu",
+      "english": "Eagle",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekiwuggulu",
+      "english": "Owl",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ennyonyi",
+      "english": "Bird (singular)",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "notes": "Ennyonyi = one bird. Ebinyonyi = birds (plural).",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebinyonyi",
+      "english": "Birds (plural)",
+      "category": "animals",
+      "subcategory": "birds",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enjuki",
+      "english": "Bee",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry had 'Omusege' which is unconfirmed and likely an OCR error. The correct and well-established Luganda word for bee is Enjuki.",
+      "example_sentence_luganda": "Enjuki ezana mu nsuku.",
+      "example_sentence_english": "The bees are busy in the garden.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Enseenene",
+      "english": "Grasshopper",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "notes": "Enseenene are a popular seasonal food in Uganda, often fried.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ejjanzi",
+      "english": "Locust",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekiyenje",
+      "english": "Cockroach",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enswa",
+      "english": "White Ants / Flying Termites",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "notes": "Enswa = flying white ants (termites). A seasonal delicacy in Uganda.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ensanafu",
+      "english": "Red Ants",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ensowera",
+      "english": "Housefly",
+      "category": "animals",
+      "subcategory": "insects",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    }
+  ]
+}

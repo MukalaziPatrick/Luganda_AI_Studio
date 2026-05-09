@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "category": "grammar_verb_tenses",
+    "description": "Luganda verb tenses: structure, naming, and full conjugation examples",
+    "source_ids": ["ish_handbook"],
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections: (1) t_001 sleep everyday form corrected from 'yeebaka' to 'yeebase'. (2) t_003 sleep past form corrected from 'yeebaka' to 'yawebaka'. (3) t_004 walk future corrected from 'ali tambula' (space) to 'alitambula'. (4) t_004 run future corrected from 'ajja kuduka' to 'ajja kudduka' (double d). (5) t_004 stand future corrected from 'aliyimiririra' (extra ri) to 'aliyimirira'. (6) t_005 Ekyali Kyaggwa: the example 'afumba = cooked (completed)' was WRONG — afumba is present tense. Replaced with correct completed past examples. (7) subject prefix plural 'you' flag cleared — Mugenda is correct standard Luganda."
+  },
+  "introduction": "Luganda verbs change their form to show when an action happens. There are four main tenses used in everyday Luganda, plus a completed past form. Learning these tenses is essential for speaking and writing correctly.",
+  "tenses": [
+    {
+      "tense_id": "t_001",
+      "luganda_name": "Bulijjo",
+      "english_name": "Everyday / Habitual Tense",
+      "description": "Used for actions that happen regularly, every day, or habitually. Like saying 'I eat every day' in English — not happening right now at this exact moment, but it always happens as a pattern.",
+      "time_marker": "buli lunaku (every day), bulijjo (always), buli kiseera (every time)",
+      "verb_pattern": "Subject prefix + verb stem. For third person (he/she): A- prefix + verb stem.",
+      "examples": [
+        { "english_verb": "eat", "luganda_infinitive": "okulya", "everyday_form": "alya", "english_everyday": "he/she eats (every day)" },
+        { "english_verb": "cook", "luganda_infinitive": "okufumba", "everyday_form": "afumba", "english_everyday": "he/she cooks" },
+        { "english_verb": "walk", "luganda_infinitive": "okutambula", "everyday_form": "atambula", "english_everyday": "he/she walks" },
+        { "english_verb": "sleep", "luganda_infinitive": "okwebaka", "everyday_form": "yeebase", "english_everyday": "he/she sleeps", "note": "CORRECTED: 'yeebaka' was wrong here. Yeebase = habitual/present state of sleeping." },
+        { "english_verb": "run", "luganda_infinitive": "okudduka", "everyday_form": "adduka", "english_everyday": "he/she runs" },
+        { "english_verb": "look", "luganda_infinitive": "okulaba", "everyday_form": "alaba", "english_everyday": "he/she looks / sees" },
+        { "english_verb": "drink", "luganda_infinitive": "okunywa", "everyday_form": "anywa", "english_everyday": "he/she drinks" },
+        { "english_verb": "laugh", "luganda_infinitive": "okuseka", "everyday_form": "aseka", "english_everyday": "he/she laughs" },
+        { "english_verb": "talk", "luganda_infinitive": "okwogera", "everyday_form": "ayogera", "english_everyday": "he/she talks" },
+        { "english_verb": "jump", "luganda_infinitive": "okubuuka", "everyday_form": "abuuka", "english_everyday": "he/she jumps" },
+        { "english_verb": "play", "luganda_infinitive": "okuzanya", "everyday_form": "azanya", "english_everyday": "he/she plays" },
+        { "english_verb": "stand", "luganda_infinitive": "okuyimirira", "everyday_form": "ayimirira", "english_everyday": "he/she stands" }
+      ],
+      "sentence_examples": [
+        { "luganda": "Ngenda ku mulimu buli lunaku.", "english": "I go to work every day." },
+        { "luganda": "Mutabani wange asoma buli lunaku.", "english": "My son goes to school every day." },
+        { "luganda": "Anywa amazzi ennyo.", "english": "He/she drinks a lot of water (habitually)." }
+      ],
+      "needs_review": false
+    },
+    {
+      "tense_id": "t_002",
+      "luganda_name": "Kaakati",
+      "english_name": "Present / Right Now",
+      "description": "Used for actions happening at this very moment. Like 'She is eating right now' — the action is actively in progress. The time word 'kakati' (now) often signals this tense.",
+      "time_marker": "kakati / kaakati (now, at this moment)",
+      "verb_pattern": "Same prefix structure as everyday tense. Context and time words signal present vs habitual. Some verbs use a stative form for present state.",
+      "examples": [
+        { "english_verb": "eat", "luganda_infinitive": "okulya", "present_form": "alya", "english_present": "he/she is eating" },
+        { "english_verb": "cook", "luganda_infinitive": "okufumba", "present_form": "afumba", "english_present": "he/she is cooking" },
+        { "english_verb": "walk", "luganda_infinitive": "okutambula", "present_form": "atambula", "english_present": "he/she is walking" },
+        { "english_verb": "sleep", "luganda_infinitive": "okwebaka", "present_form": "yeebase", "english_present": "he/she is sleeping (currently asleep)" },
+        { "english_verb": "run", "luganda_infinitive": "okudduka", "present_form": "adduka", "english_present": "he/she is running" },
+        { "english_verb": "look", "luganda_infinitive": "okulaba", "present_form": "alaba", "english_present": "he/she is looking" },
+        { "english_verb": "drink", "luganda_infinitive": "okunywa", "present_form": "anywa", "english_present": "he/she is drinking" },
+        { "english_verb": "laugh", "luganda_infinitive": "okuseka", "present_form": "aseka", "english_present": "he/she is laughing" },
+        { "english_verb": "talk", "luganda_infinitive": "okwogera", "present_form": "ayogera", "english_present": "he/she is talking" },
+        { "english_verb": "jump", "luganda_infinitive": "okubuuka", "present_form": "abuuka", "english_present": "he/she is jumping" },
+        { "english_verb": "play", "luganda_infinitive": "okuzanya", "present_form": "azanya", "english_present": "he/she is playing" },
+        { "english_verb": "stand", "luganda_infinitive": "okuyimirira", "present_form": "ayimiridde", "english_present": "he/she is standing (currently standing)" }
+      ],
+      "sentence_examples": [
+        { "luganda": "Maama waabwe alya mmere.", "english": "Their mother is eating food (right now)." },
+        { "luganda": "Obudde bugenze, alya nga ayimiridde.", "english": "It is late, she is eating while standing." },
+        { "luganda": "Kakati atunula mu ddirisa.", "english": "Now she is looking out of the window." }
+      ],
+      "needs_review": false
+    },
+    {
+      "tense_id": "t_003",
+      "luganda_name": "Ekyayita",
+      "english_name": "Past Tense",
+      "description": "Used for actions that already happened and are completed. In Luganda, the past tense for third person (he/she) typically changes the verb prefix to 'ya-'. For first person (I), the prefix changes to 'na-'.",
+      "time_marker": "jjo (yesterday), luli (last time), edda (in the past), awo (then/at that time)",
+      "verb_pattern": "ya + verb stem for he/she. na + verb stem for I. ba + verb stem for they.",
+      "examples": [
+        { "english_verb": "eat", "luganda_infinitive": "okulya", "past_form": "yalya", "english_past": "he/she ate" },
+        { "english_verb": "cook", "luganda_infinitive": "okufumba", "past_form": "yafumba", "english_past": "he/she cooked" },
+        { "english_verb": "walk", "luganda_infinitive": "okutambula", "past_form": "yatambula", "english_past": "he/she walked" },
+        { "english_verb": "sleep", "luganda_infinitive": "okwebaka", "past_form": "yawebaka", "english_past": "he/she slept", "note": "CORRECTED: previous form 'yeebaka' was the infinitive form, not past. Correct past = yawebaka." },
+        { "english_verb": "run", "luganda_infinitive": "okudduka", "past_form": "yadduka", "english_past": "he/she ran" },
+        { "english_verb": "look", "luganda_infinitive": "okulaba", "past_form": "yalaba", "english_past": "he/she looked / saw" },
+        { "english_verb": "drink", "luganda_infinitive": "okunywa", "past_form": "yanywa", "english_past": "he/she drank" },
+        { "english_verb": "laugh", "luganda_infinitive": "okuseka", "past_form": "yaseka", "english_past": "he/she laughed" },
+        { "english_verb": "talk", "luganda_infinitive": "okwogera", "past_form": "yayogera", "english_past": "he/she talked" },
+        { "english_verb": "jump", "luganda_infinitive": "okubuuka", "past_form": "yabuuka", "english_past": "he/she jumped" },
+        { "english_verb": "play", "luganda_infinitive": "okuzanya", "past_form": "yazanya", "english_past": "he/she played" },
+        { "english_verb": "go", "luganda_infinitive": "okugenda", "past_form": "yagenda", "english_past": "he/she went" }
+      ],
+      "sentence_examples": [
+        { "luganda": "Omusajja yafumba ate omukyala n'asiika enva.", "english": "The man cooked while the woman fried the sauce." },
+        { "luganda": "Omukyala yayoza engoye, omwami n'azaanika.", "english": "The woman washed the clothes while the man dried them." },
+        { "luganda": "Mikwano gyange bannewunyisa!", "english": "My friends amazed me!" },
+        { "luganda": "Nagenda ku katale jjo.", "english": "I went to the market yesterday." }
+      ],
+      "needs_review": false
+    },
+    {
+      "tense_id": "t_004",
+      "luganda_name": "Ekijja",
+      "english_name": "Future Tense",
+      "description": "Used for actions that have not yet happened but will happen. Luganda future tense is formed either by using 'ajja + infinitive' (will do) or by the prefix 'ali-' before the verb stem for third person.",
+      "time_marker": "enkya (tomorrow), mu maaso (in the future), leero emmande (later today)",
+      "verb_pattern": "ajja + full infinitive (e.g., ajja okulya) OR ali + verb stem (e.g., alirya). Both are correct. Future forms are written as one word — no spaces.",
+      "examples": [
+        { "english_verb": "eat", "luganda_infinitive": "okulya", "future_form": "ajja okulya / alirya", "english_future": "he/she will eat" },
+        { "english_verb": "cook", "luganda_infinitive": "okufumba", "future_form": "ajja okufumba / alifumba", "english_future": "he/she will cook" },
+        { "english_verb": "walk", "luganda_infinitive": "okutambula", "future_form": "alitambula", "english_future": "he/she will walk", "note": "CORRECTED: previous form 'ali tambula' had a space. Written as one word: alitambula." },
+        { "english_verb": "sleep", "luganda_infinitive": "okwebaka", "future_form": "ajja okwebaka", "english_future": "he/she will sleep" },
+        { "english_verb": "run", "luganda_infinitive": "okudduka", "future_form": "ajja okudduka", "english_future": "he/she will run", "note": "CORRECTED: previous form 'ajja kuduka' was missing the double d. Correct infinitive is okudduka." },
+        { "english_verb": "look", "luganda_infinitive": "okulaba", "future_form": "alilaba", "english_future": "he/she will look / see" },
+        { "english_verb": "drink", "luganda_infinitive": "okunywa", "future_form": "alinywa", "english_future": "he/she will drink" },
+        { "english_verb": "laugh", "luganda_infinitive": "okuseka", "future_form": "aliseka", "english_future": "he/she will laugh" },
+        { "english_verb": "talk", "luganda_infinitive": "okwogera", "future_form": "aliyogera", "english_future": "he/she will talk" },
+        { "english_verb": "jump", "luganda_infinitive": "okubuuka", "future_form": "alibuuka", "english_future": "he/she will jump" },
+        { "english_verb": "play", "luganda_infinitive": "okuzanya", "future_form": "alizanya", "english_future": "he/she will play" },
+        { "english_verb": "stand", "luganda_infinitive": "okuyimirira", "future_form": "aliyimirira", "english_future": "he/she will stand", "note": "CORRECTED: previous form 'aliyimiririra' had an extra 'ri'. Correct form: aliyimirira." }
+      ],
+      "sentence_examples": [
+        { "luganda": "Enkya ojja okuwandiika.", "english": "You will write tomorrow." },
+        { "luganda": "Tujja okusoma eby'obulamu.", "english": "We shall study health education." },
+        { "luganda": "Alikomawo enkya.", "english": "He/she will come back tomorrow." }
+      ],
+      "needs_review": false
+    },
+    {
+      "tense_id": "t_005",
+      "luganda_name": "Ekyafumbye / Ekyayitawo",
+      "english_name": "Completed Past / Perfect Tense",
+      "description": "Used for actions that were completed in the past and whose result is still relevant or felt now. Similar to 'has cooked' or 'has gone' in English. This tense is formed differently from the simple past (ekyayita). It typically uses a different verb ending.",
+      "verb_pattern": "The completed past often uses the ending '-iye' or '-ye' added to the verb stem. This is more complex than simple past and needs careful study.",
+      "examples": [
+        {
+          "english_verb": "cook",
+          "simple_past_form": "yafumba",
+          "simple_past_meaning": "he/she cooked (simple past — it happened)",
+          "completed_past_form": "afumbye",
+          "completed_past_meaning": "he/she has cooked (the food is ready now)",
+          "note": "The -ye ending signals completed action with a present result."
+        },
+        {
+          "english_verb": "go",
+          "simple_past_form": "yagenda",
+          "simple_past_meaning": "he/she went",
+          "completed_past_form": "agenda",
+          "completed_past_meaning": "he/she has gone (and is currently away)",
+          "note": "Context distinguishes simple past from completed state."
+        },
+        {
+          "english_verb": "come",
+          "simple_past_form": "yajja",
+          "simple_past_meaning": "he/she came",
+          "completed_past_form": "azze",
+          "completed_past_meaning": "he/she has arrived (and is here now)",
+          "note": "Azze is the completed past of okujja — often heard in greetings."
+        }
+      ],
+      "important_note": "The completed past tense is still being documented from source material. The examples above are reliable. A full conjugation table for this tense needs expert verification before teaching.",
+      "sentence_examples": [
+        { "luganda": "Azze.", "english": "He/she has arrived / He/she is here." },
+        { "luganda": "Afumbye emmere.", "english": "He/she has cooked the food (it is ready)." }
+      ],
+      "needs_review": true
+    }
+  ],
+  "tense_summary_table": {
+    "description": "Quick reference table showing all tenses for the verb 'okulya' (to eat)",
+    "verb": "okulya (to eat)",
+    "rows": [
+      { "tense": "Everyday (Bulijjo)", "form": "alya", "english": "he/she eats (every day)", "time_signal": "buli lunaku" },
+      { "tense": "Present Now (Kaakati)", "form": "alya", "english": "he/she is eating (right now)", "time_signal": "kakati" },
+      { "tense": "Past (Ekyayita)", "form": "yalya", "english": "he/she ate", "time_signal": "jjo / edda" },
+      { "tense": "Future (Ekijja)", "form": "ajja okulya / alirya", "english": "he/she will eat", "time_signal": "enkya / mu maaso" },
+      { "tense": "Completed Past", "form": "alidde", "english": "he/she has eaten (and is now full)", "time_signal": "context", "note": "Completed past of okulya" }
+    ],
+    "important_note": "The Everyday and Present Now forms look the same (alya). The time word or context tells you which tense is meant."
+  },
+  "subject_prefixes": {
+    "description": "How the verb prefix changes depending on who is doing the action. These prefixes apply to present and everyday tenses. Past tense uses 'ya-' for he/she, 'na-' for I.",
+    "entries": [
+      { "subject": "I (nze)", "prefix": "N-", "example": "Ngenda (I go)", "needs_review": false },
+      { "subject": "You singular (gwe)", "prefix": "O-", "example": "Ogenda (You go)", "needs_review": false },
+      { "subject": "He / She (ye)", "prefix": "A-", "example": "Agenda (He/she goes)", "needs_review": false },
+      { "subject": "We (ffe)", "prefix": "Tu-", "example": "Tugenda (We go)", "needs_review": false },
+      { "subject": "You plural (mwe)", "prefix": "Mu-", "example": "Mugenda (You all go)", "note": "Flag cleared — Mugenda is correct standard Luganda for plural you.", "needs_review": false },
+      { "subject": "They (bo)", "prefix": "Ba-", "example": "Bagenda (They go)", "needs_review": false }
+    ]
+  }
+}

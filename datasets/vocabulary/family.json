@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "category": "family",
+    "description": "Luganda vocabulary for family members, relationships, and people",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 38,
+    "last_updated": "2026-03-23"
+  },
+  "entries": [
+    {
+      "luganda": "Abantu",
+      "english": "People",
+      "category": "family",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Musajja",
+      "english": "Man",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omu yali musajja omulala mukazi.",
+      "example_sentence_english": "One was a man and the other was a woman.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Mukazi",
+      "english": "Woman",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omukyala yayoza engoye.",
+      "example_sentence_english": "The woman washed the clothes.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Mulenzi",
+      "english": "Boy",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Muwala",
+      "english": "Girl",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Muvubuka",
+      "english": "Youth / Young person",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mwana",
+      "english": "Child",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Mwana akaaba kubanga maama ne Jane bagenda.",
+      "example_sentence_english": "The child was crying because mother and Jane were going.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omwana omuwere",
+      "english": "Baby",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Maama",
+      "english": "Mother",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Maama waabwe alya mmere.",
+      "example_sentence_english": "Their mother is eating food.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Taata",
+      "english": "Father",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Taata omuto",
+      "english": "Paternal uncle",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Maana omuto",
+      "english": "Maternal aunt",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kojja",
+      "english": "Maternal uncle",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Senga",
+      "english": "Paternal aunt",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kizibwe",
+      "english": "Cousin",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Abalongo",
+      "english": "Twins",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mwanyoko / Mugandawo (omulenzi)",
+      "english": "Brother (to a boy or girl)",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mwanyoko / Mugandawo (omuwala)",
+      "english": "Sister (to a boy or girl)",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omwana wa mwanyoko - omujjwa (nga omuwala)",
+      "english": "Nephew",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuwana wa mwanyoko oba mugandawo - omujjwa (nga omulenzi)",
+      "english": "Niece",
+      "category": "family",
+      "subcategory": "extended_family",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Jjajja omukazi",
+      "english": "Grandmother",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Jjajja omusajja",
+      "english": "Grandfather",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omwami",
+      "english": "Husband",
+      "category": "family",
+      "subcategory": "marriage",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omwami ye yafumba ate omukyala n'asiika enva.",
+      "example_sentence_english": "The man cooked while the woman fried the sauce.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omukyala",
+      "english": "Wife",
+      "category": "family",
+      "subcategory": "marriage",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okuwaasa",
+      "english": "To marry (for a man)",
+      "category": "family",
+      "subcategory": "marriage",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omulenzi",
+      "english": "Boy / Young man",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omukulu",
+      "english": "Elder / Adult",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omwana omukulu Jane, mulwadde.",
+      "example_sentence_english": "The elder child, Jane, is sick.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuto",
+      "english": "Young one / Junior",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Muka bba",
+      "english": "Our husband's wife / Co-wife",
+      "category": "family",
+      "subcategory": "marriage",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omwana omuto",
+      "english": "Young child",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Musa akuba engatto eddagala.",
+      "example_sentence_english": "Young Musa is polishing shoes.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Abeeka",
+      "english": "Rest of the family / Relatives",
+      "category": "family",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Abeeka obalese batya?",
+      "example_sentence_english": "How is the rest of the family?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Mutabani",
+      "english": "Son",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Ku makya tunywa chai ne mutabani wange.",
+      "example_sentence_english": "In the morning we drink tea with my son.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Muwala wange",
+      "english": "My daughter",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "phrase",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Abaana",
+      "english": "Children",
+      "category": "family",
+      "subcategory": "family_members",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omukyala oli alina abaana babiri.",
+      "example_sentence_english": "That lady has two children.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Eka",
+      "english": "Home / Household",
+      "category": "family",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Eka eradde?",
+      "example_sentence_english": "Is all fine at home?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Amaka",
+      "english": "Family / Household (formal)",
+      "category": "family",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuyizi",
+      "english": "Student / Learner",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuwandiisi",
+      "english": "Secretary",
+      "category": "family",
+      "subcategory": "people",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    }
+  ]
+}

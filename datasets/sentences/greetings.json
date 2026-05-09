@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "category": "greetings",
+    "description": "Luganda sentence pairs for greetings, introductions, farewells, and polite conversation",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 48,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections made: gr_020 had a fused sentence error — Luganda contained two separate sentences merged into one entry. Corrected and separated. gr_022 and gr_023 corrected from stored infinitives to actual spoken greeting forms. Notes expanded across all entries for AI context quality."
+  },
+  "entries": [
+    {
+      "id": "gr_001",
+      "english": "Hello! / Welcome in.",
+      "luganda": "Koodi! / Kalibu.",
+      "tense": "general",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Koodi = greeting used when arriving or knocking at a door. Kalibu = welcome (widely used, borrowed term).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_002",
+      "english": "We are happy to see you.",
+      "luganda": "Tusanyuse okukulaba.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Tusanyuse = we are happy. Okukulaba = to see you.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_003",
+      "english": "I am happy too. / Me too.",
+      "luganda": "Nange nsanyuse.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Nange = me too / I also. Nsanyuse = I am happy.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_004",
+      "english": "Is all fine there, Sir?",
+      "luganda": "Eradde ssebo?",
+      "tense": "question",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Eradde = is it calm / is it fine. Ssebo = polite address for a man (Sir).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_005",
+      "english": "How are you all, Sir?",
+      "luganda": "Muliyo mutyanno ssebo?",
+      "tense": "question",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Muliyo = are you there. Mutyanno = how are you (plural). Ssebo = Sir.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_006",
+      "english": "Thank you for all you are doing.",
+      "luganda": "Mugyebale emirimu.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Mugyebale = thank you (plural/formal). Emirimu = the work / the tasks.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_007",
+      "english": "How is the rest of the family?",
+      "luganda": "Abeeka obalese batya?",
+      "tense": "question",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Abeeka = the others at home. Obalese = you left them. Batya = how are they.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_008",
+      "english": "Is all fine at home?",
+      "luganda": "Eka eradde?",
+      "tense": "question",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Eka = at home. Eradde = is it all fine / peaceful.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_009",
+      "english": "We are okay, Madam. We work just for a living, and at home people are fine.",
+      "luganda": "Gyetuli bulungi nnyabo. Tukola tubeewo, n'abeeka balungi.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "intermediate",
+      "notes": "Nnyabo = polite address for a woman (Madam). Tukola tubeewo = we work to get by. Abeeka balungi = the others at home are well.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_010",
+      "english": "It has been a long time since we last saw you.",
+      "luganda": "Tuludde okubalaba.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Tuludde = we have been waiting long. Okubalaba = to see you all.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_011",
+      "english": "Even us — the world is so busy that we cannot spare time to see each other.",
+      "luganda": "Naffe; anti olaba ensi etumazeeko ekiseera okulabagana ate n'emitawaana mingi.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "advanced",
+      "notes": "Naffe = even us. Ensi etumazeeko = the world has consumed our time. Emitawaana = obstacles / competing demands.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_012",
+      "english": "Congratulations on building. It is a big house.",
+      "luganda": "Mwebale kuzimba, ennyumba nene.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Mwebale = well done / thank you (plural). Kuzimba = for building. Ennyumba nene = a big house.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_013",
+      "english": "Also / As well.",
+      "luganda": "Nate.",
+      "tense": "general",
+      "topic": "common_words",
+      "difficulty": "beginner",
+      "notes": "Nate = also / in addition / as well. Used to add to a previous statement.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_014",
+      "english": "As quickly as possible.",
+      "luganda": "Mangu nga bwe kisoboka.",
+      "tense": "general",
+      "topic": "common_phrases",
+      "difficulty": "intermediate",
+      "notes": "Mangu = quickly / soon. Nga bwe kisoboka = as it is possible.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_015",
+      "english": "Please help me and tell me.",
+      "luganda": "Nyamba era ombuulire.",
+      "tense": "command",
+      "topic": "help",
+      "difficulty": "beginner",
+      "notes": "Nyamba = help me. Era = and. Ombuulire = tell me / inform me.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_016",
+      "english": "Excuse me — do you understand English?",
+      "luganda": "Mwattu nsonyiwa; omanyi Oluzungu?",
+      "tense": "question",
+      "topic": "language",
+      "difficulty": "beginner",
+      "notes": "Mwattu nsonyiwa = excuse me / I am sorry. Omanyi = do you know. Oluzungu = the English language.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_017",
+      "english": "Have pity on me, it is very bad.",
+      "luganda": "Nsaasira, kibi nnyo ddala.",
+      "tense": "present",
+      "topic": "emotions",
+      "difficulty": "beginner",
+      "notes": "Nsaasira = have mercy / pity me. Kibi nnyo ddala = it is very bad indeed.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_018",
+      "english": "I am disappointed, I am in a hurry, and I am still searching.",
+      "luganda": "Nsaaliddwa, ndi mu bwangu era noonya.",
+      "tense": "present",
+      "topic": "emotions",
+      "difficulty": "intermediate",
+      "notes": "Nsaaliddwa = I am let down / disappointed. Ndi mu bwangu = I am in a hurry. Noonya = I am searching / looking.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_019",
+      "english": "I think there is cold and warmth today.",
+      "luganda": "Ndowooza waliwo empewo n'ebbugumu.",
+      "tense": "present",
+      "topic": "weather",
+      "difficulty": "intermediate",
+      "notes": "Ndowooza = I think / I believe. Empewo = cold / wind. Ebbugumu = warmth / heat.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_020",
+      "english": "It is my fault. I do not know if it is true.",
+      "luganda": "Nsobi yange. Simanyi oba kituufu.",
+      "tense": "present",
+      "topic": "social",
+      "difficulty": "intermediate",
+      "notes": "Nsobi yange = it is my mistake / my fault. Simanyi = I do not know. Oba kituufu = whether it is true. CORRECTED: previous version incorrectly merged this entry with gr_021.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_021",
+      "english": "Wait a moment, here is the direction.",
+      "luganda": "Lindako katono, endagiriro yiino.",
+      "tense": "command",
+      "topic": "directions",
+      "difficulty": "beginner",
+      "notes": "Lindako katono = wait a little moment. Endagiriro yiino = here is the direction / the pointer.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_022",
+      "english": "Goodbye. / Farewell.",
+      "luganda": "Weeraba. / Nsiibuula.",
+      "tense": "general",
+      "topic": "farewells",
+      "difficulty": "beginner",
+      "notes": "Weeraba = goodbye (said to the person staying). Nsiibuula = I am taking my leave. CORRECTED: previously stored as the infinitive 'Okusiibuula' which is not the used spoken form.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_023",
+      "english": "Welcome. / You are welcome here.",
+      "luganda": "Kalibu. / Tukwanirizza.",
+      "tense": "general",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Kalibu = welcome (widely used form). Tukwanirizza = we welcome you (native Luganda form). CORRECTED: previously stored as infinitive 'Okwaniriza' which is not the spoken greeting.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_024",
+      "english": "Where are you from?",
+      "luganda": "Ova wa?",
+      "tense": "question",
+      "topic": "introductions",
+      "difficulty": "beginner",
+      "notes": "Ova wa = where do you come from. The longer form 'Gwe ova wa?' is also correct but the short form is more natural in speech.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_025",
+      "english": "Where are you going?",
+      "luganda": "Ogenda wa?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Ogenda = you are going. Wa = where.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_026",
+      "english": "Which way will you pass through?",
+      "luganda": "Onoyita wa?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Onoyita = you will pass through. Wa = where / which way.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_027",
+      "english": "Where will you reach / stop?",
+      "luganda": "Okoma wa?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Okoma = you reach / stop at a destination. Wa = where.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_028",
+      "english": "When will you return?",
+      "luganda": "Okomawo ddi?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Okomawo = you come back here. Ddi = when.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_029",
+      "english": "Why are you going?",
+      "luganda": "Lwaki ogenda?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Lwaki = why. Ogenda = you are going.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_030",
+      "english": "Will you pass by the market?",
+      "luganda": "Onoyitako mu katale?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Onoyitako = will you pass by there. Mu katale = at/through the market.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_031",
+      "english": "Which route will you return by?",
+      "luganda": "Onoddira mu kkubo ki?",
+      "tense": "question",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Onoddira = you will return. Mu kkubo ki = by which path / route.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_032",
+      "english": "He / she has arrived.",
+      "luganda": "Azze.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Azze = he/she has come / arrived. Used when someone has just appeared.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_033",
+      "english": "He / she is going back.",
+      "luganda": "Addayo.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Addayo = he/she goes back / returns to where they came from.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_034",
+      "english": "He / she will come back.",
+      "luganda": "Akomawo.",
+      "tense": "future",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Akomawo = he/she will return here (to this place).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_035",
+      "english": "He / she has run away.",
+      "luganda": "Adduse.",
+      "tense": "past",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Adduse = he/she has run (completed). Implies running away or fleeing.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_036",
+      "english": "He / she is standing.",
+      "luganda": "Ayimiridde.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Ayimiridde = he/she is standing (present state).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_037",
+      "english": "He / she is seated.",
+      "luganda": "Atudde.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Atudde = he/she is sitting / seated (present state).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_038",
+      "english": "He / she is walking.",
+      "luganda": "Atambula.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Atambula = he/she walks / is walking.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_039",
+      "english": "Let me pass through.",
+      "luganda": "Kampitewo.",
+      "tense": "command",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Kampitewo = let me pass / allow me through. Used when asking for space in a crowd.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_040",
+      "english": "Let me wait for you.",
+      "luganda": "Kankulinde.",
+      "tense": "present",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Kankulinde = let me wait for you. A polite offer to wait.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_041",
+      "english": "Try it. / Give it a go.",
+      "luganda": "Gezaako.",
+      "tense": "command",
+      "topic": "encouragement",
+      "difficulty": "beginner",
+      "notes": "Gezaako = try it / have a go at it. Used to encourage someone to attempt something.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_042",
+      "english": "Come closer.",
+      "luganda": "Sembera.",
+      "tense": "command",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Sembera = come nearer / approach. Used to beckon someone closer.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_043",
+      "english": "Do not step on me.",
+      "luganda": "Toninyako.",
+      "tense": "command",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Toninyako = do not tread on me. To- prefix marks the negative command.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_044",
+      "english": "Hold my hand.",
+      "luganda": "Nkwata mu ngalo.",
+      "tense": "command",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Nkwata = hold me / take me. Mu ngalo = in the palm / hand.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_045",
+      "english": "Move forward. / Make room.",
+      "luganda": "Weeyongereyo.",
+      "tense": "command",
+      "topic": "meeting",
+      "difficulty": "beginner",
+      "notes": "Weeyongereyo = extend yourself forward / move up. Used in a crowded bus or queue.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_046",
+      "english": "Friends, how are you?",
+      "luganda": "Bannange, muli mutya?",
+      "tense": "question",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Bannange = my friends / dear ones. Muli mutya = how are you (plural).",
+      "needs_review": false
+    },
+    {
+      "id": "gr_047",
+      "english": "Thank you very much.",
+      "luganda": "Webale nnyo.",
+      "tense": "present",
+      "topic": "greetings",
+      "difficulty": "beginner",
+      "notes": "Webale = thank you (singular). Mwebale = thank you (plural/formal). Nnyo = very much.",
+      "needs_review": false
+    },
+    {
+      "id": "gr_048",
+      "english": "Come back another time. / You are always welcome.",
+      "luganda": "Mukomangawo olulala.",
+      "tense": "present",
+      "topic": "farewells",
+      "difficulty": "beginner",
+      "notes": "Mukomangawo = come back here (plural). Olulala = another time / one day. Said when a guest is leaving.",
+      "needs_review": false
+    }
+  ]
+}

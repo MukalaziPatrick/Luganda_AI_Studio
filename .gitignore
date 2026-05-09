@@ -1,0 +1,91 @@
+# ====================================================
+# Luganda AI Studio — Git Ignore Rules
+# ====================================================
+
+# --- Python virtual environment ---
+venv/
+.venv/
+env/
+
+# --- Python cache files ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# --- Python egg and distribution files ---
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Environment and secrets ---
+.env
+*.env
+!.env.example
+
+# --- IDE and editor folders ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Node (for future frontend) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- React build output ---
+frontend/dist/
+frontend/build/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Database files (global exclusion) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Vector store / embeddings (large binary files) ---
+knowledge_base/embeddings/
+*.chroma/
+chroma_db/
+
+# --- Model weights (large files, never commit these) ---
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+models/
+
+# --- EXCEPTIONS: allow ChromaDB data and feedback to be committed ---
+# These are the project's core data — back them up in git.
+# Use Git LFS if the data/ folder exceeds ~500 MB.
+!data/
+!data/**
+!data/chromadb/
+!data/chromadb/**
+!data/feedback/
+!data/feedback/**
+!data/training/
+!data/training/**
+
+# --- Jupyter notebooks checkpoints ---
+.ipynb_checkpoints/
+
+# --- Coverage and test output ---
+htmlcov/
+.coverage
+.pytest_cache/

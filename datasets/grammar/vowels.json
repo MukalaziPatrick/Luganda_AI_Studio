@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "category": "grammar_vowels",
+    "description": "Luganda grammar rules for vowels, pronunciation, and vowel-controlled meaning",
+    "source_ids": ["ish_handbook"],
+    "last_updated": "2026-03-23"
+  },
+  "rules": [
+    {
+      "rule_id": "vow_001",
+      "rule_name": "The Five Luganda Vowels",
+      "explanation": "Luganda, like English, has five vowels: A, E, I, O, U (both uppercase and lowercase). These vowels give sound and meaning to words. In Luganda, each vowel is read exactly as it sounds — it directly controls the pronunciation of the word.",
+      "examples": [
+        { "vowel": "A / a", "sound_description": "Sounds like 'ah' as in 'father'", "luganda_example": "abo", "english_meaning": "those people" },
+        { "vowel": "E / e", "sound_description": "Sounds like 'eh' as in 'end'", "luganda_example": "eno", "english_meaning": "this one" },
+        { "vowel": "I / i", "sound_description": "Pronounced as 'yi' or 'ye'", "luganda_example": "iri", "english_meaning": "it is" },
+        { "vowel": "O / o", "sound_description": "Sounds like 'oh' as in 'open'", "luganda_example": "ofa", "english_meaning": "you die" },
+        { "vowel": "U / u", "sound_description": "Pronounced as 'wu'", "luganda_example": "ula", "english_meaning": "you buy" }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_002",
+      "rule_name": "Vowels Control Word Meaning",
+      "explanation": "In Luganda, the vowel in a word controls its pronunciation AND meaning. Unlike English where some vowels are silent or irregular, Luganda vowels are always pronounced as written and always affect meaning.",
+      "examples": [
+        { "luganda": "a in abo", "note": "Vowel 'a' gives the 'ah' sound" },
+        { "luganda": "e in eno", "note": "Vowel 'e' gives the 'eh' sound" },
+        { "luganda": "o in ofa", "note": "Vowel 'o' gives the 'oh' sound" }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_003",
+      "rule_name": "Double Vowels Change Meaning",
+      "explanation": "When two identical vowels appear together in a Luganda word (called a long vowel), they extend the sound AND change the meaning of the word entirely. This is a very important rule because using the wrong vowel length can produce a completely different word.",
+      "examples": [
+        {
+          "single_vowel_word": "buza",
+          "single_vowel_meaning": "loose",
+          "double_vowel_word": "buuza",
+          "double_vowel_meaning": "to greet"
+        },
+        {
+          "single_vowel_word": "kuula",
+          "single_vowel_meaning": "to uproot",
+          "double_vowel_word": "kula",
+          "double_vowel_meaning": "to grow"
+        },
+        {
+          "single_vowel_word": "maala",
+          "single_vowel_meaning": "to smear",
+          "double_vowel_word": "mala",
+          "double_vowel_meaning": "to finish"
+        }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_004",
+      "rule_name": "Vowels Together in a Word Change Sound",
+      "explanation": "When two vowels appear together in a Luganda word, they extend the pronunciation and sometimes give the word a different meaning. This is similar to how English vowel combinations create new sounds (e.g., 'ai', 'ou', 'ie').",
+      "examples": [
+        { "luganda": "empoza ne empooza", "english": "similar vowel pairing changes sound and meaning" },
+        { "luganda": "buza ne buuza", "english": "single vs double vowel gives different words" }
+      ],
+      "important_note": "In English, unsimilar vowels like 'e' and 'a' together can form a different word with the same sound (e.g., bean and been, reed and read). In Luganda, vowel length is more strictly controlled by spelling.",
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_005",
+      "rule_name": "The Special Vowel: I pronounced as Yi/Ye",
+      "explanation": "The vowel 'I' in Luganda is pronounced as 'yi' or 'ye'. This is different from English where 'i' can have multiple sounds. Always pronounce Luganda 'i' as 'yi/ye' when reading.",
+      "examples": [
+        { "luganda": "iri", "pronounce_as": "yi-ri", "english": "it is" },
+        { "luganda": "biri", "pronounce_as": "bi-yi-ri", "english": "they are", "needs_review": true }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_006",
+      "rule_name": "The Special Vowel: U pronounced as Wu",
+      "explanation": "The vowel 'U' in Luganda is pronounced as 'wu'. When you see a word starting with 'U' or containing 'u', pronounce it with a 'wu' sound.",
+      "examples": [
+        { "luganda": "ula", "pronounce_as": "wu-la", "english": "you buy" },
+        { "luganda": "umwana", "note": "u sounds like wu", "needs_review": true }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "vow_007",
+      "rule_name": "Words Without Vowel Endings Are Rare in Luganda",
+      "explanation": "Unlike English, Luganda words almost never end with a consonant. English words like 'food', 'water', 'hill' all end in consonants. In Luganda, nearly every word ends in a vowel. This is an important structural feature of the language.",
+      "examples": [
+        { "english": "food", "luganda": "emmere", "note": "ends in vowel 'e'" },
+        { "english": "water", "luganda": "amazzi", "note": "ends in vowel 'i'" },
+        { "english": "house", "luganda": "nyumba", "note": "ends in vowel 'a'" }
+      ],
+      "needs_review": false
+    }
+  ]
+}

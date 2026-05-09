@@ -1,0 +1,591 @@
+{
+  "metadata": {
+    "category": "food_and_drink",
+    "description": "Luganda vocabulary for food, drinks, cooking, and eating",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 56,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections: (1) Omumwa→Salt was WRONG — Omumwa=Mouth. Corrected to Omunnyo=Salt. (2) Kaawa (Coffee) appeared twice — duplicate removed. (3) Jiko→Spoon was WRONG — Jiko=charcoal stove. Corrected to Ekijiko=Spoon. (4) Ebirabo→Restaurant was WRONG — Ebirabo=gifts. Corrected to Ootteli/Reesituraanti. (5) Okulyia misspelling corrected to Okulya. (6) Omucungwa corrected from 'Orange Juice' to 'Orange (fruit)'. (7) Enva clarified from 'Sauce/Vegetables' to 'Relish/Side sauce'. (8) Ebirala (Others) removed — too vague, not food-specific. (9) Okuwaata flagged for spelling review."
+  },
+  "entries": [
+    {
+      "luganda": "Emmere",
+      "english": "Food",
+      "category": "food_and_drink",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Maama waabwe alya mmere.",
+      "example_sentence_english": "Their mother is eating food.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Amazzi",
+      "english": "Water",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Leeta amazzi.",
+      "example_sentence_english": "Bring some water.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Amatooke",
+      "english": "Cooking Bananas / Matoke",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Tulina amatooke ne omuchere.",
+      "example_sentence_english": "We have bananas and rice.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuchere",
+      "english": "Rice",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Akawunga",
+      "english": "Posho / Maize flour",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "notes": "Akawunga = cooked maize meal (posho). Also used for dry maize flour depending on context.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obumonde obuzungu",
+      "english": "Irish Potatoes",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "notes": "Obuzungu = foreign/European. Literally 'the foreign tuber'.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Lumonde",
+      "english": "Sweet Potatoes",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Muwogo",
+      "english": "Cassava",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amayuuni",
+      "english": "Yams",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebijanjaalo",
+      "english": "Beans",
+      "category": "food_and_drink",
+      "subcategory": "vegetables",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebinyebwa",
+      "english": "Groundnuts / Peanuts",
+      "category": "food_and_drink",
+      "subcategory": "vegetables",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Emboga",
+      "english": "Leafy Greens / Vegetables",
+      "category": "food_and_drink",
+      "subcategory": "vegetables",
+      "part_of_speech": "noun",
+      "notes": "Emboga refers to leafy greens such as nakati, dodo, and sukuma wiki. Not cabbage specifically.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ovakedo",
+      "english": "Avocado",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Nyaanya",
+      "english": "Tomatoes",
+      "category": "food_and_drink",
+      "subcategory": "vegetables",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkoko",
+      "english": "Chicken (as food)",
+      "category": "food_and_drink",
+      "subcategory": "meat",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ennyama y'ente",
+      "english": "Beef",
+      "category": "food_and_drink",
+      "subcategory": "meat",
+      "part_of_speech": "noun",
+      "notes": "Ennyama = meat. Y'ente = of a cow. Literally 'meat of a cow'.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ennyama y'embuzi",
+      "english": "Goat Meat",
+      "category": "food_and_drink",
+      "subcategory": "meat",
+      "part_of_speech": "noun",
+      "notes": "Ennyama = meat. Y'embuzi = of a goat.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekyennyanja",
+      "english": "Fish",
+      "category": "food_and_drink",
+      "subcategory": "meat",
+      "part_of_speech": "noun",
+      "notes": "Ekyennyanja = thing of the lake. Used to refer to fish generally.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amagi",
+      "english": "Eggs",
+      "category": "food_and_drink",
+      "subcategory": "protein",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Mugaati",
+      "english": "Bread",
+      "category": "food_and_drink",
+      "subcategory": "staples",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Njagala kugula mugaati.",
+      "example_sentence_english": "I want to buy bread.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekibumba",
+      "english": "Cake",
+      "category": "food_and_drink",
+      "subcategory": "snacks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Sumbusa",
+      "english": "Samosa",
+      "category": "food_and_drink",
+      "subcategory": "snacks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Chapati",
+      "english": "Chapati",
+      "category": "food_and_drink",
+      "subcategory": "snacks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Caayi",
+      "english": "Tea",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Ku makya tunywa caayi ne mutabani wange.",
+      "example_sentence_english": "In the morning we drink tea with my son.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Kaawa",
+      "english": "Coffee",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: duplicate entry removed. Only one Kaawa entry retained.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Soya",
+      "english": "Soya milk drink",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obugi",
+      "english": "Porridge",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "notes": "Obugi = thin porridge, often made from millet or maize. Drunk as a beverage.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amata",
+      "english": "Milk",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previously 'Amata g'ente' (milk of a cow). The standard short form is 'Amata'. The full phrase 'Amata g'ente' = fresh cow's milk, used when specifying the source.",
+      "example_sentence_luganda": "Omwana anywa amata.",
+      "example_sentence_english": "The child is drinking milk.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omwenge",
+      "english": "Local Beer / Brew",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "notes": "Omwenge = traditional fermented drink, often banana beer or millet beer.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Soda",
+      "english": "Soda / Soft drink",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omucungwa",
+      "english": "Orange (fruit)",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: Omucungwa = the orange fruit, not orange juice. Orange juice = Omuto gw'omucungwa.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omuto gw'omucungwa",
+      "english": "Orange Juice",
+      "category": "food_and_drink",
+      "subcategory": "drinks",
+      "part_of_speech": "noun",
+      "notes": "Omuto = juice/liquid. Gw'omucungwa = of the orange. Added as a separate entry from the fruit.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Eby'obutunda",
+      "english": "Passion fruit / Passion fruit juice",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Apapaali",
+      "english": "Pawpaw / Papaya",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Emiyembe",
+      "english": "Mangoes",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ennanaansi",
+      "english": "Pineapple",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Kaloti",
+      "english": "Carrots",
+      "category": "food_and_drink",
+      "subcategory": "vegetables",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Niimu",
+      "english": "Lemon",
+      "category": "food_and_drink",
+      "subcategory": "fruits",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enva",
+      "english": "Relish / Side sauce",
+      "category": "food_and_drink",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "notes": "CLARIFIED: Enva = the sauce, stew, or relish eaten alongside a staple food like amatooke or akawunga. Not raw vegetables.",
+      "example_sentence_luganda": "Omukyala asiika enva.",
+      "example_sentence_english": "The woman is frying the sauce.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Masavu",
+      "english": "Cooking fat / Oil",
+      "category": "food_and_drink",
+      "subcategory": "cooking",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Sukaali",
+      "english": "Sugar",
+      "category": "food_and_drink",
+      "subcategory": "cooking",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omunnyo",
+      "english": "Salt",
+      "category": "food_and_drink",
+      "subcategory": "cooking",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry had 'Omumwa' which means Mouth (a completely different word). Correct Luganda for salt is Omunnyo.",
+      "example_sentence_luganda": "Yongera omunnyo.",
+      "example_sentence_english": "Add more salt.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekijiko",
+      "english": "Spoon",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry had 'Jiko' which is a charcoal stove (Swahili loanword). Correct Luganda for spoon is Ekijiko (singular). Plural: Ebijiiko.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Sowaani",
+      "english": "Plate",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekiraasi",
+      "english": "Glass / Cup",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebijiiko",
+      "english": "Spoons (plural)",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Wuma",
+      "english": "Fork",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obuso",
+      "english": "Knife",
+      "category": "food_and_drink",
+      "subcategory": "utensils",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okufumba",
+      "english": "To cook",
+      "category": "food_and_drink",
+      "subcategory": "cooking_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Omwami ye yafumba ate omukyala n'asiika enva.",
+      "example_sentence_english": "The man cooked while the woman fried the sauce.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okulya",
+      "english": "To eat",
+      "category": "food_and_drink",
+      "subcategory": "cooking_verbs",
+      "part_of_speech": "verb",
+      "notes": "CORRECTED: previously misspelled as 'Okulyia'. Correct infinitive is Okulya.",
+      "example_sentence_luganda": "Alya mmere.",
+      "example_sentence_english": "He/she is eating food.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okunywa",
+      "english": "To drink",
+      "category": "food_and_drink",
+      "subcategory": "cooking_verbs",
+      "part_of_speech": "verb",
+      "example_sentence_luganda": "Anywa amazzi.",
+      "example_sentence_english": "He/she is drinking water.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Okuwata",
+      "english": "To peel",
+      "category": "food_and_drink",
+      "subcategory": "cooking_verbs",
+      "part_of_speech": "verb",
+      "notes": "CORRECTED spelling: 'Okuwaata' (double a) corrected to standard 'Okuwata'. Double-a form may appear in some texts but single-a is more established.",
+      "example_sentence_luganda": "Owata amatooke.",
+      "example_sentence_english": "Peel the bananas.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Enjala",
+      "english": "Hunger",
+      "category": "food_and_drink",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Mpulira enjala.",
+      "example_sentence_english": "I feel hungry.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Enyonta",
+      "english": "Thirst",
+      "category": "food_and_drink",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Mpulira enjala era n'enyonta.",
+      "example_sentence_english": "I feel hungry and thirsty.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ootteli / Reesituraanti",
+      "english": "Hotel / Restaurant",
+      "category": "food_and_drink",
+      "subcategory": "places",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry used 'Ebirabo' which means 'gifts'. The correct Luganda words are borrowed: Ootteli (hotel) and Reesituraanti (restaurant).",
+      "example_sentence_luganda": "Waliwo ootteli oba reesituraanti webaliira?",
+      "example_sentence_english": "Is there a hotel or restaurant where we could eat?",
+      "needs_review": false
+    },
+    {
+      "luganda": "Mmenu",
+      "english": "Menu",
+      "category": "food_and_drink",
+      "subcategory": "general",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Mmenu yiiyo mulabe.",
+      "example_sentence_english": "There is the menu, have a look.",
+      "needs_review": false
+    }
+  ]
+}

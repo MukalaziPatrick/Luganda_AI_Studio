@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(curl -s \"http://127.0.0.1:8000/api/v1/teach/cards?limit=10&shuffle=true\")",
+      "Bash(taskkill:*)",
+      "Bash(wmic process:*)",
+      "Bash(git init *)"
+    ]
+  }
+}

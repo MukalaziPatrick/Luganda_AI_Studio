@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "category": "grammar_consonants",
+    "description": "Luganda grammar rules for consonants, double consonants, and special letter rules",
+    "source_ids": ["ish_handbook"],
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections: (1) con_003 double consonant pair labeling was confusing — the single/double columns were not clearly indicating which direction the change goes. Rewritten for clarity with directional examples. (2) con_004 Bw combo: 'bwongo' corrected to 'obwongo' (the actual word for brain). (3) con_005 Ng rule: clarified that ng' with apostrophe is how modern Luganda marks the nasal velar sound. (4) con_006 R/L rule: second example fixed — previously showed 'Luwero / Luwero' (same word twice). Replaced with a working example. (5) con_007 H letter sound: corrected from 'Eki' (letter name) to actual pronunciation note. (6) con_008 flagged example 'enywanto' replaced with 'enyonyi' (aeroplane) which is a clean, verifiable three-consonant cluster. 'Emambya' replaced with 'embalaasi' as a better example."
+  },
+  "rules": [
+    {
+      "rule_id": "con_001",
+      "rule_name": "Luganda Consonants Are Similar to English",
+      "explanation": "Luganda uses almost all the same consonants as English. The only two consonant letters from the English alphabet that are NOT used in standard Luganda are X and Q. All other consonants appear in Luganda words.",
+      "exceptions": ["X — not used in Luganda", "Q — not used in Luganda"],
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_002",
+      "rule_name": "Each Consonant Pairs Cleanly With Each Vowel",
+      "explanation": "In Luganda, every consonant combines directly and predictably with each vowel to produce a clean syllable sound. Unlike English, there are no silent letters or irregular combinations. What you see is what you say.",
+      "consonant_vowel_table": [
+        { "consonant": "B", "with_A": "Ba", "with_E": "Be", "with_I": "Bi", "with_O": "Bo", "with_U": "Bu" },
+        { "consonant": "C", "with_A": "Ca", "with_E": "Ce", "with_I": "Ci", "with_O": "Co", "with_U": "Cu" },
+        { "consonant": "D", "with_A": "Da", "with_E": "De", "with_I": "Di", "with_O": "Do", "with_U": "Du" },
+        { "consonant": "F", "with_A": "Fa", "with_E": "Fe", "with_I": "Fi", "with_O": "Fo", "with_U": "Fu" },
+        { "consonant": "G", "with_A": "Ga", "with_E": "Ge", "with_I": "Gi", "with_O": "Go", "with_U": "Gu" },
+        { "consonant": "K", "with_A": "Ka", "with_E": "Ke", "with_I": "Ki", "with_O": "Ko", "with_U": "Ku" },
+        { "consonant": "L", "with_A": "La", "with_E": "Le", "with_I": "Li", "with_O": "Lo", "with_U": "Lu" },
+        { "consonant": "M", "with_A": "Ma", "with_E": "Me", "with_I": "Mi", "with_O": "Mo", "with_U": "Mu" },
+        { "consonant": "N", "with_A": "Na", "with_E": "Ne", "with_I": "Ni", "with_O": "No", "with_U": "Nu" },
+        { "consonant": "P", "with_A": "Pa", "with_E": "Pe", "with_I": "Pi", "with_O": "Po", "with_U": "Pu" },
+        { "consonant": "R", "with_A": "Ra", "with_E": "Re", "with_I": "Ri", "with_O": "Ro", "with_U": "Ru" },
+        { "consonant": "S", "with_A": "Sa", "with_E": "Se", "with_I": "Si", "with_O": "So", "with_U": "Su" },
+        { "consonant": "T", "with_A": "Ta", "with_E": "Te", "with_I": "Ti", "with_O": "To", "with_U": "Tu" },
+        { "consonant": "W", "with_A": "Wa", "with_E": "We", "with_I": "Wi", "with_O": "Wo", "with_U": "Wu" },
+        { "consonant": "Y", "with_A": "Ya", "with_E": "Ye", "with_I": "Yi", "with_O": "Yo", "with_U": "Yu" },
+        { "consonant": "Z", "with_A": "Za", "with_E": "Ze", "with_I": "Zi", "with_O": "Zo", "with_U": "Zu" }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_003",
+      "rule_name": "Double Consonants Change Meaning — Always Write Them Correctly",
+      "explanation": "In Luganda, writing a single consonant versus a double consonant (two of the same letter together) produces two completely different words. This is one of the most important spelling rules in Luganda. Getting it wrong does not just change the emphasis — it changes the entire meaning of the word.",
+      "how_to_read_the_table": "Each row shows a pair of words. The left word uses a single consonant. The right word uses a double consonant. They are different words with different meanings.",
+      "examples": [
+        {
+          "single_form": "bafe",
+          "single_meaning": "let them die",
+          "double_form": "bbaffe",
+          "double_meaning": "our husband",
+          "note": "b vs bb — completely different meanings"
+        },
+        {
+          "single_form": "muka",
+          "single_meaning": "sharp taste",
+          "double_form": "mukka",
+          "double_meaning": "smoke",
+          "note": "k vs kk"
+        },
+        {
+          "single_form": "bbisi",
+          "single_meaning": "raw / uncooked",
+          "double_form": "bissi",
+          "double_meaning": "dangerous / deadly",
+          "note": "bb vs ss — note the double can appear in different positions"
+        },
+        {
+          "single_form": "babi",
+          "single_meaning": "bad people",
+          "double_form": "babbi",
+          "double_meaning": "thieves",
+          "note": "b vs bb in the middle of the word"
+        },
+        {
+          "single_form": "bika",
+          "single_meaning": "clans",
+          "double_form": "bikka",
+          "double_meaning": "cover / lids",
+          "note": "k vs kk"
+        }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_004",
+      "rule_name": "Common Two-Consonant Combinations That Function as One Sound",
+      "explanation": "Luganda uses many two-consonant combinations that are read as a single blended sound. These must be learned as complete units. The most important ones are listed below with real word examples.",
+      "combinations": [
+        {
+          "combo": "Gw",
+          "pronunciation_guide": "Sounds like 'gwuh' — the G and W blend together",
+          "examples": [
+            { "luganda": "omuggwanga", "english": "citizen / person of a nation" },
+            { "luganda": "gwegwo", "english": "it is the one (that one)" },
+            { "luganda": "gwonna", "english": "all of it" }
+          ]
+        },
+        {
+          "combo": "Gy",
+          "pronunciation_guide": "Sounds like 'jy' or 'gy' — G and Y together",
+          "examples": [
+            { "luganda": "gyani?", "english": "whose?" },
+            { "luganda": "gyebale", "english": "thank you for the work" },
+            { "luganda": "gyonna", "english": "all of them" }
+          ]
+        },
+        {
+          "combo": "By",
+          "pronunciation_guide": "Sounds like 'byw' — B and Y together",
+          "examples": [
+            { "luganda": "byange", "english": "mine (my things)" },
+            { "luganda": "ebyenda", "english": "intestines" },
+            { "luganda": "bibyo", "english": "yours (your things)" }
+          ]
+        },
+        {
+          "combo": "Bw",
+          "pronunciation_guide": "Sounds like 'bwuh' — B and W together",
+          "examples": [
+            { "luganda": "abaana", "english": "children (note: full word, Bw- is the cluster at start)" },
+            { "luganda": "obwongo", "english": "brain" },
+            { "luganda": "bweyo", "english": "brooms" },
+            { "luganda": "bwiino", "english": "ink" }
+          ]
+        },
+        {
+          "combo": "Mw",
+          "pronunciation_guide": "Sounds like 'mwuh' — M and W together",
+          "examples": [
+            { "luganda": "mwattu", "english": "excuse me / I am sorry" },
+            { "luganda": "mwenda", "english": "nine" }
+          ]
+        },
+        {
+          "combo": "Kw",
+          "pronunciation_guide": "Sounds like 'kwuh' — K and W together",
+          "examples": [
+            { "luganda": "okwata", "english": "to hold / to catch" },
+            { "luganda": "okweeka", "english": "to hide" },
+            { "luganda": "okwogera", "english": "to speak" }
+          ]
+        },
+        {
+          "combo": "Lw",
+          "pronunciation_guide": "Sounds like 'lwuh' — L and W together",
+          "examples": [
+            { "luganda": "olwana", "english": "fight / war" },
+            { "luganda": "lwenda", "english": "nine hundred" },
+            { "luganda": "lwonna", "english": "all of it (the day)" }
+          ]
+        },
+        {
+          "combo": "Ly",
+          "pronunciation_guide": "Sounds like 'lyuh' — L and Y together",
+          "examples": [
+            { "luganda": "lyange", "english": "mine (my thing — singular)" },
+            { "luganda": "lye", "english": "it is / that is" },
+            { "luganda": "elyolya", "english": "that very one" }
+          ]
+        },
+        {
+          "combo": "Tw",
+          "pronunciation_guide": "Sounds like 'twuh' — T and W together",
+          "examples": [
+            { "luganda": "twala", "english": "take it / carry it" },
+            { "luganda": "twebaka", "english": "we sleep" },
+            { "luganda": "tugenda", "english": "we go" }
+          ]
+        },
+        {
+          "combo": "Ny",
+          "pronunciation_guide": "Sounds like 'ny' as in 'canyon' — N and Y blend",
+          "examples": [
+            { "luganda": "nyaanya", "english": "tomatoes" },
+            { "luganda": "enyonyi", "english": "aeroplane / bird" },
+            { "luganda": "ennyumba", "english": "house" },
+            { "luganda": "okunywa", "english": "to drink" }
+          ]
+        }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_005",
+      "rule_name": "The Nasal Velar Sound: ng' (ŋ)",
+      "explanation": "Luganda has a special consonant sound that does not exist in English. It is the nasal velar sound — the 'ng' sound at the end of English words like 'sing' or 'king'. In Luganda, this sound can appear at the START of a word, which is unusual for English speakers. In modern Luganda writing it is written as 'ng'' (ng with an apostrophe) to distinguish it from a regular n+g combination.",
+      "how_to_pronounce": "Make the 'ng' sound from the back of your throat (like the end of 'singing') and then immediately say the next vowel. Example: ng'ombe (cow in Swahili) — the sound starts at the back of the throat.",
+      "examples": [
+        {
+          "old_form": "ŋoma",
+          "modern_form": "ng'oma",
+          "english": "drum",
+          "note": "The apostrophe signals the nasal velar ng sound"
+        },
+        {
+          "old_form": "ŋaano",
+          "modern_form": "ng'aano",
+          "english": "wheat",
+          "note": "Starts with the nasal ng sound"
+        }
+      ],
+      "important_note": "Do not confuse ng' (nasal sound, single unit) with ng without an apostrophe (two separate sounds, like in 'angel').",
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_006",
+      "rule_name": "The Letters R and L Sometimes Interchange",
+      "explanation": "In Luganda, the letters R and L are related sounds and in some words they can be interchanged or appear as variants. Many Luganda speakers pronounce R and L similarly. You will find both spellings in different texts for the same word. This is a natural feature of the language.",
+      "examples": [
+        {
+          "form_with_r": "Rubaga",
+          "form_with_l": "Lubaga",
+          "english": "Lubaga — a place in Kampala",
+          "note": "Both spellings are used. Lubaga is more standard today."
+        },
+        {
+          "form_with_r": "Luzira",
+          "form_with_l": "Luzila",
+          "english": "Luzira — a place in Kampala",
+          "note": "The r sound in some positions is softened toward l."
+        },
+        {
+          "form_with_r": "Omulamuzi",
+          "form_with_l": "Omuramuzi",
+          "english": "Judge / Arbitrator",
+          "note": "Both forms appear in texts — r and l are interchangeable here."
+        }
+      ],
+      "practical_advice": "When you see a word that looks almost right but has R where you expect L, or vice versa, it may be a legitimate spelling variant rather than a mistake.",
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_007",
+      "rule_name": "How Luganda Letters Are Named and Pronounced",
+      "explanation": "In Luganda, each letter of the alphabet has a name (what you call the letter) and a sound (what the letter says in a word). These are different things. The table below shows selected letters with both their Luganda letter name and their sound in words. Note that H is a special case — it is rarely used in native Luganda words.",
+      "letter_sounds": [
+        {
+          "letter": "B",
+          "luganda_letter_name": "Bii",
+          "sound_in_words": "same as English B — a 'buh' sound",
+          "example": "Biri = two of them"
+        },
+        {
+          "letter": "D",
+          "luganda_letter_name": "Dee",
+          "sound_in_words": "same as English D — a 'duh' sound",
+          "example": "Ddi? = When?"
+        },
+        {
+          "letter": "F",
+          "luganda_letter_name": "Effu",
+          "sound_in_words": "same as English F",
+          "example": "Fuba = chest (alternate form)"
+        },
+        {
+          "letter": "G",
+          "luganda_letter_name": "Gii",
+          "sound_in_words": "always a hard G as in 'go', never soft as in 'gem'",
+          "example": "Genda = go"
+        },
+        {
+          "letter": "H",
+          "luganda_letter_name": "Eechi",
+          "sound_in_words": "H appears mainly in loanwords in Luganda. In native Luganda words, H is rare.",
+          "example": "Hamza (a name) — borrowed word"
+        },
+        {
+          "letter": "L",
+          "luganda_letter_name": "Elo",
+          "sound_in_words": "similar to English L",
+          "example": "Laba = look / see"
+        },
+        {
+          "letter": "M",
+          "luganda_letter_name": "Emu",
+          "sound_in_words": "same as English M",
+          "example": "Mala = finish"
+        },
+        {
+          "letter": "W",
+          "luganda_letter_name": "Ddaburiyu",
+          "sound_in_words": "same as English W",
+          "example": "Wano = here"
+        },
+        {
+          "letter": "Z",
+          "luganda_letter_name": "Zedi",
+          "sound_in_words": "same as English Z",
+          "example": "Zino = these"
+        }
+      ],
+      "needs_review": false
+    },
+    {
+      "rule_id": "con_008",
+      "rule_name": "Three-Consonant Clusters Before One Vowel",
+      "explanation": "Luganda commonly uses words where three consonants appear together before a vowel. These form a single blended syllable sound. English speakers find these challenging because English rarely has three consonants together. Practice by blending all three consonants before landing on the vowel.",
+      "how_to_practice": "Try saying each consonant very quickly without a gap, then land on the vowel. Example: for 'embwa' — say E + mbwa (m-b-w-a all blended) = em-bwa.",
+      "examples": [
+        {
+          "luganda": "embwa",
+          "english": "dog",
+          "cluster": "mbw",
+          "note": "m + b + w + a — a very common Luganda word"
+        },
+        {
+          "luganda": "enyonyi",
+          "english": "aeroplane / bird",
+          "cluster": "nyw",
+          "note": "n + y + o — common word, easier to practice"
+        },
+        {
+          "luganda": "endwadde",
+          "english": "illnesses / diseases",
+          "cluster": "ndw",
+          "note": "n + d + w + a"
+        },
+        {
+          "luganda": "enkwa",
+          "english": "tick (insect)",
+          "cluster": "nkw",
+          "note": "n + k + w + a"
+        },
+        {
+          "luganda": "enswaswa",
+          "english": "monitor lizard",
+          "cluster": "nsw",
+          "note": "n + s + w + a"
+        },
+        {
+          "luganda": "embalaasi",
+          "english": "horse",
+          "cluster": "mbl",
+          "note": "m + b + l + a — three consonants before the a vowel"
+        }
+      ],
+      "needs_review": false
+    }
+  ]
+}

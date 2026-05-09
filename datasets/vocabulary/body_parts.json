@@ -1,0 +1,478 @@
+{
+  "metadata": {
+    "category": "body_parts",
+    "description": "Luganda vocabulary for parts of the human body",
+    "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+    "total_entries": 48,
+    "last_updated": "2026-03-23",
+    "verified": "2026-03-23",
+    "verification_notes": "Corrections: (1) Okuvirira→Spine was WRONG — Okuvirira is a verb meaning 'to originate'. Corrected to Omugongo=Backbone/Spine. (2) Ekizinziiro (Heel alternate) REMOVED — unconfirmed, standard heel is Ekibatu. (3) Akabina (Buttock smaller ref) REMOVED — unconfirmed and duplicates existing entry. (4) Omusaayi gw'omukono→Vein corrected to clearer description. (5) Omukutu→Back kept flagged, Omugongo already covers back/spine. (6) Omukono label corrected to Hand/Arm. (7) Mu Maaso→Face clarified. (8) Entunbwe→Calf kept flagged — spelling uncertain."
+  },
+  "entries": [
+    {
+      "luganda": "Omutwe",
+      "english": "Head",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omutwe gwange gukola.",
+      "example_sentence_english": "My head is aching.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Obwongo",
+      "english": "Brain",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Obwongo bwe buwanvu.",
+      "example_sentence_english": "His/her brain is sharp.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Amaaso",
+      "english": "Face / Eyes",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Amaaso covers both face (general front of head) and eyes. Context determines meaning. 'Mu maaso' = in the face / in front.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Eriiso",
+      "english": "Eye (singular)",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Eriiso = one eye. Amaaso = eyes (both) / face.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebisige",
+      "english": "Eyebrows",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obukoowekoowe",
+      "english": "Eyelashes",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Okutu",
+      "english": "Ear",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enyindo",
+      "english": "Nose",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omumwa",
+      "english": "Mouth",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Omumwa = mouth. NOTE: This word was incorrectly entered as 'Salt' in a food file. Omumwa always means Mouth.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Emimwa",
+      "english": "Lips",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olulimi",
+      "english": "Tongue",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Olulimi also means 'language'. Context determines meaning: olulimi lwa Luganda = the Luganda language.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amannyo",
+      "english": "Teeth",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Asenya amannyo.",
+      "example_sentence_english": "He/she is brushing teeth.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekyeenyi",
+      "english": "Forehead",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekirevu",
+      "english": "Beard",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Ekirevu = beard. Akalevu = chin (lower jaw area).",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Akalevu",
+      "english": "Chin",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enviiri",
+      "english": "Hair",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ensingo",
+      "english": "Neck",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omutima",
+      "english": "Heart",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekifuba",
+      "english": "Chest",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Embirizi",
+      "english": "Ribs",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amabeere",
+      "english": "Breasts",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebibegabega",
+      "english": "Shoulders",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Amawuggwe",
+      "english": "Lungs",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ebyenda",
+      "english": "Intestines",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ensigo",
+      "english": "Kidney",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omusaayi",
+      "english": "Blood",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": "Omusaayi gwe guyiika nnyo.",
+      "example_sentence_english": "He/she is losing a lot of blood.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omusuwa",
+      "english": "Blood Vessel / Vein",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Omusuwa = blood vessel in general. Previously an incorrect phrase 'Omusaayi gw'omukono' was used for vein — that literally means 'blood of the arm', not the vessel itself.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olubuto",
+      "english": "Stomach / Belly",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekiwato",
+      "english": "Waist",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omubiri",
+      "english": "Body",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olususu",
+      "english": "Skin",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Eggumba",
+      "english": "Bone",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Omugongo",
+      "english": "Back / Backbone / Spine",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "CORRECTED: previous entry 'Okuvirira→Spine' was wrong — Okuvirira is a verb. Omugongo is the correct noun for back and backbone. It covers both the back of the body and the spinal column.",
+      "example_sentence_luganda": "Omugongo gwange gukola.",
+      "example_sentence_english": "My back is aching.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Omukono",
+      "english": "Hand / Arm",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "CLARIFIED: Omukono = both hand and arm depending on context. The example sentence uses it for arm.",
+      "example_sentence_luganda": "Musibe omukono, gumenyese.",
+      "example_sentence_english": "Tie his arm, it is broken.",
+      "needs_review": false
+    },
+    {
+      "luganda": "Engalo",
+      "english": "Fingers / Palm of hand",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Engalo = fingers or the palm area. Context determines meaning.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olwaala",
+      "english": "Fingernail / Toenail",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Olukokola",
+      "english": "Elbow",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enkwawa",
+      "english": "Armpit",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Enyingo",
+      "english": "Joint / Joints",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekigere",
+      "english": "Foot",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obugere",
+      "english": "Toes",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Wansi w'ekigere",
+      "english": "Sole of foot",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Wansi = bottom/below. W'ekigere = of the foot.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekibatu",
+      "english": "Heel",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Ekibatu is the established Luganda word for heel. An alternate 'Ekizinziiro' was previously listed but is unconfirmed and has been removed.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Maviivi",
+      "english": "Knees",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Ekisambi",
+      "english": "Thigh",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Entunbwe",
+      "english": "Calf (of leg)",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Spelling uncertain from source scan. Possible alternatives: Enkundi, Entunsi. Keep flagged until confirmed by a Luganda speaker.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": true
+    },
+    {
+      "luganda": "Omukutu",
+      "english": "Lower back / Lumbar area",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Omukutu may specifically refer to the lower back / lumbar area rather than the full back (which is Omugongo). Kept flagged — needs confirmation from a native speaker.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": true
+    },
+    {
+      "luganda": "Obutuuliro",
+      "english": "Buttocks",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Obutuuliro = buttocks. Also: Obunyuma. Both refer to the buttocks area.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Obusajja / Obukazi",
+      "english": "Genitals (male / female)",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "notes": "Obusajja = male genitalia. Obukazi = female genitalia.",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    },
+    {
+      "luganda": "Eddokooli",
+      "english": "Voice box / Larynx",
+      "category": "body_parts",
+      "part_of_speech": "noun",
+      "example_sentence_luganda": null,
+      "example_sentence_english": null,
+      "needs_review": false
+    }
+  ]
+}

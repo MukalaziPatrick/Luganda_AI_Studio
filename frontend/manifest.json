@@ -1,0 +1,43 @@
+{
+  "name": "Luganda AI Studio",
+  "short_name": "Luganda AI",
+  "description": "AI-powered Luganda ↔ English translation, search, and learning — runs locally on your machine.",
+  "start_url": "/app/index.html",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1f14",
+  "theme_color": "#0d1f14",
+  "lang": "en",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/app/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Translate",
+      "short_name": "Translate",
+      "description": "Open the translation tool",
+      "url": "/app/translate.html",
+      "icons": [{ "src": "/app/icons/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Teach Mode",
+      "short_name": "Teach",
+      "description": "Open flashcard learning mode",
+      "url": "/app/teach.html",
+      "icons": [{ "src": "/app/icons/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
+}

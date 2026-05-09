@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "description": "Source registry for all data used in Luganda AI Studio datasets",
+    "last_updated": "2026-03-23",
+    "maintainer": "Luganda AI Studio",
+    "version": "1.0.0"
+  },
+  "sources": [
+    {
+      "source_id": "ish_handbook",
+      "title": "English to Luganda Easy Reading Handbook",
+      "authors": ["James Nsibambi", "Vincent Busulwa"],
+      "type": "book",
+      "format": "PDF",
+      "language_coverage": ["Luganda", "English"],
+      "quality_rating": 5,
+      "content_types": ["vocabulary", "grammar", "sentence_pairs", "dialogues"],
+      "notes": "Primary source. Contains structured vocabulary by category, grammar rules, verb tenses, and real dialogue examples. Very high quality for our purposes.",
+      "license": "Unknown — data extracted for educational/research use",
+      "needs_review": false
+    },
+    {
+      "source_id": "lajenta_phrasebook",
+      "title": "Lajenta Mulimu Amazzi",
+      "authors": ["Unknown"],
+      "type": "phrasebook",
+      "format": "PDF",
+      "pages_used": "25–37",
+      "language_coverage": ["Luganda", "English"],
+      "quality_rating": 4,
+      "content_types": ["vocabulary", "phrases", "road_signs", "transport"],
+      "notes": "Good topical vocabulary coverage. Used for transport, road signs, and supplemental vocabulary. Some entries may have OCR issues from scanning.",
+      "license": "Unknown — data extracted for educational/research use",
+      "needs_review": false
+    },
+    {
+      "source_id": "nakimbugwe_dissertation",
+      "title": "Kiganda Proverbs: A Linguistic and Cultural Analysis",
+      "authors": ["Nakimbugwe"],
+      "institution": "Makerere University",
+      "year": 2022,
+      "type": "academic_dissertation",
+      "format": "PDF",
+      "language_coverage": ["Luganda", "English"],
+      "quality_rating": 4,
+      "content_types": ["proverbs"],
+      "notes": "Contains approximately 80 Kiganda proverbs with analysis. 60 have been extracted with translations and themes. Remaining 20 need further extraction. Academic source with good contextual explanations.",
+      "license": "Academic — extracted for research/educational use only",
+      "needs_review": false
+    }
+  ],
+  "dataset_index": {
+    "vocabulary": [
+      {
+        "file": "datasets/vocabulary/body_parts.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 52,
+        "completeness": "high",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/vocabulary/animals.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 55,
+        "completeness": "high",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/vocabulary/food_and_drink.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 58,
+        "completeness": "medium",
+        "notes": "Missing some cooking vocabulary and local dishes",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/vocabulary/transport.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 48,
+        "completeness": "high",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/vocabulary/family.json",
+        "source_ids": ["ish_handbook"],
+        "entry_count": 38,
+        "completeness": "medium",
+        "notes": "Missing some extended family terms and Luganda kinship system specifics",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/vocabulary/numbers.json",
+        "source_ids": ["ish_handbook"],
+        "entry_count": 42,
+        "completeness": "high",
+        "last_updated": "2026-03-23"
+      }
+    ],
+    "sentences": [
+      {
+        "file": "datasets/sentences/daily_life.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 62,
+        "completeness": "medium",
+        "notes": "Good foundation. Needs more conversational pairs, more beginner sentences, and more topic variety.",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/sentences/greetings.json",
+        "source_ids": ["ish_handbook", "lajenta_phrasebook"],
+        "entry_count": 48,
+        "completeness": "medium",
+        "notes": "Good greetings coverage. Needs more formal/informal variants and multi-turn dialogue examples.",
+        "last_updated": "2026-03-23"
+      }
+    ],
+    "grammar": [
+      {
+        "file": "datasets/grammar/vowels.json",
+        "source_ids": ["ish_handbook"],
+        "rule_count": 7,
+        "completeness": "medium",
+        "notes": "Core vowel rules captured. Missing: tonal rules, vowel harmony patterns.",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/grammar/consonants.json",
+        "source_ids": ["ish_handbook"],
+        "rule_count": 8,
+        "completeness": "medium",
+        "notes": "Core consonant rules captured. Missing: full consonant cluster documentation.",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/grammar/word_classes.json",
+        "source_ids": ["ish_handbook"],
+        "rule_count": 8,
+        "completeness": "medium",
+        "notes": "All 8 word classes documented. Missing: noun class agreement system (critical gap), adjective agreement tables.",
+        "last_updated": "2026-03-23"
+      },
+      {
+        "file": "datasets/grammar/verb_tenses.json",
+        "source_ids": ["ish_handbook"],
+        "rule_count": 5,
+        "completeness": "medium",
+        "notes": "4 main tenses documented with examples. Missing: negative forms, full subject prefix tables, aspect markers.",
+        "last_updated": "2026-03-23"
+      }
+    ],
+    "proverbs": [
+      {
+        "file": "datasets/proverbs/kiganda_proverbs.json",
+        "source_ids": ["nakimbugwe_dissertation"],
+        "entry_count": 60,
+        "completeness": "medium",
+        "notes": "60 of approximately 80 proverbs extracted. 20 more remain in dissertation. Themes covered: hardwork, wisdom, respect.",
+        "last_updated": "2026-03-23"
+      }
+    ]
+  },
+  "data_gaps": {
+    "critical": [
+      {
+        "gap": "Dialogue / multi-turn conversation examples",
+        "why_it_matters": "Chat assistant needs back-and-forth dialogue patterns to respond naturally",
+        "current_count": 0,
+        "target_count": 200
+      },
+      {
+        "gap": "Negative verb forms",
+        "why_it_matters": "Users need to say 'I do not...' and 'He is not...' — currently undocumented",
+        "current_count": 0,
+        "target_count": "50 example sentences"
+      },
+      {
+        "gap": "Noun class agreement system",
+        "why_it_matters": "Adjectives, verbs, and pronouns change based on noun class — essential for correct grammar",
+        "current_count": 0,
+        "target_count": "8 class tables with full examples"
+      }
+    ],
+    "important": [
+      {
+        "gap": "Health and medical vocabulary",
+        "why_it_matters": "Health is a core use case — hospital phrases, symptoms, body systems",
+        "current_count": "partial (in daily_life sentences)",
+        "target_count": 80
+      },
+      {
+        "gap": "Numbers in sentence context",
+        "why_it_matters": "Knowing 'five' is not useful without 'give me five tomatoes'",
+        "current_count": 5,
+        "target_count": 40
+      },
+      {
+        "gap": "Evaluation test set",
+        "why_it_matters": "Needed to score translation quality — cannot improve without measuring",
+        "current_count": 0,
+        "target_count": 100
+      }
+    ],
+    "future": [
+      {
+        "gap": "Audio recordings",
+        "why_it_matters": "Voice input/output phase will need aligned audio+text pairs",
+        "current_count": 0,
+        "target_count": "1000+ aligned utterances"
+      },
+      {
+        "gap": "User corrections",
+        "why_it_matters": "Feedback loop for improving translation quality over time",
+        "current_count": 0,
+        "target_count": "ongoing collection"
+      }
+    ]
+  },
+  "total_summary": {
+    "total_vocabulary_entries": 293,
+    "total_sentence_pairs": 110,
+    "total_grammar_rules": 28,
+    "total_proverbs": 60,
+    "overall_completeness": "low — strong foundation but far below minimum for reliable AI",
+    "minimum_target_sentence_pairs": 1000,
+    "fine_tuning_threshold_sentence_pairs": 10000
+  }
+}
