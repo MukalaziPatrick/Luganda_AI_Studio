@@ -34,6 +34,12 @@ OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")  # CHAN
 OLLAMA_DEFAULT_MODEL = os.getenv("OLLAMA_DEFAULT_MODEL", "qwen3:1.7b")   # CHANGED: fits in 4GB VRAM (only ~1.1GB)
 OLLAMA_TIMEOUT = 120
 
+# ─── OpenRouter ───────────────────────────────────────────────
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")  # CHANGED: new for OpenRouter integration
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "google/gemma-2-9b-it:free")  # CHANGED: new for OpenRouter
+OPENROUTER_TIMEOUT_SECONDS = float(os.getenv("OPENROUTER_TIMEOUT_SECONDS", "8"))  # CHANGED: new for OpenRouter
+OPENROUTER_DAILY_LIMIT_USD = float(os.getenv("OPENROUTER_DAILY_LIMIT_USD", "0.10"))  # CHANGED: new for OpenRouter
+
 # ─── Chat Settings ────────────────────────────────────────────
 CHAT_MAX_HISTORY = 10
 CHAT_CONTEXT_RESULTS = 5
@@ -48,4 +54,9 @@ settings = SimpleNamespace(
     imported_datasets_dir=IMPORTED_DATASETS_DIR,  # Phase 1: downloaded datasets
     feedback_dir=FEEDBACK_DIR,             # Phase 3: user feedback
     training_dir=TRAINING_DIR,             # Phase 3: training data accumulation
+    # CHANGED: OpenRouter configuration
+    openrouter_api_key=OPENROUTER_API_KEY,
+    openrouter_model=OPENROUTER_MODEL,
+    openrouter_timeout_seconds=OPENROUTER_TIMEOUT_SECONDS,
+    openrouter_daily_limit_usd=OPENROUTER_DAILY_LIMIT_USD,
 )
