@@ -33,7 +33,7 @@ _CORRECTIONS_FILE = _PROJECT_ROOT / "data" / "training" / "corrections.jsonl"
 _TRAINING_DIR = _PROJECT_ROOT / "data" / "training"
 _CHROMA_DIR = _PROJECT_ROOT / "data" / "chromadb"
 
-_COLLECTIONS = ["vocabulary", "sentences", "grammar", "proverbs", "documents"]
+_COLLECTIONS = ["vocabulary", "sentences", "grammar", "proverbs"]
 
 
 def _chroma_disk_mb() -> float:
@@ -62,7 +62,7 @@ def _collection_counts() -> Dict[str, Any]:
         client = get_chroma_client()
         for name in _COLLECTIONS:
             try:
-                col = client.get_or_create_collection(name)
+                col = client.get_collection(name)
                 counts[name] = col.count()
             except Exception:
                 counts[name] = 0
@@ -175,7 +175,6 @@ async def admin_status() -> Dict[str, Any]:
         },
         "pipeline": {
             "nllb_loaded": _nllb_loaded(),
-            "openrouter_key_set": bool(settings.openrouter_api_key),
             "openrouter_last_call_at": get_last_call_at(),
         },
     }

@@ -34,7 +34,7 @@ def test_admin_system_section_has_required_keys():
 def test_admin_collections_section_has_required_keys():
     response = client.get("/api/v1/admin/status")
     cols = response.json()["collections"]
-    for name in ("vocabulary", "sentences", "grammar", "proverbs", "documents", "total"):
+    for name in ("vocabulary", "sentences", "grammar", "proverbs", "total"):
         assert name in cols
 
 
@@ -55,5 +55,5 @@ def test_admin_training_section_has_required_keys():
 def test_admin_pipeline_section_has_required_keys():
     response = client.get("/api/v1/admin/status")
     pl = response.json()["pipeline"]
-    for key in ("nllb_loaded", "openrouter_key_set", "openrouter_last_call_at"):
+    for key in ("nllb_loaded", "openrouter_last_call_at"):
         assert key in pl
