@@ -8,17 +8,21 @@ logger = logging.getLogger(__name__)
 _model_name = "paraphrase-multilingual-MiniLM-L12-v2"
 
 _model = None
+_chroma_embedding_fn = None
 
 
 def get_chroma_embedding_fn():
     """
     Return a ChromaDB-compatible embedding function using the multilingual model.
 
-    Pass this to get_or_create_collection() and query() so ChromaDB uses
-    the same model for both ingestion and search — no mismatch possible.
+    Pass this to get_or_create_collection() so ChromaDB uses the same model
+    for both ingestion and search — no mismatch possible. Cached after first call.
     """
-    from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
-    return SentenceTransformerEmbeddingFunction(model_name=_model_name)
+    global _chroma_embedding_fn
+    if _chroma_embedding_fn is None:
+        from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+        _chroma_embedding_fn = SentenceTransformerEmbeddingFunction(model_name=_model_name)
+    return _chroma_embedding_fn
 
 
 def get_model():
