@@ -10,7 +10,7 @@ These are Pydantic models. They:
 """
 
 from typing import Literal, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 # ---------------------------------------------------------------------- #
@@ -29,6 +29,13 @@ class TranslationRequest(BaseModel):
         description="The text to translate.",
         examples=["hello", "ndaba", "How are you?"],
     )
+
+    @field_validator("text")
+    @classmethod
+    def text_must_not_be_whitespace_only(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("text must not be whitespace only")
+        return v
 
     direction: Literal["en_to_lg", "lg_to_en"] = Field(
         ...,
