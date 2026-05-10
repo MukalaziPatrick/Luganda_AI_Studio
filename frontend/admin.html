@@ -4,211 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin — Luganda AI Studio</title>
+  <script>(function(){const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
   <link rel="manifest" href="/app/manifest.json" />
-  <meta name="theme-color" content="#0c1710" />
+  <meta name="theme-color" content="#E8E6DE" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Luganda AI" />
+  <link rel="apple-touch-icon" href="/app/icons/icon-192.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg:            #0c1710;
-      --bg-card:       #111f15;
-      --bg-surface:    #182a1d;
-      --border:        #243529;
-      --green-deep:    #1a6b35;
-      --green-mid:     #27924a;
-      --green-light:   #52c46e;
-      --amber:         #d99b2a;
-      --amber-light:   #f0b93c;
-      --red:           #c9503e;
-      --text-primary:  #deeee2;
-      --text-secondary:#7a9e84;
-      --text-muted:    #3e5c46;
-      --font-display:  'Fraunces', Georgia, serif;
-      --font-body:     'DM Sans', sans-serif;
-      --radius:        14px;
-      --radius-sm:     8px;
-      --space-2: 8px; --space-3: 12px; --space-4: 16px;
-      --space-5: 20px; --space-6: 24px; --space-8: 32px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-body); background: var(--bg); color: var(--text-primary); min-height: 100vh; padding: var(--space-6); }
-    h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 600; margin-bottom: var(--space-2); }
-    .subtitle { color: var(--text-secondary); margin-bottom: var(--space-8); font-size: 0.9rem; }
-    nav { margin-bottom: var(--space-8); display: flex; gap: var(--space-4); flex-wrap: wrap; }
-    nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--border); transition: color 0.18s, border-color 0.18s; }
-    nav a:hover { color: var(--text-primary); border-color: var(--green-mid); }
-    nav a.active { color: var(--green-light); border-color: var(--green-mid); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--space-6); }
-    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-6); }
-    .card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: var(--space-4); color: var(--text-primary); }
-    .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 99px; font-size: 0.8rem; font-weight: 500; }
-    .pill.ok   { background: #0d2a18; color: var(--green-light); border: 1px solid #1a5c30; }
-    .pill.fail { background: #2a1208; color: #e07060; border: 1px solid #5c2010; }
-    .status-row { display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) 0; border-bottom: 1px solid var(--border); }
-    .status-row:last-child { border-bottom: none; }
-    .status-label { color: var(--text-secondary); font-size: 0.88rem; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-    th { text-align: left; color: var(--text-muted); font-weight: 500; padding: var(--space-2) 0; border-bottom: 1px solid var(--border); }
-    td { padding: var(--space-2) 0; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
-    td:last-child { text-align: right; color: var(--text-primary); font-weight: 500; }
-    tfoot td { color: var(--green-light); font-weight: 600; border-top: 1px solid var(--border); border-bottom: none; }
-    .stat-row { display: flex; justify-content: space-between; align-items: center; padding: var(--space-2) 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
-    .stat-row:last-child { border-bottom: none; }
-    .stat-val { color: var(--text-primary); font-weight: 500; }
-    .refresh-btn { margin-top: var(--space-8); padding: var(--space-2) var(--space-5); background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-secondary); font-family: var(--font-body); font-size: 0.88rem; cursor: pointer; transition: color 0.18s, border-color 0.18s; }
-    .refresh-btn:hover { color: var(--text-primary); border-color: var(--green-mid); }
-    .error-msg { color: #e07060; font-size: 0.88rem; margin-top: var(--space-4); }
-    .loading { color: var(--text-muted); font-size: 0.88rem; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/app/styles.css" />
 </head>
 <body>
+<div class="app-shell">
 
-  <nav>
-    <a href="/app/index.html">Dashboard</a>
-    <a href="/app/translate.html">Translate</a>
-    <a href="/app/search.html">Search</a>
-    <a href="/app/teach.html">Teach</a>
-    <a href="/app/reviews.html">Reviews</a>
-    <a href="/app/admin.html" class="active">Admin</a>
-  </nav>
-
-  <h1>Admin Dashboard</h1>
-  <p class="subtitle">System status — read-only view. Refresh the page to update.</p>
-
-  <div id="error" class="error-msg" style="display:none"></div>
-  <div id="loading" class="loading">Loading status…</div>
-
-  <div class="grid" id="grid" style="display:none">
-
-    <!-- Card 1: System Health -->
-    <div class="card">
-      <div class="card-title">System Health</div>
-      <div class="status-row">
-        <span class="status-label">API</span>
-        <span class="pill ok">● Online</span>
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">Luganda <span>AI</span></div>
+    <nav class="sidebar-nav">
+      <a href="index.html"     class="sidebar-link">⌂ Home</a>
+      <a href="translate.html" class="sidebar-link">⇄ Translate</a>
+      <a href="search.html"    class="sidebar-link">◎ Search</a>
+      <a href="teach.html"     class="sidebar-link">📖 Teach</a>
+      <a href="reviews.html"   class="sidebar-link">★ Reviews</a>
+      <a href="admin.html"     class="sidebar-link active">⚙ Admin</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="theme-pill">
+        <button class="theme-pill-btn" id="btnLight" onclick="setTheme('light')">☀ Light</button>
+        <button class="theme-pill-btn" id="btnDark"  onclick="setTheme('dark')">🌙 Dark</button>
       </div>
-      <div class="status-row">
-        <span class="status-label">ChromaDB</span>
-        <span id="chroma-pill"></span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">OpenRouter key</span>
-        <span id="or-key-pill"></span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">TTS dependencies</span>
-        <span id="tts-pill"></span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">ChromaDB disk usage</span>
-        <span id="chroma-disk" class="stat-val"></span>
-      </div>
+      <div class="sidebar-version">v1.0 · Luganda AI Studio</div>
     </div>
+  </aside>
 
-    <!-- Card 2: Collections -->
-    <div class="card">
-      <div class="card-title">Collections</div>
-      <table>
-        <thead><tr><th>Collection</th><th>Records</th></tr></thead>
-        <tbody id="collections-body"></tbody>
-        <tfoot><tr><td>Total</td><td id="collections-total"></td></tr></tfoot>
-      </table>
-    </div>
+  <!-- Mobile topbar -->
+  <header class="mobile-topbar">
+    <span class="mobile-topbar-title">Admin</span>
+    <button class="theme-icon-btn" id="mobileThemeBtn" onclick="toggleTheme()">☀</button>
+  </header>
 
-    <!-- Card 3: Feedback Summary -->
-    <div class="card">
-      <div class="card-title">Feedback Summary</div>
-      <div class="stat-row"><span class="status-label">Total submissions</span><span id="fb-total" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">Last submission</span><span id="fb-last" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">✓ Correct</span><span id="fb-correct" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">✗ Wrong</span><span id="fb-wrong" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">🔁 Needs Review</span><span id="fb-review" class="stat-val"></span></div>
-    </div>
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="container" style="padding-top:32px; padding-bottom:32px;">
 
-    <!-- Card 4: Training Data -->
-    <div class="card">
-      <div class="card-title">Training Data</div>
-      <div class="stat-row"><span class="status-label">Training pairs</span><span id="tr-pairs" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">Correction pairs</span><span id="tr-corrections" class="stat-val"></span></div>
-      <div class="stat-row"><span class="status-label">Last export</span><span id="tr-export" class="stat-val"></span></div>
-    </div>
+      <h1 class="page-heading">Admin Dashboard</h1>
+      <p class="page-subheading">System status — read-only view. Refresh the page to update.</p>
 
-    <!-- Card 5: Translation Pipeline -->
-    <div class="card">
-      <div class="card-title">Translation Pipeline</div>
-      <div class="status-row">
-        <span class="status-label">NLLB model loaded</span>
-        <span id="nllb-pill"></span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">OpenRouter last call</span>
-        <span id="or-last" class="stat-val"></span>
-      </div>
-    </div>
+      <div id="error" class="admin-error-msg" style="display:none"></div>
+      <div id="loading" class="admin-loading">Loading status…</div>
 
+      <div class="admin-grid" id="grid" style="display:none">
+
+        <!-- Card 1: System Health -->
+        <div class="card">
+          <div class="admin-card-title">System Health</div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">API</span>
+            <span class="chip chip-success">● Online</span>
+          </div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">ChromaDB</span>
+            <span id="chroma-pill"></span>
+          </div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">OpenRouter key</span>
+            <span id="or-key-pill"></span>
+          </div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">TTS dependencies</span>
+            <span id="tts-pill"></span>
+          </div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">ChromaDB disk usage</span>
+            <span id="chroma-disk" class="admin-stat-val"></span>
+          </div>
+        </div>
+
+        <!-- Card 2: Collections -->
+        <div class="card">
+          <div class="admin-card-title">Collections</div>
+          <table class="admin-table">
+            <thead><tr><th>Collection</th><th>Records</th></tr></thead>
+            <tbody id="collections-body"></tbody>
+            <tfoot><tr><td>Total</td><td id="collections-total"></td></tr></tfoot>
+          </table>
+        </div>
+
+        <!-- Card 3: Feedback Summary -->
+        <div class="card">
+          <div class="admin-card-title">Feedback Summary</div>
+          <div class="admin-stat-row"><span class="admin-status-label">Total submissions</span><span id="fb-total" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">Last submission</span><span id="fb-last" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">✓ Correct</span><span id="fb-correct" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">✗ Wrong</span><span id="fb-wrong" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">🔁 Needs Review</span><span id="fb-review" class="admin-stat-val"></span></div>
+        </div>
+
+        <!-- Card 4: Training Data -->
+        <div class="card">
+          <div class="admin-card-title">Training Data</div>
+          <div class="admin-stat-row"><span class="admin-status-label">Training pairs</span><span id="tr-pairs" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">Correction pairs</span><span id="tr-corrections" class="admin-stat-val"></span></div>
+          <div class="admin-stat-row"><span class="admin-status-label">Last export</span><span id="tr-export" class="admin-stat-val"></span></div>
+        </div>
+
+        <!-- Card 5: Translation Pipeline -->
+        <div class="card">
+          <div class="admin-card-title">Translation Pipeline</div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">NLLB model loaded</span>
+            <span id="nllb-pill"></span>
+          </div>
+          <div class="admin-status-row">
+            <span class="admin-status-label">OpenRouter last call</span>
+            <span id="or-last" class="admin-stat-val"></span>
+          </div>
+        </div>
+
+      </div><!-- /#grid -->
+
+      <button class="btn-secondary admin-refresh-btn" onclick="location.reload()">↺ Refresh</button>
+
+    </div><!-- /.container -->
+  </main><!-- /.main-content -->
+</div><!-- /.app-shell -->
+
+<!-- Bottom nav (mobile) — admin is secondary, no active tab -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html"     class="bnav-item" data-page="index"><span class="bnav-icon">⌂</span><span class="bnav-label">Home</span></a>
+    <a href="translate.html" class="bnav-item" data-page="translate"><span class="bnav-icon">⇄</span><span class="bnav-label">Translate</span></a>
+    <a href="search.html"    class="bnav-item" data-page="search"><span class="bnav-icon">◎</span><span class="bnav-label">Search</span></a>
+    <a href="teach.html"     class="bnav-item" data-page="teach"><span class="bnav-icon">📖</span><span class="bnav-label">Teach</span></a>
   </div>
+</nav>
 
-  <button class="refresh-btn" onclick="location.reload()">↺ Refresh</button>
+<script>
+'use strict';
 
-  <script>
-    function pill(ok, yesLabel, noLabel) {
-      return '<span class="pill ' + (ok ? 'ok' : 'fail') + '">● ' + (ok ? yesLabel : noLabel) + '</span>';
-    }
+function pill(ok, yesLabel, noLabel) {
+  const cls = ok ? 'chip chip-success' : 'chip chip-red';
+  return '<span class="' + cls + '">● ' + (ok ? yesLabel : noLabel) + '</span>';
+}
 
-    function fmt(ts) {
-      if (!ts) return '—';
-      try { return new Date(ts).toLocaleString(); } catch { return ts; }
-    }
+function fmt(ts) {
+  if (!ts) return '—';
+  try { return new Date(ts).toLocaleString(); } catch { return ts; }
+}
 
-    async function load() {
-      try {
-        const res = await fetch('/api/v1/admin/status');
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const d = await res.json();
+async function load() {
+  try {
+    const res = await fetch('/api/v1/admin/status');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const d = await res.json();
 
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('grid').style.display = 'grid';
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('grid').style.display = 'grid';
 
-        // System
-        document.getElementById('chroma-pill').outerHTML = '<span id="chroma-pill">' + pill(d.system.chroma_connected, 'Connected', 'Disconnected') + '</span>';
-        document.getElementById('or-key-pill').outerHTML = '<span id="or-key-pill">' + pill(d.system.openrouter_key_set, 'Set', 'Not set') + '</span>';
-        document.getElementById('tts-pill').outerHTML    = '<span id="tts-pill">' + pill(d.system.tts_deps_installed, 'Installed', 'Missing') + '</span>';
-        document.getElementById('chroma-disk').textContent = d.system.chroma_disk_mb + ' MB';
+    // System
+    document.getElementById('chroma-pill').outerHTML = '<span id="chroma-pill">' + pill(d.system.chroma_connected, 'Connected', 'Disconnected') + '</span>';
+    document.getElementById('or-key-pill').outerHTML = '<span id="or-key-pill">' + pill(d.system.openrouter_key_set, 'Set', 'Not set') + '</span>';
+    document.getElementById('tts-pill').outerHTML    = '<span id="tts-pill">' + pill(d.system.tts_deps_installed, 'Installed', 'Missing') + '</span>';
+    document.getElementById('chroma-disk').textContent = d.system.chroma_disk_mb + ' MB';
 
-        // Collections
-        const cols = ['vocabulary', 'sentences', 'grammar', 'proverbs'];
-        document.getElementById('collections-body').innerHTML = cols.map(c =>
-          '<tr><td>' + c + '</td><td>' + (d.collections[c] ?? '—') + '</td></tr>'
-        ).join('');
-        document.getElementById('collections-total').textContent = d.collections.total ?? '—';
+    // Collections
+    const cols = ['vocabulary', 'sentences', 'grammar', 'proverbs'];
+    document.getElementById('collections-body').innerHTML = cols.map(c =>
+      '<tr><td>' + c + '</td><td>' + (d.collections[c] ?? '—') + '</td></tr>'
+    ).join('');
+    document.getElementById('collections-total').textContent = d.collections.total ?? '—';
 
-        // Feedback
-        document.getElementById('fb-total').textContent   = d.feedback.total_submissions;
-        document.getElementById('fb-last').textContent    = fmt(d.feedback.last_submission_at);
-        document.getElementById('fb-correct').textContent = d.feedback.correct;
-        document.getElementById('fb-wrong').textContent   = d.feedback.wrong;
-        document.getElementById('fb-review').textContent  = d.feedback.needs_review;
+    // Feedback
+    document.getElementById('fb-total').textContent   = d.feedback.total_submissions;
+    document.getElementById('fb-last').textContent    = fmt(d.feedback.last_submission_at);
+    document.getElementById('fb-correct').textContent = d.feedback.correct;
+    document.getElementById('fb-wrong').textContent   = d.feedback.wrong;
+    document.getElementById('fb-review').textContent  = d.feedback.needs_review;
 
-        // Training
-        document.getElementById('tr-pairs').textContent       = d.training.training_pairs;
-        document.getElementById('tr-corrections').textContent = d.training.correction_pairs;
-        document.getElementById('tr-export').textContent      = d.training.last_export ?? '—';
+    // Training
+    document.getElementById('tr-pairs').textContent       = d.training.training_pairs;
+    document.getElementById('tr-corrections').textContent = d.training.correction_pairs;
+    document.getElementById('tr-export').textContent      = d.training.last_export ?? '—';
 
-        // Pipeline
-        document.getElementById('nllb-pill').outerHTML = '<span id="nllb-pill">' + pill(d.pipeline.nllb_loaded, 'Loaded', 'Not loaded') + '</span>';
-        document.getElementById('or-last').textContent = fmt(d.pipeline.openrouter_last_call_at);
+    // Pipeline
+    document.getElementById('nllb-pill').outerHTML = '<span id="nllb-pill">' + pill(d.pipeline.nllb_loaded, 'Loaded', 'Not loaded') + '</span>';
+    document.getElementById('or-last').textContent = fmt(d.pipeline.openrouter_last_call_at);
 
-      } catch (err) {
-        document.getElementById('loading').style.display = 'none';
-        const el = document.getElementById('error');
-        el.style.display = 'block';
-        el.textContent = 'Failed to load status: ' + err.message;
-      }
-    }
+  } catch (err) {
+    document.getElementById('loading').style.display = 'none';
+    const el = document.getElementById('error');
+    el.style.display = 'block';
+    el.textContent = 'Failed to load status: ' + err.message;
+  }
+}
 
-    load();
-  </script>
+load();
+
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  updateThemeUI();
+}
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setTheme(isDark ? 'light' : 'dark');
+}
+function updateThemeUI() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('btnLight')?.classList.toggle('active', !isDark);
+  document.getElementById('btnDark')?.classList.toggle('active', isDark);
+  const mb = document.getElementById('mobileThemeBtn');
+  if (mb) mb.textContent = isDark ? '☀' : '🌙';
+}
+updateThemeUI();
+</script>
 </body>
 </html>
