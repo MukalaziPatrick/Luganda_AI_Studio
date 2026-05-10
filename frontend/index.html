@@ -3,1033 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luganda AI Studio — Dashboard</title>
-  <!-- PWA -->
+  <title>Luganda AI Studio</title>
+  <script>(function(){const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
   <link rel="manifest" href="/app/manifest.json" />
-  <meta name="theme-color" content="#0d1f14" />
+  <meta name="theme-color" content="#E8E6DE" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Luganda AI" />
   <link rel="apple-touch-icon" href="/app/icons/icon-192.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    /* ============================================================
-       CSS VARIABLES — DESIGN TOKENS
-       ============================================================ */
-    :root {
-      --bg:           #0f1a12;
-      --bg-card:      #162019;
-      --bg-surface:   #1c2b20;
-      --border:       #2a3d2e;
-      --border-light: #3a5040;
-      --green-deep:   #1a7a3a;
-      --green-mid:    #2ea84f;
-      --green-light:  #5ecf7a;
-      --amber:        #e8a93a;
-      --amber-light:  #f5c76a;
-      --cream:        #f0e8d8;
-      --text-primary: #e8f0ea;
-      --text-secondary: #8aab90;
-      --text-muted:   #4a6650;
-      --red:          #d95f4b;
-      --red-bg:       #2a1510;
-      --success:      #4caf72;
-      --success-bg:   #0d2216;
-      --purple:       #7c6fe0;
-      --purple-bg:    #1a1630;
-      --purple-light: #a89cf5;
-      --font-display: 'Fraunces', Georgia, serif;
-      --font-body:    'DM Sans', sans-serif;
-      --radius:       12px;
-      --radius-sm:    8px;
-      --shadow:       0 4px 24px rgba(0,0,0,0.4);
-      --transition:   all 0.22s ease;
-    }
-
-    /* ============================================================
-       RESET & BASE
-       ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text-primary);
-      min-height: 100vh;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ============================================================
-       LAYOUT WRAPPER
-       ============================================================ */
-    .layout {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      min-height: 100vh;
-    }
-
-    /* ============================================================
-       SIDEBAR NAVIGATION
-       ============================================================ */
-    .sidebar {
-      background: var(--bg-card);
-      border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    .sidebar-brand {
-      padding: 28px 24px 24px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 12px rgba(46,168,79,0.25);
-    }
-
-    .brand-name {
-      font-family: var(--font-display);
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-primary);
-      line-height: 1.2;
-    }
-
-    .brand-tagline {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-      margin-top: 3px;
-      text-transform: uppercase;
-    }
-
-    .sidebar-nav {
-      padding: 16px 12px;
-      flex: 1;
-    }
-
-    .nav-section-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      padding: 8px 12px 6px;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 400;
-      transition: var(--transition);
-      margin-bottom: 2px;
-    }
-
-    .nav-link:hover {
-      background: var(--bg-surface);
-      color: var(--text-primary);
-    }
-
-    .nav-link.active {
-      background: var(--bg-surface);
-      color: var(--green-light);
-      font-weight: 500;
-      border-left: 3px solid var(--green-mid);
-    }
-
-    .nav-link .nav-icon { font-size: 16px; width: 20px; text-align: center; }
-
-    .sidebar-footer {
-      padding: 16px 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .version-badge {
-      font-size: 11px;
-      color: var(--text-muted);
-      background: var(--bg-surface);
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: inline-block;
-    }
-
-    /* ============================================================
-       MAIN CONTENT
-       ============================================================ */
-    .main {
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-
-    /* ============================================================
-       TOP BAR
-       ============================================================ */
-    .topbar {
-      padding: 20px 36px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--bg-card);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .topbar-title {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .topbar-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 1px;
-    }
-
-    /* ============================================================
-       STATUS INDICATOR
-       ============================================================ */
-    .status-pill {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      transition: var(--transition);
-      cursor: default;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--text-muted);
-      transition: var(--transition);
-    }
-
-    .status-pill.checking .status-dot {
-      background: var(--amber);
-      animation: pulse 1.2s ease-in-out infinite;
-    }
-
-    .status-pill.online {
-      border-color: var(--green-deep);
-      background: var(--success-bg);
-      color: var(--success);
-    }
-
-    .status-pill.online .status-dot {
-      background: var(--success);
-      box-shadow: 0 0 6px var(--success);
-    }
-
-    .status-pill.offline {
-      border-color: var(--red);
-      background: var(--red-bg);
-      color: var(--red);
-    }
-
-    .status-pill.offline .status-dot { background: var(--red); }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.4; }
-    }
-
-    /* ============================================================
-       PAGE BODY
-       ============================================================ */
-    .page-body {
-      padding: 32px 36px 60px;
-      max-width: 1100px;
-    }
-
-    /* ============================================================
-       BANNER
-       ============================================================ */
-    .banner {
-      padding: 12px 18px;
-      border-radius: var(--radius);
-      font-size: 13px;
-      margin-bottom: 24px;
-      display: none;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid transparent;
-    }
-
-    .banner.error {
-      background: var(--red-bg);
-      border-color: var(--red);
-      color: var(--red);
-    }
-
-    /* ============================================================
-       HERO
-       ============================================================ */
-    .hero {
-      margin-bottom: 40px;
-    }
-
-    .hero-kicker {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-mid);
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 38px;
-      font-weight: 700;
-      color: var(--text-primary);
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--amber);
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: var(--text-secondary);
-      max-width: 560px;
-      line-height: 1.7;
-    }
-
-    /* ============================================================
-       STATS ROW
-       ============================================================ */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .stat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-    }
-
-    .stat-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .stat-value {
-      font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 4px;
-    }
-
-    .stat-sub {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .loading-text { color: var(--text-muted); }
-
-    /* ============================================================
-       SECTION HEADERS
-       ============================================================ */
-    .section-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .section-badge {
-      font-size: 11px;
-      color: var(--text-muted);
-      background: var(--bg-surface);
-      padding: 3px 10px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-    }
-
-    /* ============================================================
-       FEATURES GRID
-       ============================================================ */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .feature-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      opacity: 0;
-      transition: var(--transition);
-    }
-
-    .feature-card:hover {
-      border-color: var(--border-light);
-      background: var(--bg-surface);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    .feature-card:hover::before { opacity: 1; }
-
-    .feature-card.translate::before { background: linear-gradient(90deg, var(--green-deep), var(--green-light)); }
-    .feature-card.search::before    { background: linear-gradient(90deg, var(--amber), var(--amber-light)); }
-    .feature-card.teach::before     { background: linear-gradient(90deg, var(--purple), var(--purple-light)); }
-    .feature-card.chat::before      { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
-
-    .feature-icon {
-      font-size: 28px;
-      margin-bottom: 4px;
-    }
-
-    .feature-name {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .feature-desc {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .feature-status {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .feature-status .dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-    }
-
-    .status-live   { color: var(--success); }
-    .status-live .dot { background: var(--success); box-shadow: 0 0 4px var(--success); }
-
-    .status-coming { color: var(--text-muted); }
-    .status-coming .dot { background: var(--text-muted); }
-
-    .feature-cta {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-top: 6px;
-      transition: var(--transition);
-    }
-
-    .feature-card:hover .feature-cta { color: var(--text-secondary); }
-
-    /* ============================================================
-       SYSTEM STATUS CARD
-       ============================================================ */
-    .system-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-bottom: 40px;
-      overflow: hidden;
-    }
-
-    .system-rows { display: flex; flex-direction: column; }
-
-    .system-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-      border-bottom: 1px solid var(--border);
-      transition: var(--transition);
-    }
-
-    .system-row:last-child { border-bottom: none; }
-    .system-row:hover { background: var(--bg-surface); }
-
-    .system-row-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .system-row-icon { font-size: 15px; width: 20px; text-align: center; }
-    .system-row-value { font-size: 13px; }
-
-    /* ============================================================
-       CHIPS
-       ============================================================ */
-    .chip {
-      padding: 3px 10px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .chip-green  { background: var(--success-bg); color: var(--success); border: 1px solid var(--green-deep); }
-    .chip-red    { background: var(--red-bg);     color: var(--red);     border: 1px solid var(--red); }
-    .chip-purple { background: var(--purple-bg);  color: var(--purple-light); border: 1px solid var(--purple); }
-    .chip-blue   { background: #082030;           color: #38bdf8;        border: 1px solid #0ea5e9; }
-    .chip-muted  { background: var(--bg-surface); color: var(--text-muted); border: 1px solid var(--border); }
-
-    /* ============================================================
-       QUICK ACTIONS
-       ============================================================ */
-    .actions-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      border-radius: var(--radius-sm);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: var(--transition);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .btn-primary {
-      background: var(--green-deep);
-      color: var(--text-primary);
-      border: 1px solid var(--green-mid);
-    }
-
-    .btn-primary:hover { background: var(--green-mid); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text-secondary);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      background: var(--bg-surface);
-      color: var(--text-primary);
-      border-color: var(--border-light);
-    }
-
-    /* ============================================================
-       FADE IN ANIMATION
-       ============================================================ */
-    .fade-in {
-      animation: fadeIn 0.5s ease both;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ============================================================
-       MOBILE NAV TOGGLE BUTTON (hidden on desktop)
-       ============================================================ */
-    .mobile-nav-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      font-size: 20px;
-      padding: 4px 10px;
-      cursor: pointer;
-      line-height: 1;
-    }
-
-    /* ============================================================
-       RESPONSIVE — MOBILE
-       ============================================================ */
-    @media (max-width: 768px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: fixed;
-        top: 0; left: 0;
-        width: 260px;
-        height: 100vh;
-        z-index: 200;
-        transform: translateX(-100%);
-        transition: transform 0.25s ease;
-        box-shadow: 4px 0 24px rgba(0,0,0,0.5);
-      }
-
-      .sidebar.open {
-        transform: translateX(0);
-      }
-
-      .sidebar-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-        z-index: 199;
-      }
-
-      .sidebar-overlay.open { display: block; }
-
-      .mobile-nav-toggle { display: block; }
-
-      .topbar {
-        padding: 14px 16px;
-      }
-
-      .topbar-title { font-size: 17px; }
-
-      .page-body {
-        padding: 20px 16px 60px;
-      }
-
-      .stats-row {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .stats-row .stat-card:last-child {
-        grid-column: 1 / -1;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .hero-title { font-size: 26px; }
-      .hero-desc  { font-size: 14px; }
-
-      .actions-row { flex-wrap: wrap; gap: 8px; }
-      .btn { padding: 10px 14px; font-size: 13px; min-height: 44px; }
-
-      .system-row { padding: 12px 16px; }
-    }
-
-    @media (max-width: 400px) {
-      .stats-row {
-        grid-template-columns: 1fr;
-      }
-      .stats-row .stat-card:last-child {
-        grid-column: auto;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/app/styles.css" />
 </head>
 <body>
+<div class="app-shell">
 
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-<div class="layout">
-
-  <!-- ============================================================
-       SIDEBAR
-       ============================================================ -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-icon">🇺🇬</div>
-      <div class="brand-name">Luganda AI Studio</div>
-      <div class="brand-tagline">Language · AI · Local</div>
-    </div>
-
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">Luganda <span>AI</span></div>
     <nav class="sidebar-nav">
-      <div class="nav-section-label">Navigation</div>
-      <a href="index.html"     class="nav-link active"><span class="nav-icon">⌂</span> Dashboard</a>
-      <a href="translate.html" class="nav-link"><span class="nav-icon">⇄</span> Translate</a>
-      <a href="search.html"    class="nav-link"><span class="nav-icon">◎</span> Search</a>
-      <a href="teach.html"     class="nav-link"><span class="nav-icon">📖</span> Teach Mode</a>
-      <!-- ADDED: Chat link in sidebar -->
-      <a href="chat.html"      class="nav-link"><span class="nav-icon">💬</span> Chat Assistant</a>
-
-      <div class="nav-section-label" style="margin-top:16px;">System</div>
-      <a href="reviews.html"   class="nav-link"><span class="nav-icon">📋</span> Reviews</a>
-      <a href="admin.html"     class="nav-link"><span class="nav-icon">⚙️</span> Admin</a>
-      <a href="/docs"          class="nav-link" target="_blank"><span class="nav-icon">⧉</span> API Docs</a>
+      <a href="index.html"     class="sidebar-link active">⌂ Home</a>
+      <a href="translate.html" class="sidebar-link">⇄ Translate</a>
+      <a href="search.html"    class="sidebar-link">◎ Search</a>
+      <a href="teach.html"     class="sidebar-link">📖 Teach</a>
+      <a href="reviews.html"   class="sidebar-link">★ Reviews</a>
+      <a href="admin.html"     class="sidebar-link">⚙ Admin</a>
     </nav>
-
     <div class="sidebar-footer">
-      <!-- UPDATED: version bumped to v0.3 -->
-      <span class="version-badge">v0.3 · Chat Live</span>
+      <div class="theme-pill">
+        <button class="theme-pill-btn" id="btnLight" onclick="setTheme('light')">☀ Light</button>
+        <button class="theme-pill-btn" id="btnDark"  onclick="setTheme('dark')">🌙 Dark</button>
+      </div>
+      <div class="sidebar-version">v1.0 · Luganda AI Studio</div>
     </div>
   </aside>
 
-  <!-- ============================================================
-       MAIN
-       ============================================================ -->
-  <main class="main">
+  <!-- Mobile topbar -->
+  <header class="mobile-topbar">
+    <span class="mobile-topbar-title">Luganda AI Studio</span>
+    <button class="theme-icon-btn" id="mobileThemeBtn" onclick="toggleTheme()">☀</button>
+  </header>
 
-    <!-- TOP BAR -->
-    <div class="topbar">
-      <div>
-        <div class="topbar-title">Dashboard</div>
-        <div class="topbar-subtitle">System overview and quick access</div>
-      </div>
-      <button class="mobile-nav-toggle" onclick="openSidebar()" aria-label="Open navigation">☰</button>
-      <div class="status-pill checking" id="statusPill">
-        <div class="status-dot"></div>
-        <span id="statusText">Checking...</span>
-      </div>
-    </div>
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="container">
 
-    <!-- PAGE BODY -->
-    <div class="page-body">
-
-      <!-- OFFLINE BANNER (shown only if health check fails) -->
-      <div class="banner error" id="offlineBanner">
-        ⚠️ Backend API is not responding. Make sure your FastAPI server is running on port 8000.
-      </div>
-
-      <!-- HERO -->
-      <div class="hero fade-in">
+      <!-- Hero -->
+      <section class="hero">
         <div class="hero-kicker">Luganda AI Studio</div>
-        <div class="hero-title">
-          Translate. Learn.<br/><em>Communicate.</em>
+        <h1 class="hero-title">
+          Translate.<br>
+          Learn.<br>
+          <span class="hero-underline">Communicate.</span>
+        </h1>
+        <p class="hero-desc">AI-powered tools for the Luganda language — built to run on your machine.</p>
+        <div class="flex gap-12 flex-wrap mt-8">
+          <a href="translate.html" class="btn-primary">Start Translating →</a>
+          <div class="theme-pill" id="heroPill" style="align-self:center;">
+            <button class="theme-pill-btn" id="heroLight" onclick="setTheme('light')">☀ Light</button>
+            <button class="theme-pill-btn" id="heroDark"  onclick="setTheme('dark')">🌙 Dark</button>
+          </div>
         </div>
-        <div class="hero-desc">
-          AI-powered tools for the Luganda language — built to run locally on your machine.
-          Translate between Luganda and English, search language knowledge, chat with an AI assistant, and learn step by step.
-        </div>
+      </section>
+
+      <!-- Stats row -->
+      <div class="stats-row" id="statsRow">
+        <div class="stat-item"><span class="stat-value" id="statVocab">—</span><span class="stat-label">Vocabulary pairs</span></div>
+        <div class="stat-item"><span class="stat-value" id="statSentences">—</span><span class="stat-label">Sentence pairs</span></div>
+        <div class="stat-item"><span class="stat-value" id="statGrammar">—</span><span class="stat-label">Grammar notes</span></div>
+        <div class="stat-item"><span class="stat-value" id="statProverbs">—</span><span class="stat-label">Proverbs</span></div>
       </div>
 
-      <!-- STATS ROW -->
-      <div class="stats-row fade-in">
-        <div class="stat-card">
-          <div class="stat-label">Knowledge Entries</div>
-          <div class="stat-value" id="statEntries">
-            <span class="loading-text">—</span>
-          </div>
-          <div class="stat-sub">Loaded from dataset</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">API Status</div>
-          <div class="stat-value" id="statApi">
-            <span class="loading-text">—</span>
-          </div>
-          <div class="stat-sub" id="statApiSub">Checking connection...</div>
-        </div>
-        <div class="stat-card">
-          <!-- UPDATED: 4 features live now -->
-          <div class="stat-label">Features Live</div>
-          <div class="stat-value">4</div>
-          <div class="stat-sub">Translate · Search · Teach · Chat</div>
-        </div>
-      </div>
-
-      <!-- FEATURES SECTION -->
-      <!-- UPDATED: section badge now shows 4 live -->
-      <div class="section-header fade-in">
-        <div class="section-title">Features</div>
-        <div class="section-badge">4 total · 4 live</div>
-      </div>
-
-      <div class="features-grid fade-in">
-
-        <!-- TRANSLATE -->
-        <a href="translate.html" class="feature-card translate">
-          <div class="feature-icon">⇄</div>
-          <div class="feature-name">Translate</div>
-          <div class="feature-desc">
-            Translate text between Luganda and English using AI. Supports both directions with confidence scores.
-          </div>
-          <div class="feature-status status-live">
-            <div class="dot"></div> Live
-          </div>
-          <div class="feature-cta">Open Translate →</div>
+      <!-- Feature grid -->
+      <div class="feature-grid mt-24">
+        <a href="translate.html" class="feature-card">
+          <div class="feature-card-icon">⇄</div>
+          <div class="feature-card-title">Translate</div>
+          <div class="feature-card-desc">Luganda ↔ English with confidence scoring and neural fallback.</div>
         </a>
-
-        <!-- SEARCH -->
-        <a href="search.html" class="feature-card search">
-          <div class="feature-icon">◎</div>
-          <div class="feature-name">Knowledge Search</div>
-          <div class="feature-desc">
-            Search the Luganda language dataset. Find vocabulary, phrases, and grammar examples instantly.
-          </div>
-          <div class="feature-status status-live">
-            <div class="dot"></div> Live
-          </div>
-          <div class="feature-cta">Open Search →</div>
+        <a href="search.html" class="feature-card">
+          <div class="feature-card-icon">◎</div>
+          <div class="feature-card-title">Search</div>
+          <div class="feature-card-desc">Semantic search across vocabulary, sentences, grammar and proverbs.</div>
         </a>
-
-        <!-- TEACH MODE -->
-        <a href="teach.html" class="feature-card teach">
-          <div class="feature-icon">📖</div>
-          <div class="feature-name">Teach Mode</div>
-          <div class="feature-desc">
-            Structured Luganda flash card drills. Flip cards, mark your progress, and track what you need to review.
-          </div>
-          <div class="feature-status status-live">
-            <div class="dot"></div> Live
-          </div>
-          <div class="feature-cta">Open Teach Mode →</div>
+        <a href="teach.html" class="feature-card">
+          <div class="feature-card-icon">📖</div>
+          <div class="feature-card-title">Teach</div>
+          <div class="feature-card-desc">Flash cards and quiz mode to build Luganda vocabulary fast.</div>
         </a>
-
-        <!-- CHAT ASSISTANT — NEW -->
-        <a href="chat.html" class="feature-card chat">
-          <div class="feature-icon">💬</div>
-          <div class="feature-name">Chat Assistant</div>
-          <div class="feature-desc">
-            Have a real Luganda conversation with a local AI. Ask questions, practise phrases, and get explanations — powered by your own knowledge base.
-          </div>
-          <div class="feature-status status-live">
-            <div class="dot"></div> Live
-          </div>
-          <div class="feature-cta">Open Chat →</div>
+        <a href="reviews.html" class="feature-card">
+          <div class="feature-card-icon">★</div>
+          <div class="feature-card-title">Reviews</div>
+          <div class="feature-card-desc">Browse user feedback and correction history.</div>
         </a>
-
       </div>
 
-      <!-- SYSTEM STATUS -->
-      <div class="section-header">
-        <div class="section-title">System Status</div>
-      </div>
-
-      <div class="system-card">
-        <div class="system-rows">
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">🖥</span> Backend API (FastAPI)
-            </div>
-            <div class="system-row-value">
-              <span class="chip chip-muted" id="apiChip">Checking...</span>
-            </div>
-          </div>
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">⇄</span> Translation Engine
-            </div>
-            <div class="system-row-value">
-              <span class="chip chip-green">Available</span>
-            </div>
-          </div>
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">◎</span> Knowledge Search
-            </div>
-            <div class="system-row-value">
-              <span class="chip chip-green">Available</span>
-            </div>
-          </div>
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">📖</span> Teach Mode
-            </div>
-            <div class="system-row-value">
-              <span class="chip chip-purple">Available</span>
-            </div>
-          </div>
-          <!-- ADDED: Chat Assistant status row -->
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">💬</span> Chat Assistant (Ollama)
-            </div>
-            <div class="system-row-value">
-              <span class="chip chip-blue" id="chatChip">Checking...</span>
-            </div>
-          </div>
-          <div class="system-row">
-            <div class="system-row-label">
-              <span class="system-row-icon">📚</span> API Documentation
-            </div>
-            <div class="system-row-value">
-              <a href="/docs" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-size: 12px;">
-                Open /docs ↗
-              </a>
-            </div>
-          </div>
+      <!-- More / secondary links -->
+      <div class="more-section mb-24">
+        <div class="more-title">More</div>
+        <div class="more-links">
+          <a href="admin.html" class="more-link">⚙ Admin Dashboard</a>
+          <a href="/docs"      class="more-link">📄 API Docs</a>
         </div>
       </div>
 
-      <!-- QUICK ACTIONS -->
-      <div class="section-header">
-        <div class="section-title">Quick Actions</div>
-      </div>
-      <div class="actions-row">
-        <a href="translate.html" class="btn btn-primary">⇄ Open Translate</a>
-        <a href="search.html"    class="btn btn-outline">◎ Open Search</a>
-        <a href="teach.html"     class="btn btn-outline">📖 Teach Mode</a>
-        <!-- ADDED: Chat button in quick actions -->
-        <a href="chat.html"      class="btn btn-outline">💬 Chat Assistant</a>
-        <a href="/docs"          class="btn btn-outline" target="_blank">⧉ View API Docs</a>
-      </div>
+    </div><!-- /.container -->
+  </main><!-- /.main-content -->
+</div><!-- /.app-shell -->
 
-    </div><!-- /page-body -->
-  </main>
-</div>
+<!-- Bottom nav (mobile) -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html"     class="bnav-item active"  data-page="index"><span class="bnav-icon">⌂</span><span class="bnav-label">Home</span></a>
+    <a href="translate.html" class="bnav-item"         data-page="translate"><span class="bnav-icon">⇄</span><span class="bnav-label">Translate</span></a>
+    <a href="search.html"    class="bnav-item"         data-page="search"><span class="bnav-icon">◎</span><span class="bnav-label">Search</span></a>
+    <a href="teach.html"     class="bnav-item"         data-page="teach"><span class="bnav-icon">📖</span><span class="bnav-label">Teach</span></a>
+  </div>
+</nav>
 
-<!-- ============================================================
-     JAVASCRIPT — LIVE HEALTH CHECK
-     ============================================================ -->
 <script>
-  async function checkHealth() {
-    const pill        = document.getElementById('statusPill');
-    const text        = document.getElementById('statusText');
-    const chip        = document.getElementById('apiChip');
-    const banner      = document.getElementById('offlineBanner');
-    const statApi     = document.getElementById('statApi');
-    const statApiSub  = document.getElementById('statApiSub');
-    const statEntries = document.getElementById('statEntries');
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  updateThemeUI();
+}
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setTheme(isDark ? 'light' : 'dark');
+}
+function updateThemeUI() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  ['btnLight','heroLight'].forEach(id => document.getElementById(id)?.classList.toggle('active', !isDark));
+  ['btnDark','heroDark'].forEach(id   => document.getElementById(id)?.classList.toggle('active', isDark));
+  const mb = document.getElementById('mobileThemeBtn');
+  if (mb) mb.textContent = isDark ? '☀' : '🌙';
+}
+updateThemeUI();
 
-    try {
-      const response = await fetch('/api/v1/health', { signal: AbortSignal.timeout(5000) });
-      const data = await response.json();
-
-      if (response.ok) {
-        pill.className       = 'status-pill online';
-        text.textContent     = 'Backend Online';
-        statApi.textContent  = 'Online';
-        statApi.style.color  = 'var(--success)';
-        statApiSub.textContent = 'Connected to FastAPI';
-        chip.className       = 'chip chip-green';
-        chip.textContent     = 'Online';
-        banner.style.display = 'none';
-
-        if (data.dataset_entries !== undefined) {
-          statEntries.textContent = data.dataset_entries.toLocaleString();
-        } else {
-          statEntries.textContent = '—';
-        }
-      } else {
-        throw new Error('Non-OK response');
-      }
-    } catch (err) {
-      pill.className         = 'status-pill offline';
-      text.textContent       = 'Backend Offline';
-      statApi.textContent    = 'Offline';
-      statApi.style.color    = 'var(--red)';
-      statApiSub.textContent = 'Cannot reach API server';
-      chip.className         = 'chip chip-red';
-      chip.textContent       = 'Offline';
-      banner.style.display   = 'flex';
-      statEntries.textContent = '—';
-    }
-  }
-
-  // ADDED: Check Ollama/chat status separately
-  async function checkChatStatus() {
-    const chatChip = document.getElementById('chatChip');
-    try {
-      const res  = await fetch('/api/v1/chat/status', { signal: AbortSignal.timeout(5000) });
-      const data = await res.json();
-      if (data.ollama_running && data.default_model_available) {
-        chatChip.className   = 'chip chip-blue';
-        chatChip.textContent = `${data.default_model} · ready`;
-      } else if (data.ollama_running) {
-        chatChip.className   = 'chip chip-blue';
-        chatChip.textContent = 'Ollama running';
-      } else {
-        chatChip.className   = 'chip chip-muted';
-        chatChip.textContent = 'Ollama offline';
-      }
-    } catch (e) {
-      chatChip.className   = 'chip chip-muted';
-      chatChip.textContent = 'Unknown';
-    }
-  }
-
-  checkHealth();
-  checkChatStatus();
-  setInterval(checkHealth, 30000);
-  setInterval(checkChatStatus, 30000);
-
-  // Mobile sidebar
-  function openSidebar() {
-    document.getElementById('sidebar').classList.add('open');
-    document.getElementById('sidebarOverlay').classList.add('open');
-  }
-  function closeSidebar() {
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('sidebarOverlay').classList.remove('open');
-  }
-
-  // Service Worker registration
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/app/service-worker.js', { scope: '/app/' })
-        .catch(err => console.warn('SW registration failed:', err));
-    });
-  }
+// Load stats from /api/v1/knowledge/stats
+fetch('/api/v1/knowledge/stats')
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById('statVocab').textContent     = (d.vocabulary    ?? '—').toLocaleString();
+    document.getElementById('statSentences').textContent = (d.sentences     ?? '—').toLocaleString();
+    document.getElementById('statGrammar').textContent   = (d.grammar       ?? '—').toLocaleString();
+    document.getElementById('statProverbs').textContent  = (d.proverbs      ?? '—').toLocaleString();
+  })
+  .catch(() => {});
 </script>
-
 </body>
 </html>
