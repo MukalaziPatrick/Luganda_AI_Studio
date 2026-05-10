@@ -3,683 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luganda AI Studio — Knowledge Search</title>
-  <!-- PWA -->
+  <title>Search — Luganda AI Studio</title>
+  <script>(function(){const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
   <link rel="manifest" href="/app/manifest.json" />
-  <meta name="theme-color" content="#0f1a12" />
+  <meta name="theme-color" content="#E8E6DE" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Luganda AI" />
   <link rel="apple-touch-icon" href="/app/icons/icon-192.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    /* ============================================================
-       CSS VARIABLES
-       ============================================================ */
-    :root {
-      --bg:           #0f1a12;
-      --bg-card:      #162019;
-      --bg-surface:   #1c2b20;
-      --border:       #2a3d2e;
-      --border-light: #3a5040;
-      --green-deep:   #1a7a3a;
-      --green-mid:    #2ea84f;
-      --green-light:  #5ecf7a;
-      --amber:        #e8a93a;
-      --amber-light:  #f5c76a;
-      --text-primary: #e8f0ea;
-      --text-secondary: #8aab90;
-      --text-muted:   #4a6650;
-      --red:          #d95f4b;
-      --red-bg:       #2a1510;
-      --success:      #4caf72;
-      --success-bg:   #0d2216;
-      --purple:       #7c6fe0;
-      --purple-bg:    #1a1630;
-      --purple-light: #a89cf5;
-      --font-display: 'Fraunces', Georgia, serif;
-      --font-body:    'DM Sans', sans-serif;
-      --radius:       12px;
-      --radius-sm:    8px;
-      --shadow:       0 4px 24px rgba(0,0,0,0.4);
-      --transition:   all 0.22s ease;
-    }
-
-    /* ============================================================
-       RESET & BASE
-       ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text-primary);
-      min-height: 100vh;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ============================================================
-       LAYOUT
-       ============================================================ */
-    .layout {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      min-height: 100vh;
-    }
-
-    /* ============================================================
-       SIDEBAR
-       ============================================================ */
-    .sidebar {
-      background: var(--bg-card);
-      border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    .sidebar-brand {
-      padding: 28px 24px 24px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 12px rgba(46,168,79,0.25);
-    }
-
-    .brand-name {
-      font-family: var(--font-display);
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-primary);
-      line-height: 1.2;
-    }
-
-    .brand-tagline {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-      margin-top: 3px;
-      text-transform: uppercase;
-    }
-
-    .sidebar-nav {
-      padding: 16px 12px;
-      flex: 1;
-    }
-
-    .nav-section-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      padding: 8px 12px 6px;
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 400;
-      transition: var(--transition);
-      margin-bottom: 2px;
-    }
-
-    .nav-link:hover {
-      background: var(--bg-surface);
-      color: var(--text-primary);
-    }
-
-    .nav-link.active {
-      background: var(--bg-surface);
-      color: var(--amber-light);
-      font-weight: 500;
-      border-left: 3px solid var(--amber);
-    }
-
-    .nav-link .nav-icon { font-size: 16px; width: 20px; text-align: center; }
-
-    .sidebar-footer {
-      padding: 16px 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .version-badge {
-      font-size: 11px;
-      color: var(--text-muted);
-      background: var(--bg-surface);
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: inline-block;
-    }
-
-    /* ============================================================
-       MAIN
-       ============================================================ */
-    .main {
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ============================================================
-       TOP BAR
-       ============================================================ */
-    .topbar {
-      padding: 20px 36px;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg-card);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .topbar-title {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .topbar-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 1px;
-    }
-
-    /* ============================================================
-       PAGE BODY
-       ============================================================ */
-    .page-body {
-      padding: 36px;
-      flex: 1;
-    }
-
-    /* ============================================================
-       SEARCH INPUT
-       ============================================================ */
-    .search-box {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .search-input-wrap {
-      flex: 1;
-      position: relative;
-    }
-
-    .search-input-icon {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 15px;
-      color: var(--text-muted);
-      pointer-events: none;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 13px 14px 13px 42px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 15px;
-      outline: none;
-      transition: var(--transition);
-    }
-
-    .search-input::placeholder { color: var(--text-muted); }
-
-    .search-input:focus {
-      border-color: var(--amber);
-      box-shadow: 0 0 0 3px rgba(232,169,58,0.12);
-    }
-
-    .btn-search {
-      padding: 13px 24px;
-      border-radius: var(--radius-sm);
-      border: none;
-      background: var(--amber);
-      color: #1a1000;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-search:hover:not(:disabled) { background: var(--amber-light); }
-    .btn-search:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    .search-spinner {
-      display: none;
-      width: 14px;
-      height: 14px;
-      border: 2px solid rgba(26,16,0,0.3);
-      border-top-color: #1a1000;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-
-    .btn-search.loading .search-spinner { display: inline-block; }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ============================================================
-       FILTER CHIPS
-       ============================================================ */
-    .filter-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .filter-chip {
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text-secondary);
-      font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .filter-chip:hover { background: var(--bg-surface); color: var(--text-primary); }
-
-    .filter-chip.active {
-      background: var(--bg-surface);
-      color: var(--amber-light);
-      border-color: var(--amber);
-    }
-
-    /* ============================================================
-       SUGGEST SECTION
-       ============================================================ */
-    .suggest-section { margin-bottom: 28px; }
-
-    .suggest-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .suggest-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .suggest-chip {
-      padding: 7px 14px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      font-family: var(--font-body);
-      font-size: 13px;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .suggest-chip:hover {
-      border-color: var(--amber);
-      color: var(--amber-light);
-      background: var(--bg-surface);
-    }
-
-    /* ============================================================
-       STATES
-       ============================================================ */
-    .state-area {
-      text-align: center;
-      padding: 60px 24px;
-    }
-
-    .state-icon { font-size: 40px; margin-bottom: 16px; }
-
-    .state-title {
-      font-family: var(--font-display);
-      font-size: 18px;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-    }
-
-    .state-desc {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 360px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    .error-state .state-title { color: var(--red); }
-
-    .loading-dots {
-      display: flex;
-      gap: 6px;
-      justify-content: center;
-      margin-top: 16px;
-    }
-
-    .loading-dots span {
-      width: 8px;
-      height: 8px;
-      background: var(--amber);
-      border-radius: 50%;
-      animation: pulse 1.2s ease-in-out infinite;
-    }
-
-    .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-    .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.3; }
-    }
-
-    /* ============================================================
-       RESULTS
-       ============================================================ */
-    .results-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 16px;
-    }
-
-    .results-count {
-      font-size: 13px;
-      color: var(--text-secondary);
-    }
-
-    .results-count strong { color: var(--text-primary); }
-
-    .results-clear {
-      font-size: 12px;
-      color: var(--text-muted);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: var(--font-body);
-      transition: var(--transition);
-    }
-
-    .results-clear:hover { color: var(--text-primary); }
-
-    .results-list { display: flex; flex-direction: column; gap: 10px; }
-
-    .result-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      transition: var(--transition);
-    }
-
-    .result-item:hover { border-color: var(--border-light); }
-
-    /* Exact match gets a subtle green left border */
-    .result-item.match-exact {
-      border-left: 3px solid var(--green-mid);
-    }
-
-    /* Prefix/substring match gets a subtle amber left border */
-    .result-item.match-prefix,
-    .result-item.match-substring {
-      border-left: 3px solid rgba(232,169,58,0.5);
-    }
-
-    .result-item-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-
-    .result-luganda {
-      font-family: var(--font-display);
-      font-size: 18px;
-      color: var(--text-primary);
-      line-height: 1.3;
-    }
-
-    .result-type-chip {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 20px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .type-vocabulary { background: rgba(94,207,122,0.12);  color: var(--green-light); border: 1px solid rgba(94,207,122,0.2); }
-    .type-phrase     { background: rgba(232,169,58,0.12);  color: var(--amber-light);  border: 1px solid rgba(232,169,58,0.2); }
-    .type-grammar    { background: rgba(100,140,255,0.12); color: #8aabff;             border: 1px solid rgba(100,140,255,0.2); }
-    .type-dialogue   { background: rgba(200,100,255,0.12); color: #d0aaff;             border: 1px solid rgba(200,100,255,0.2); }
-    .type-default    { background: var(--bg-surface);      color: var(--text-muted);   border: 1px solid var(--border); }
-
-    .result-english {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-bottom: 6px;
-      line-height: 1.5;
-    }
-
-    .result-english em {
-      color: var(--amber-light);
-      font-style: normal;
-      font-weight: 600;
-    }
-
-    .result-notes {
-      font-size: 12px;
-      color: var(--text-muted);
-      font-style: italic;
-      margin-bottom: 8px;
-    }
-
-    .result-item-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .result-tag {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      background: var(--bg-surface);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-    }
-
-    /* ── Score badge — colour changes based on quality ── */
-    .score-badge {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 10px;
-      margin-left: auto;
-      font-weight: 600;
-      border: 1px solid transparent;
-    }
-
-    /* Exact / strong match → green */
-    .score-badge.score-high {
-      background: rgba(94,207,122,0.12);
-      color: var(--green-light);
-      border-color: rgba(94,207,122,0.25);
-    }
-
-    /* Good match → amber */
-    .score-badge.score-mid {
-      background: rgba(232,169,58,0.10);
-      color: var(--amber-light);
-      border-color: rgba(232,169,58,0.2);
-    }
-
-    /* Related / weak → muted */
-    .score-badge.score-low {
-      background: var(--bg-surface);
-      color: var(--text-muted);
-      border-color: var(--border);
-    }
-
-    /* ── Match type pill (exact / prefix / semantic) ── */
-    .match-pill {
-      font-size: 10px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .match-pill.pill-exact     { background: rgba(94,207,122,0.15); color: var(--green-light); }
-    .match-pill.pill-prefix    { background: rgba(232,169,58,0.12); color: var(--amber-light); }
-    .match-pill.pill-substring { background: rgba(232,169,58,0.08); color: var(--amber); }
-    .match-pill.pill-semantic  { background: var(--bg-surface);     color: var(--text-muted);  }
-
-    /* Mobile nav toggle */
-    .mobile-nav-toggle {
-      display: none;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      color: var(--text-secondary);
-      font-size: 18px;
-      padding: 6px 10px;
-      cursor: pointer;
-      line-height: 1;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sidebar-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 199;
-    }
-    .sidebar-overlay.open { display: block; }
-
-    /* ============================================================
-       RESPONSIVE
-       ============================================================ */
-    @media (max-width: 768px) {
-      .layout { grid-template-columns: 1fr; }
-
-      .sidebar {
-        position: fixed;
-        top: 0; left: 0;
-        width: 260px;
-        height: 100vh;
-        z-index: 200;
-        transform: translateX(-100%);
-        transition: transform 0.25s ease;
-        box-shadow: 4px 0 24px rgba(0,0,0,0.5);
-      }
-      .sidebar.open { transform: translateX(0); }
-
-      .mobile-nav-toggle { display: flex; }
-
-      .topbar { padding: 14px 16px; }
-      .page-body { padding: 16px; }
-
-      .search-box { flex-direction: column; gap: 10px; }
-      .btn-search { width: 100%; min-height: 48px; justify-content: center; }
-      .search-input { font-size: 16px; }
-
-      .filter-chip { min-height: 40px; padding: 8px 14px; }
-      .suggest-chip { min-height: 44px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/app/styles.css" />
 </head>
 <body>
+<div class="app-shell">
 
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
-<div class="layout">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-icon">🌿</div>
-      <div class="brand-name">Luganda AI Studio</div>
-      <div class="brand-tagline">Language Intelligence</div>
-    </div>
-
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">Luganda <span>AI</span></div>
     <nav class="sidebar-nav">
-      <div class="nav-section-label">Main</div>
-      <a href="index.html"     class="nav-link"><span class="nav-icon">⊞</span> Dashboard</a>
-      <a href="translate.html" class="nav-link"><span class="nav-icon">⇄</span> Translate</a>
-      <a href="search.html"    class="nav-link active"><span class="nav-icon">◎</span> Search</a>
-      <a href="teach.html"     class="nav-link"><span class="nav-icon">📖</span> Teach Mode</a>
-
-      <div class="nav-section-label" style="margin-top:16px;">System</div>
-      <a href="reviews.html"   class="nav-link"><span class="nav-icon">📋</span> Reviews</a>
-      <a href="admin.html"     class="nav-link"><span class="nav-icon">⚙</span> Admin</a>
-      <a href="/docs"          class="nav-link" target="_blank"><span class="nav-icon">⧉</span> API Docs</a>
+      <a href="index.html"     class="sidebar-link">⌂ Home</a>
+      <a href="translate.html" class="sidebar-link">⇄ Translate</a>
+      <a href="search.html"    class="sidebar-link active">◎ Search</a>
+      <a href="teach.html"     class="sidebar-link">📖 Teach</a>
+      <a href="reviews.html"   class="sidebar-link">★ Reviews</a>
+      <a href="admin.html"     class="sidebar-link">⚙ Admin</a>
     </nav>
-
     <div class="sidebar-footer">
-      <span class="version-badge">v0.1 · MVP</span>
+      <div class="theme-pill">
+        <button class="theme-pill-btn" id="btnLight" onclick="setTheme('light')">☀ Light</button>
+        <button class="theme-pill-btn" id="btnDark"  onclick="setTheme('dark')">🌙 Dark</button>
+      </div>
+      <div class="sidebar-version">v1.0 · Luganda AI Studio</div>
     </div>
   </aside>
 
-  <!-- MAIN -->
-  <main class="main">
+  <!-- Mobile topbar -->
+  <header class="mobile-topbar">
+    <span class="mobile-topbar-title">Search</span>
+    <button class="theme-icon-btn" id="mobileThemeBtn" onclick="toggleTheme()">☀</button>
+  </header>
 
-    <div class="topbar">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <button class="mobile-nav-toggle" onclick="openSidebar()" aria-label="Open navigation">☰</button>
-        <div>
-          <div class="topbar-title">Knowledge Search</div>
-          <div class="topbar-subtitle">Search Luganda vocabulary, phrases, and grammar</div>
-        </div>
-      </div>
-    </div>
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="container" style="padding-top:32px; padding-bottom:32px;">
 
-    <div class="page-body">
+      <h1 class="page-title">Knowledge Search</h1>
+      <p class="page-sub">Search Luganda vocabulary, phrases, grammar, and proverbs.</p>
 
       <!-- SEARCH BOX -->
       <div class="search-box">
@@ -687,13 +58,13 @@
           <span class="search-input-icon">🔍</span>
           <input
             type="text"
-            class="search-input"
+            class="input-field search-input-inner"
             id="searchInput"
             placeholder="Search for a word, phrase, or topic..."
             onkeydown="if(event.key==='Enter') runSearch()"
           />
         </div>
-        <button class="btn-search" id="searchBtn" onclick="runSearch()">
+        <button class="btn-primary" id="searchBtn" onclick="runSearch()">
           <span class="search-spinner" id="sSpinner"></span>
           Search
         </button>
@@ -701,24 +72,24 @@
 
       <!-- FILTER CHIPS -->
       <div class="filter-row">
-        <button class="filter-chip active" onclick="setFilter(this, 'all')">All</button>
-        <button class="filter-chip" onclick="setFilter(this, 'vocabulary')">Vocabulary</button>
-        <button class="filter-chip" onclick="setFilter(this, 'sentences')">Sentences</button>
-        <button class="filter-chip" onclick="setFilter(this, 'grammar')">Grammar</button>
-        <button class="filter-chip" onclick="setFilter(this, 'proverbs')">Proverbs</button>
-        <button class="filter-chip" onclick="setFilter(this, 'documents')">📄 Documents</button>
+        <button class="btn-secondary filter-chip active" onclick="setFilter(this, 'all')">All</button>
+        <button class="btn-secondary filter-chip" onclick="setFilter(this, 'vocabulary')">Vocabulary</button>
+        <button class="btn-secondary filter-chip" onclick="setFilter(this, 'sentences')">Sentences</button>
+        <button class="btn-secondary filter-chip" onclick="setFilter(this, 'grammar')">Grammar</button>
+        <button class="btn-secondary filter-chip" onclick="setFilter(this, 'proverbs')">Proverbs</button>
+        <button class="btn-secondary filter-chip" onclick="setFilter(this, 'documents')">📄 Documents</button>
       </div>
 
       <!-- SUGGEST SECTION -->
       <div class="suggest-section" id="suggestSection">
         <div class="suggest-label">Try searching for</div>
         <div class="suggest-chips">
-          <button class="suggest-chip" onclick="quickSearch('hello')">hello</button>
-          <button class="suggest-chip" onclick="quickSearch('water')">water</button>
-          <button class="suggest-chip" onclick="quickSearch('thank you')">thank you</button>
-          <button class="suggest-chip" onclick="quickSearch('family')">family</button>
-          <button class="suggest-chip" onclick="quickSearch('numbers')">numbers</button>
-          <button class="suggest-chip" onclick="quickSearch('greetings')">greetings</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('hello')">hello</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('water')">water</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('thank you')">thank you</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('family')">family</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('numbers')">numbers</button>
+          <button class="btn-ghost suggest-chip" onclick="quickSearch('greetings')">greetings</button>
         </div>
       </div>
 
@@ -759,17 +130,26 @@
 
         <div class="results-header" id="resultsHeader" style="display:none;">
           <div class="results-count" id="resultsCount"></div>
-          <button class="results-clear" onclick="clearSearch()">Clear results</button>
+          <button class="btn-ghost" onclick="clearSearch()">Clear results</button>
         </div>
 
         <div class="results-list" id="resultsList"></div>
 
       </div><!-- /resultsArea -->
 
-    </div><!-- /page-body -->
-  </main>
+    </div><!-- /.container -->
+  </main><!-- /.main-content -->
+</div><!-- /.app-shell -->
 
-</div>
+<!-- Bottom nav (mobile) -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html"     class="bnav-item"        data-page="index"><span class="bnav-icon">⌂</span><span class="bnav-label">Home</span></a>
+    <a href="translate.html" class="bnav-item"        data-page="translate"><span class="bnav-icon">⇄</span><span class="bnav-label">Translate</span></a>
+    <a href="search.html"    class="bnav-item active"  data-page="search"><span class="bnav-icon">◎</span><span class="bnav-label">Search</span></a>
+    <a href="teach.html"     class="bnav-item"        data-page="teach"><span class="bnav-icon">📖</span><span class="bnav-label">Teach</span></a>
+  </div>
+</nav>
 
 <script>
   // ── State ────────────────────────────────────────────────────────────────
@@ -785,8 +165,14 @@
 
   // ── Filter ───────────────────────────────────────────────────────────────
   function setFilter(el, type) {
-    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.remove('active');
+      c.style.borderColor = '';
+      c.style.color = '';
+    });
     el.classList.add('active');
+    el.style.borderColor = 'var(--lime)';
+    el.style.color = 'var(--text-primary)';
     activeFilter = type;
     if (lastResults.length > 0) {
       renderResults(lastResults, lastQuery);
@@ -816,34 +202,32 @@
     }
   }
 
-  // ── Get type class for collection chip ───────────────────────────────────
+  // ── Get collection chip class ─────────────────────────────────────────────
   function getTypeClass(type) {
-    if (!type) return 'type-default';
+    if (!type) return '';
     const t = type.toLowerCase();
-    if (t.includes('vocab'))    return 'type-vocabulary';
-    if (t.includes('sentence')) return 'type-phrase';
-    if (t.includes('grammar'))  return 'type-grammar';
-    if (t.includes('proverb'))  return 'type-dialogue';
-    return 'type-default';
+    if (t.includes('vocab'))    return 'chip chip-lime';
+    if (t.includes('sentence')) return 'chip chip-success';
+    if (t.includes('grammar'))  return 'chip chip-neutral';
+    if (t.includes('proverb'))  return 'chip chip-amber';
+    return 'chip chip-neutral';
   }
 
-  // ── Score → CSS class ────────────────────────────────────────────────────
-  // Score is now 0–100, calculated server-side.
-  // We use it directly — no recalculation needed on the frontend.
+  // ── Score → chip class ────────────────────────────────────────────────────
   function getScoreClass(score) {
-    if (score >= 80) return 'score-high';
-    if (score >= 50) return 'score-mid';
-    return 'score-low';
+    if (score >= 80) return 'chip chip-success';
+    if (score >= 50) return 'chip chip-amber';
+    return 'chip chip-neutral';
   }
 
   // ── Match type → pill CSS class ──────────────────────────────────────────
   function getMatchPillClass(matchType) {
     switch ((matchType || '').toLowerCase()) {
-      case 'exact':     return 'pill-exact';
-      case 'prefix':    return 'pill-prefix';
-      case 'substring': return 'pill-substring';
-      case 'semantic':  return 'pill-semantic';
-      default:          return 'pill-semantic';
+      case 'exact':     return 'chip chip-success';
+      case 'prefix':    return 'chip chip-amber';
+      case 'substring': return 'chip chip-amber';
+      case 'semantic':  return 'chip chip-neutral';
+      default:          return 'chip chip-neutral';
     }
   }
 
@@ -899,54 +283,52 @@
         ? rawTags.split(',').map(t => t.trim()).filter(Boolean)
         : (Array.isArray(rawTags) ? rawTags : []);
 
-      // ── Score ────────────────────────────────────────────────────────────
-      // The backend now sends score (0–100) directly.
-      // We no longer recalculate from distance — the old formula was wrong.
+      // Score
       const score      = typeof item.score === 'number' ? item.score : null;
       const scoreLabel = item.score_label || '';
       const matchType  = item.match_type  || 'semantic';
 
-      // ── Build HTML pieces ────────────────────────────────────────────────
-      const typeClass  = getTypeClass(type);
+      const typeChipClass = getTypeClass(type);
 
       const tagsHtml   = tags.length
-        ? tags.slice(0, 4).map(t => `<span class="result-tag">${t}</span>`).join('')
+        ? tags.slice(0, 4).map(t => `<span class="chip chip-neutral">${t}</span>`).join('')
         : '';
 
-      // Score badge: show label + percentage
+      // Score chip: show label + percentage
       let scoreHtml = '';
       if (score !== null) {
         const cls   = getScoreClass(score);
         const label = scoreLabel || (score >= 80 ? 'Strong match' : score >= 50 ? 'Good match' : 'Related');
-        scoreHtml   = `<span class="score-badge ${cls}">${label} · ${score}%</span>`;
+        scoreHtml   = `<span class="${cls}">${label} · ${score}%</span>`;
       }
 
-      // Match type pill (exact / prefix / semantic)
-      const matchClass  = getMatchPillClass(matchType);
-      const matchLabel  = matchType.charAt(0).toUpperCase() + matchType.slice(1);
-      const matchPillHtml = matchType !== 'semantic'
-        ? `<span class="match-pill ${matchClass}">${matchLabel}</span>`
-        : '';  // Don't show "Semantic" pill — it's the default, not exciting info
+      // Match type chip (exact / prefix / semantic)
+      const matchChipClass = getMatchPillClass(matchType);
+      const matchLabel     = matchType.charAt(0).toUpperCase() + matchType.slice(1);
+      const matchChipHtml  = matchType !== 'semantic'
+        ? `<span class="${matchChipClass}">${matchLabel}</span>`
+        : '';
 
       // Card border class based on match type
-      const itemClass = matchType === 'exact'
-        ? 'result-item match-exact'
+      const borderStyle = matchType === 'exact'
+        ? 'border-left: 3px solid var(--success);'
         : (matchType === 'prefix' || matchType === 'substring')
-          ? 'result-item match-prefix'
-          : 'result-item';
+          ? 'border-left: 3px solid var(--amber);'
+          : '';
 
       const el = document.createElement('div');
-      el.className = itemClass;
+      el.className = 'result-card';
+      el.style.cssText = borderStyle;
       el.innerHTML = `
         <div class="result-item-top">
           <div class="result-luganda">${luganda}</div>
-          <div class="result-type-chip ${typeClass}">${type}</div>
+          <span class="${typeChipClass}">${type}</span>
         </div>
         ${english ? `<div class="result-english">${highlight(english, query)}</div>` : ''}
         ${notes   ? `<div class="result-notes">${notes}</div>` : ''}
-        ${(tagsHtml || scoreHtml || matchPillHtml) ? `
+        ${(tagsHtml || scoreHtml || matchChipHtml) ? `
           <div class="result-item-footer">
-            ${matchPillHtml}
+            ${matchChipHtml}
             ${tagsHtml}
             ${scoreHtml}
           </div>
@@ -1023,16 +405,6 @@
     }
   }
 
-  // Mobile sidebar
-  function openSidebar() {
-    document.getElementById('sidebar').classList.add('open');
-    document.getElementById('sidebarOverlay').classList.add('open');
-  }
-  function closeSidebar() {
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('sidebarOverlay').classList.remove('open');
-  }
-
   // Service Worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -1042,5 +414,33 @@
   }
 </script>
 
+<script>
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  updateThemeUI();
+}
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setTheme(isDark ? 'light' : 'dark');
+}
+function updateThemeUI() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('btnLight')?.classList.toggle('active', !isDark);
+  document.getElementById('btnDark')?.classList.toggle('active', isDark);
+  const mb = document.getElementById('mobileThemeBtn');
+  if (mb) mb.textContent = isDark ? '☀' : '🌙';
+}
+updateThemeUI();
+
+// Set initial active filter style on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const activeChip = document.querySelector('.filter-chip.active');
+  if (activeChip) {
+    activeChip.style.borderColor = 'var(--lime)';
+    activeChip.style.color = 'var(--text-primary)';
+  }
+});
+</script>
 </body>
 </html>
