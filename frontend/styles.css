@@ -954,9 +954,15 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   margin-bottom: 20px;
 }
 .filter-chip {
-  padding: 6px 14px !important;
+  padding: 6px 14px;
   font-size: 12px !important;
   border-radius: var(--radius-pill) !important;
+  min-height: auto;
+}
+.filter-chip.active {
+  border-color: var(--lime);
+  color: var(--text-primary);
+  background: var(--lime-bg);
 }
 
 /* Suggest section */
@@ -971,8 +977,9 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 }
 .suggest-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .suggest-chip {
-  padding: 7px 14px !important;
+  padding: 7px 14px;
   font-size: 13px !important;
+  min-height: auto;
 }
 
 /* States */

@@ -167,12 +167,8 @@
   function setFilter(el, type) {
     document.querySelectorAll('.filter-chip').forEach(c => {
       c.classList.remove('active');
-      c.style.borderColor = '';
-      c.style.color = '';
     });
     el.classList.add('active');
-    el.style.borderColor = 'var(--lime)';
-    el.style.color = 'var(--text-primary)';
     activeFilter = type;
     if (lastResults.length > 0) {
       renderResults(lastResults, lastQuery);
@@ -433,14 +429,7 @@ function updateThemeUI() {
 }
 updateThemeUI();
 
-// Set initial active filter style on page load
-document.addEventListener('DOMContentLoaded', function() {
-  const activeChip = document.querySelector('.filter-chip.active');
-  if (activeChip) {
-    activeChip.style.borderColor = 'var(--lime)';
-    activeChip.style.color = 'var(--text-primary)';
-  }
-});
+// Active filter chip state is handled via the .filter-chip.active CSS class.
 </script>
 </body>
 </html>
