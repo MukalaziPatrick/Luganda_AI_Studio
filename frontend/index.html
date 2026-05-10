@@ -145,10 +145,12 @@ updateThemeUI();
 fetch('/api/v1/knowledge/stats')
   .then(r => r.json())
   .then(d => {
-    document.getElementById('statVocab').textContent     = (d.vocabulary    ?? '—').toLocaleString();
-    document.getElementById('statSentences').textContent = (d.sentences     ?? '—').toLocaleString();
-    document.getElementById('statGrammar').textContent   = (d.grammar       ?? '—').toLocaleString();
-    document.getElementById('statProverbs').textContent  = (d.proverbs      ?? '—').toLocaleString();
+    // CHANGED: Unpack d.collections to handle API response shape
+    const c = d.collections ?? d;
+    document.getElementById('statVocab').textContent     = (c.vocabulary ?? '—').toLocaleString();
+    document.getElementById('statSentences').textContent = (c.sentences  ?? '—').toLocaleString();
+    document.getElementById('statGrammar').textContent   = (c.grammar    ?? '—').toLocaleString();
+    document.getElementById('statProverbs').textContent  = (c.proverbs   ?? '—').toLocaleString();
   })
   .catch(() => {});
 </script>
