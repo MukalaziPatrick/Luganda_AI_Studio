@@ -217,7 +217,7 @@
   function getScoreClass(score) {
     if (score >= 80) return 'chip chip-success';
     if (score >= 50) return 'chip chip-amber';
-    return 'chip chip-neutral';
+    return 'chip chip-red';  // CHANGED: use chip-red for low relevance scores
   }
 
   // ── Match type → pill CSS class ──────────────────────────────────────────
