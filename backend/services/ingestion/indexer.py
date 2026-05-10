@@ -33,6 +33,7 @@ import logging
 from typing import Any
 
 from backend.db.chroma_client import get_chroma_client
+from backend.services.ingestion.embedder import get_chroma_embedding_fn
 
 logger = logging.getLogger(__name__)
 
@@ -129,6 +130,7 @@ def index_records(
         try:
             collection = client.get_or_create_collection(
                 name=collection_name,
+                embedding_function=get_chroma_embedding_fn(),
                 metadata={
                     "description": COLLECTION_DESCRIPTIONS.get(collection_name, ""),
                     "hnsw:space":  "cosine",
@@ -236,6 +238,7 @@ def clear_collection(collection_name: str) -> bool:
         client.delete_collection(collection_name)
         client.get_or_create_collection(
             name=collection_name,
+            embedding_function=get_chroma_embedding_fn(),
             metadata={
                 "description": COLLECTION_DESCRIPTIONS.get(collection_name, ""),
                 "hnsw:space":  "cosine",
