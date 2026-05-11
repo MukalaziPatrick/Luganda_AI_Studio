@@ -6,7 +6,7 @@
   <title>Luganda AI Studio</title>
   <script>(function(){const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
   <link rel="manifest" href="/app/manifest.json" />
-  <meta name="theme-color" content="#E8E6DE" />
+  <meta name="theme-color" content="#F7F0E6" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Luganda AI" />
@@ -58,9 +58,10 @@
           <span class="hero-underline">Communicate.</span>
         </h1>
         <p class="hero-desc">AI-powered tools for the Luganda language — built to run on your machine.</p>
-        <div class="flex gap-12 flex-wrap mt-8">
-          <a href="translate.html" class="btn-primary">Start Translating →</a>
-          <div class="theme-pill" id="heroPill" style="align-self:center;">
+        <!-- CHANGED: Improved hero layout with button and theme toggle separated for mobile -->
+        <div class="hero-actions mt-8">
+          <a href="translate.html" class="btn-primary hero-cta">Start Translating →</a>
+          <div class="theme-pill" id="heroPill" style="align-self: center;">
             <button class="theme-pill-btn" id="heroLight" onclick="setTheme('light')">☀ Light</button>
             <button class="theme-pill-btn" id="heroDark"  onclick="setTheme('dark')">🌙 Dark</button>
           </div>

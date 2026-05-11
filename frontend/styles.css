@@ -7,23 +7,23 @@ html { font-size: 16px; scroll-behavior: smooth; }
 
 /* ── Tokens: Light mode (default) ───────────────────────────────────── */
 :root {
-  --bg:             #E8E6DE;
-  --bg-card:        #F5F4F0;
-  --bg-card-hover:  #EDEAE2;
+  --bg:             #F7F0E6;
+  --bg-card:        #FFF8EF;
+  --bg-card-hover:  #F5EAD8;
   --bg-input:       #FFFFFF;
-  --border:         #D4D0C8;
-  --border-focus:   #CADF3E;
+  --border:         #E2D5C3;
+  --border-focus:   #C1440E;
 
-  --lime:           #CADF3E;
-  --lime-dim:       #B8CC2A;
-  --lime-dark:      #8FA800;
-  --lime-glow:      rgba(202, 223, 62, 0.25);
-  --lime-bg:        rgba(202, 223, 62, 0.12);
+  --lime:           #C1440E;
+  --lime-dim:       #A83A0C;
+  --lime-dark:      #8C2E08;
+  --lime-glow:      rgba(193, 68, 14, 0.20);
+  --lime-bg:        rgba(193, 68, 14, 0.08);
 
-  --text-primary:   #1C2B1A;
-  --text-secondary: #5A6B5A;
-  --text-muted:     #8A9A8A;
-  --text-on-lime:   #1C2B1A;
+  --text-primary:   #2C1810;
+  --text-secondary: #7A5A48;
+  --text-muted:     #B09070;
+  --text-on-lime:   #F7F0E6;
 
   --green:          #2E7D32;
   --red:            #C62828;
@@ -32,9 +32,9 @@ html { font-size: 16px; scroll-behavior: smooth; }
   --success:        #2E7D32;
   --success-bg:     #E8F5E9;
   --success-border: #A5D6A7;
-  --amber:          #F57F17;
-  --amber-bg:       #FFF8E1;
-  --amber-border:   #FFE082;
+  --amber:          #E8A87C;
+  --amber-bg:       #FDF3E8;
+  --amber-border:   #DEBA96;
 
   --font-display:   'Figtree', sans-serif;
   --font-body:      'DM Sans', sans-serif;
@@ -45,8 +45,8 @@ html { font-size: 16px; scroll-behavior: smooth; }
   --radius-sm:      8px;
   --radius-xs:      4px;
 
-  --shadow-card:    0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
-  --shadow-modal:   0 8px 40px rgba(0,0,0,0.16);
+  --shadow-card:    0 1px 2px rgba(0,0,0,0.05);
+  --shadow-modal:   0 8px 40px rgba(0,0,0,0.14);
   --transition:     0.18s ease;
   --transition-slow:0.32s ease;
 
@@ -58,17 +58,17 @@ html { font-size: 16px; scroll-behavior: smooth; }
 
 /* ── Tokens: Dark mode ───────────────────────────────────────────────── */
 [data-theme="dark"] {
-  --bg:             #0D1117;
-  --bg-card:        #161B22;
-  --bg-card-hover:  #1C2330;
-  --bg-input:       #0D1117;
-  --border:         #30363D;
-  --border-focus:   #CADF3E;
+  --bg:             #1C1208;
+  --bg-card:        #261A0E;
+  --bg-card-hover:  #301F10;
+  --bg-input:       #1C1208;
+  --border:         #3A2818;
+  --border-focus:   #E8824A;
 
-  --text-primary:   #E6EDF3;
-  --text-secondary: #8B949E;
-  --text-muted:     #484F58;
-  --text-on-lime:   #0D1117;
+  --text-primary:   #F5EDD8;
+  --text-secondary: #A08060;
+  --text-muted:     #6A5040;
+  --text-on-lime:   #1C1208;
 
   --green:          #3FB950;
   --red:            #F85149;
@@ -81,8 +81,8 @@ html { font-size: 16px; scroll-behavior: smooth; }
   --amber-bg:       #1C1205;
   --amber-border:   #7A5212;
 
-  --shadow-card:    0 1px 4px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.3);
-  --shadow-modal:   0 8px 40px rgba(0,0,0,0.6);
+  --shadow-card:    0 1px 4px rgba(0,0,0,0.35), 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-modal:   0 8px 40px rgba(0,0,0,0.55);
 
   /* CHANGED: CSS variable aliases for translate.html */
   --border-subtle:  var(--border);
@@ -98,7 +98,12 @@ body {
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;
+  /* CHANGED: prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
+
+/* CHANGED: prevent horizontal scroll at root level */
+html { overflow-x: hidden; }
 
 a { color: var(--lime-dark); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -281,7 +286,12 @@ a:hover { text-decoration: underline; }
 
 .bnav-item:hover { text-decoration: none; }
 
-.bnav-item.active { color: var(--lime-dark); }
+.bnav-item.active {
+  color: var(--lime-dark);
+  background: var(--lime-bg);
+  border-radius: 999px;
+  padding: 10px 14px;
+}
 
 .bnav-icon { font-size: 1.2rem; line-height: 1; }
 
@@ -294,7 +304,7 @@ a:hover { text-decoration: underline; }
 }
 
 .container {
-  max-width: 1000px;
+  max-width: none;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -468,14 +478,26 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   margin-bottom: 16px;
 }
 
+/* CHANGED: clamp() anchored to vw so it scales smoothly across all screen widths */
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-size: clamp(2.4rem, 9vw, 3.2rem);
   font-weight: 800;
   color: var(--text-primary);
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hero-cta {
+  min-width: 240px;
 }
 
 .hero-underline {
@@ -505,18 +527,18 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   background: var(--bg-card);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 20px;
-  box-shadow: var(--shadow-card);
+  padding: 20px 20px 20px 18px;
+  box-shadow: none;
   transition: border-color var(--transition), border-left-color var(--transition), transform var(--transition);
-  border-left: 3px solid transparent;
+  border-left: 4px solid var(--lime);
   text-decoration: none;
   display: block;
   color: var(--text-primary);
 }
 
 .feature-card:hover {
-  border-left-color: var(--lime);
-  border-color: var(--lime);
+  border-left-color: var(--lime-dim);
+  border-color: rgba(193, 68, 14, 0.18);
   transform: translateY(-2px);
   text-decoration: none;
   color: var(--text-primary);
@@ -544,10 +566,25 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 .more-link:hover { border-color: var(--lime); color: var(--text-primary); text-decoration: none; }
 
 /* ── Stats row ───────────────────────────────────────────────────────── */
-.stats-row { display: flex; gap: 24px; flex-wrap: wrap; margin: 24px 0; }
-.stat-item { display: flex; flex-direction: column; }
-.stat-value { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: var(--text-primary); }
-.stat-label { font-size: 0.8rem; color: var(--text-muted); }
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin: 24px 0;
+  overflow: hidden;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 18px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+.stat-value { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--text-primary); }
+.stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; }
 
 /* ── Direction toggle (translate.html) ───────────────────────────────── */
 .direction-toggle {
@@ -559,6 +596,8 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   border-radius: var(--radius-pill);
   padding: 6px;
   width: fit-content;
+  /* CHANGED: allow wrapping on tiny screens */
+  flex-wrap: wrap;
 }
 
 .dir-btn {
@@ -572,6 +611,8 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   font-size: 13px;
   cursor: pointer;
   transition: background var(--transition), color var(--transition);
+  /* CHANGED: touch-friendly tap target */
+  min-height: 40px;
 }
 
 .dir-btn.active { background: var(--lime); color: var(--text-on-lime); }
@@ -670,28 +711,166 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 .gap-12 { gap: 12px; }
 .gap-16 { gap: 16px; }
 
-.flex   { display: flex; }
+.flex   { display: flex; flex-direction: row; }
 .flex-wrap { flex-wrap: wrap; }
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 .flex-1 { flex: 1; }
 .w-full { width: 100%; }
 
-/* ── Responsive ──────────────────────────────────────────────────────── */
+/* ── Responsive: tablet / large phone (≤768px) ───────────────────────── */
 @media (max-width: 768px) {
-  .sidebar      { display: none; }
-  .mobile-topbar{ display: flex; }
-  .bottom-nav   { display: block; }
-  .main-content { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
-  .hero-title   { font-size: clamp(2rem, 10vw, 3rem); }
-  .container    { padding: 0 16px; }
-  .feature-grid { grid-template-columns: 1fr 1fr; }
-  .toast        { right: 16px; bottom: calc(72px + env(safe-area-inset-bottom)); }
+
+  /* Layout: hide sidebar, show mobile bars */
+  .sidebar       { display: none; }
+  .mobile-topbar { display: flex; }
+  .bottom-nav    { display: block; }
+
+  /* CHANGED: padding-bottom clears the 64px nav + device safe-area; no content hidden behind it */
+  .main-content  {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+    padding-top: 16px;
+  }
+
+  /* CHANGED: container — full-width with 16px side gutters */
+  .container { padding: 0 16px; max-width: 100%; }
+
+  /* CHANGED: pill must not stretch to fill the parent flex row when it wraps onto
+     its own line. width: fit-content keeps it at intrinsic size. Row direction is
+     explicit so it can never inherit a column direction from anything. */
+  .theme-pill {
+    width: fit-content;
+    flex-direction: row;
+  }
+
+  /* CHANGED: stop buttons growing to fill the pill (that was the stacking cause).
+     Padding is kept generous so the pill height (~44px) matches the adjacent
+     btn-primary — a squat pill next to a tall button looked worse than the
+     stacking bug. Font stays at 12px (same as desktop) so labels stay legible. */
+  .theme-pill-btn {
+    flex: 0 0 auto;
+    padding: 9px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* CHANGED: hero — tighter padding, controlled title scale */
+  .hero         { padding: 32px 0 24px; }
+  .hero-kicker  { font-size: 0.75rem; margin-bottom: 12px; }
+  .hero-title   { font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1.1; margin-bottom: 16px; }
+  .hero-desc    { font-size: 0.88rem; margin-bottom: 20px; max-width: 100%; }
+
+  .hero-cta { width: 100%; }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stat-item { padding: 18px 14px; }
+  .stat-value { font-size: 1.5rem; }
+  .stat-label { font-size: 0.75rem; }
+
+  /* CHANGED: feature grid — single column on all mobile widths */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 24px 0;
+  }
+  .feature-card       { padding: 18px 16px 18px 20px; min-height: 90px; }
+  .feature-card-icon  { font-size: 1.4rem; margin-bottom: 8px; }
+  .feature-card-title { font-size: 0.95rem; margin-bottom: 3px; }
+  .feature-card-desc  { font-size: 0.8rem; line-height: 1.4; }
+
+  /* Page header scaling */
+  .page-header  { padding: 24px 0 16px; margin-bottom: 20px; }
+  .page-title   { font-size: clamp(1.35rem, 5vw, 1.8rem); }
+  .page-sub     { font-size: 0.9rem; margin-top: 4px; }
+
+  /* CHANGED: touch-friendly button sizing — min 44px tap target */
+  .btn-primary   { padding: 12px 20px; font-size: 14px; min-height: 44px; border-radius: var(--radius-sm); }
+  .btn-secondary { padding: 11px 18px; font-size: 13px; min-height: 44px; }
+
+  /* CHANGED: feedback buttons also touch-friendly */
+  .feedback-btn { min-height: 44px; padding: 10px 16px; }
+
+  /* CHANGED: toast clears the bottom nav on mobile */
+  .toast {
+    right: 12px;
+    bottom: calc(80px + env(safe-area-inset-bottom));
+    max-width: calc(100% - 24px);
+  }
+
+  /* More-links wrap tightly on mobile */
+  .more-section { margin-top: 24px; padding-top: 20px; }
+
+  /* CHANGED: admin grid — single column below 768px */
+  .admin-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* ── Responsive: small phone (≤480px) ───────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* CHANGED: tighter gutters on small phones */
+  .container { padding: 0 12px; }
+
+  .hero       { padding: 20px 0 18px; }
+  /* clamp: min 1.4rem | fluid 7vw | max 1.8rem — fits 360–480px without overflow */
+  .hero-title { font-size: clamp(1.4rem, 7vw, 1.8rem); line-height: 1.2; }
+  .hero-desc  { font-size: 0.88rem; line-height: 1.55; }
+
+  .page-title { font-size: clamp(1.2rem, 5.5vw, 1.5rem); }
+
+  .stats-row  { gap: 12px; }
+  .stat-value { font-size: 1.25rem; }
+  .stat-label { font-size: 0.7rem; }
+
+  .more-links { gap: 6px; }
+  .more-link  { padding: 6px 12px; font-size: 0.8rem; min-height: 40px; }
+
+  .feature-grid { margin: 16px 0; gap: 10px; }
+
+  /* CHANGED: 16px minimum prevents iOS zoom on focus */
+  .input-field { font-size: 16px; padding: 10px 12px; }
+
+  .btn-primary  { padding: 11px 18px; font-size: 14px; min-height: 44px; }
+  .btn-secondary { padding: 10px 16px; font-size: 13px; min-height: 44px; }
+
+  /* CHANGED: bottom nav items — always at least 48px for WCAG touch target */
+  .bnav-item  { min-height: 48px; font-size: 0.65rem; }
+  .bnav-icon  { font-size: 1.1rem; }
+
+  /* Dir buttons fit in the toggle on narrow screens */
+  .dir-btn { padding: 8px 14px; font-size: 12px; }
+}
+
+/* ── Responsive: tiny phone (≤374px) ────────────────────────────────── */
 @media (max-width: 374px) {
-  .feature-grid { grid-template-columns: 1fr; }
-  .bnav-item    { min-height: 52px; }
+
+  /* CHANGED: tightest gutters for phones like iPhone SE 1st gen */
+  .container { padding: 0 10px; }
+
+  /* CHANGED: hero title — fixed floor so it doesn't get too small */
+  .hero-title { font-size: clamp(1.3rem, 7.5vw, 1.6rem); line-height: 1.2; }
+  .hero-desc  { font-size: 0.85rem; }
+
+  .page-title { font-size: 1.2rem; }
+
+  .stats-row  { gap: 8px; }
+  .stat-value { font-size: 1.1rem; }
+  .stat-label { font-size: 0.65rem; }
+
+  /* Bottom nav — slightly taller for comfortable tap */
+  .bnav-item  { min-height: 52px; gap: 2px; }
+  .bnav-label { font-size: 0.6rem; }
+
+  /* Feature grid already 1fr, just tighten the gap */
+  .feature-grid { gap: 8px; }
+  .feature-card { padding: 14px 12px 14px 18px; }
+
+  /* Ensure buttons don't overflow at 374px */
+  .btn-primary, .btn-secondary { font-size: 13px; }
+
+  /* More links wrap at very small sizes */
+  .more-link { padding: 5px 10px; font-size: 0.78rem; }
 }
 
 /* ── Teach page ─────────────────────────────────────────────────────── */
@@ -904,11 +1083,24 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 
 /* ── Teach page responsive ── */
 @media (max-width: 768px) {
-  .card-word  { font-size: 28px; }
-  .quiz-word { font-size: 28px; }
+  .card-word    { font-size: 28px; }
+  .quiz-word    { font-size: 28px; }
+  /* CHANGED: quiz options — single column on mobile for readability */
   .quiz-options { grid-template-columns: 1fr; gap: 10px; }
   .quiz-option  { min-height: 52px; font-size: 15px; }
-  .mode-btn   { min-height: 44px; padding: 8px 14px; font-size: 13px; }
+  .mode-btn     { min-height: 44px; padding: 8px 14px; font-size: 13px; }
+  /* CHANGED: flash card padding tighter on small screens */
+  .card-face    { padding: 24px 20px; }
+  .quiz-card    { padding: 24px 20px; }
+}
+
+@media (max-width: 480px) {
+  .card-word  { font-size: 24px; }
+  .quiz-word  { font-size: 24px; }
+  .done-score { font-size: 40px; }
+  /* CHANGED: done-stats stacks vertically on tiny phones */
+  .done-stats { flex-direction: column; align-items: center; gap: 10px; }
+  .done-stat  { min-width: 140px; }
 }
 
 /* ── Search page ─────────────────────────────────────────────────────── */
@@ -1066,7 +1258,8 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 @media (max-width: 768px) {
   .search-box { flex-direction: column; gap: 10px; }
   .btn-primary#searchBtn { width: 100%; min-height: 48px; justify-content: center; }
-  .filter-chip { min-height: 40px; }
+  /* CHANGED: touch-friendly filter / suggest chips */
+  .filter-chip  { min-height: 40px; }
   .suggest-chip { min-height: 44px; }
 }
 
@@ -1074,9 +1267,11 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 .page-heading    { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
 .page-subheading { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 32px; }
 
+/* CHANGED: minmax(320px) would overflow at 360px; let auto-fit handle it and we force
+   single-column below 768px via the media query above */
 .admin-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   margin-bottom: 32px;
 }
@@ -1334,10 +1529,18 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   .reviews-stat-cell:nth-child(4),
   .reviews-stat-cell:nth-child(5) { border-top: 1px solid var(--border); }
   .reviews-stat-cell:nth-child(5) { border-right: none; }
-  .rpair-row { grid-template-columns: 1fr; gap: 8px; }
+  /* CHANGED: pair row stacks vertically, arrow hidden */
+  .rpair-row   { grid-template-columns: 1fr; gap: 8px; }
   .rpair-arrow { display: none; }
   .reviews-topbar-row { flex-direction: column; }
 }
 @media (max-width: 400px) {
+  /* CHANGED: 2-column stat bar on very small phones */
   .reviews-stats-bar { grid-template-columns: 1fr 1fr; }
+  .reviews-stat-cell:nth-child(2) { border-right: none; }
+  .reviews-stat-cell:nth-child(3) { border-top: 1px solid var(--border); }
+  .reviews-stat-cell:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+  .reviews-stat-cell:nth-child(5) { grid-column: 1 / -1; border-top: 1px solid var(--border); border-right: none; }
+  /* CHANGED: stat numbers smaller on tiny phones */
+  .reviews-stat-num { font-size: 1.4rem; }
 }
