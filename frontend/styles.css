@@ -730,10 +730,11 @@ textarea.input-field { resize: vertical; min-height: 100px; }
   .main-content  {
     padding-bottom: calc(72px + env(safe-area-inset-bottom));
     padding-top: 16px;
+    width: 100%;
   }
 
   /* CHANGED: container — full-width with 16px side gutters */
-  .container { padding: 0 16px; max-width: 100%; }
+  .container { padding: 0 16px; max-width: 100%; width: 100%; margin: 0; }
 
   /* CHANGED: pill must not stretch to fill the parent flex row when it wraps onto
      its own line. width: fit-content keeps it at intrinsic size. Row direction is
