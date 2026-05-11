@@ -721,7 +721,8 @@ textarea.input-field { resize: vertical; min-height: 100px; }
 /* ── Responsive: tablet / large phone (≤768px) ───────────────────────── */
 @media (max-width: 768px) {
 
-  /* Layout: hide sidebar, show mobile bars */
+  /* Layout: stack topbar above content, hide sidebar, show mobile bars */
+  .app-shell     { flex-direction: column; }
   .sidebar       { display: none; }
   .mobile-topbar { display: flex; }
   .bottom-nav    { display: block; }
